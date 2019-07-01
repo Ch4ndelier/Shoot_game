@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Nov 02 17:50:29 2018
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : gamecontrol
+Top-level Entity Name : gamecontrol
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 136 / 1,270 ( 11 % )
+Total pins : 69 / 116 ( 59 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

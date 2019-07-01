@@ -1,0 +1,11 @@
+Fitter Status : Successful - Fri Nov 02 17:10:30 2018
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : antishake
+Top-level Entity Name : antishake
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 50 / 1,270 ( 4 % )
+Total pins : 17 / 116 ( 15 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

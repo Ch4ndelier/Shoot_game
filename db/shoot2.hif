@@ -1,0 +1,349 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Full Version
+45
+3268
+OFF
+OFF
+OFF
+ON
+ON
+OFF
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+shoot2
+# storage
+db|shoot2.(0).cnf
+db|shoot2.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+shoot2.vhd
+d9e52f43fb49be213f6e975a82e7fb6
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+frequency_divider
+# storage
+db|shoot2.(1).cnf
+db|shoot2.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+frequency_divider|frequency_divider.vhd
+59d84cb825635d953eb24da2388b562f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+frequency_divider:u1
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+mxdisplay
+# storage
+db|shoot2.(2).cnf
+db|shoot2.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mxdisplay|mxdisplay.vhd
+86416c49cbcac696e414b49c973f29fa
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(fpc)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(fpr)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(tgtc)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(tgtr)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(row1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(col1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(col2)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+mxdisplay:u2
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+numdisplay
+# storage
+db|shoot2.(3).cnf
+db|shoot2.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+numdisplay|numdisplay.vhd
+6ecec5f9d0ef10511da06adf45e0b7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(seven)
+6 downto 0
+PARAMETER_STRING
+USR
+ constraint(cat)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(shownum)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+numdisplay:u3
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+statecontrol
+# storage
+db|shoot2.(4).cnf
+db|shoot2.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+statecontrol|statecontrol.vhd
+64a661b241dd44e5d7e4282114996c3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+statecontrol:u4
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+gamecontrol
+# storage
+db|shoot2.(5).cnf
+db|shoot2.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+gamecontrol|gamecontrol.vhd
+11e1825f1eaf7b7c444691a6ef63f16
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(tgtc)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(tgtr)
+2 downto 0
+PARAMETER_STRING
+USR
+ constraint(fpc)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(shownum)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+gamecontrol:u5
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+antishake
+# storage
+db|shoot2.(6).cnf
+db|shoot2.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+antishake|antishake.vhd
+c7be27eb7c946ae6b38969f3f27de7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+antishake:u6
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+musicplayer
+# storage
+db|shoot2.(7).cnf
+db|shoot2.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+music|musicplayer.vhd
+b17877fc2d9e67678641ac0489b8f43
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+musicplayer:u7
+}
+# lmf
+f:|quartus|quartus|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

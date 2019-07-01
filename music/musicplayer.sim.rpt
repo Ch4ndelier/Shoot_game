@@ -1,0 +1,531 @@
+Simulator report for musicplayer
+Thu Nov 08 19:24:40 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 210 nodes     ;
+; Simulation Coverage         ;      78.91 %  ;
+; Total Number of Transitions ; 17117392      ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      78.91 % ;
+; Total nodes checked                                 ; 210          ;
+; Total output ports checked                          ; 313          ;
+; Total output ports with complete 1/0-value coverage ; 247          ;
+; Total output ports with no 1/0-value coverage       ; 57           ;
+; Total output ports with no 1-value coverage         ; 57           ;
+; Total output ports with no 0-value coverage         ; 66           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++---------------------------+---------------------------------+------------------+
+; Node Name                 ; Output Port Name                ; Output Port Type ;
++---------------------------+---------------------------------+------------------+
+; |musicplayer|Mux12~0      ; |musicplayer|Mux12~0            ; combout          ;
+; |musicplayer|Mux12~1      ; |musicplayer|Mux12~1            ; combout          ;
+; |musicplayer|Mux12~2      ; |musicplayer|Mux12~2            ; combout          ;
+; |musicplayer|CT_142[2]    ; |musicplayer|CT_142[2]          ; regout           ;
+; |musicplayer|CT_142[3]    ; |musicplayer|CT_142[3]          ; regout           ;
+; |musicplayer|CT_142[1]    ; |musicplayer|CT_142[1]          ; regout           ;
+; |musicplayer|CT_142[0]    ; |musicplayer|Equal6~0           ; combout          ;
+; |musicplayer|CT_142[0]    ; |musicplayer|CT_142[0]          ; regout           ;
+; |musicplayer|CT_142[7]    ; |musicplayer|CT_142[7]          ; regout           ;
+; |musicplayer|CT_142[5]    ; |musicplayer|CT_142[5]          ; regout           ;
+; |musicplayer|CT_142[6]    ; |musicplayer|CT_142[6]          ; regout           ;
+; |musicplayer|CT_142[4]    ; |musicplayer|Equal6~1           ; combout          ;
+; |musicplayer|CT_142[4]    ; |musicplayer|CT_142[4]          ; regout           ;
+; |musicplayer|CLK_50       ; |musicplayer|CLK_50             ; regout           ;
+; |musicplayer|Equal10~1    ; |musicplayer|Equal10~1          ; combout          ;
+; |musicplayer|NOTE~5       ; |musicplayer|NOTE~5             ; combout          ;
+; |musicplayer|CT_159[1]    ; |musicplayer|CT_159[1]          ; regout           ;
+; |musicplayer|CT_159[2]    ; |musicplayer|CT_159[2]          ; regout           ;
+; |musicplayer|CT_159[3]    ; |musicplayer|CT_159[3]          ; regout           ;
+; |musicplayer|CT_159[0]    ; |musicplayer|CT_159[0]          ; regout           ;
+; |musicplayer|Equal5~0     ; |musicplayer|Equal5~0           ; combout          ;
+; |musicplayer|CT_159[4]    ; |musicplayer|CT_159[4]          ; regout           ;
+; |musicplayer|CT_159[7]    ; |musicplayer|CT_159[7]          ; regout           ;
+; |musicplayer|CT_159[6]    ; |musicplayer|CT_159[6]          ; regout           ;
+; |musicplayer|CT_159[5]    ; |musicplayer|Equal5~1           ; combout          ;
+; |musicplayer|CT_159[5]    ; |musicplayer|CT_159[5]          ; regout           ;
+; |musicplayer|NOTE~8       ; |musicplayer|NOTE~8             ; combout          ;
+; |musicplayer|NOTE~9       ; |musicplayer|NOTE~9             ; combout          ;
+; |musicplayer|CT_179[1]    ; |musicplayer|CT_179[1]          ; regout           ;
+; |musicplayer|CT_179[0]    ; |musicplayer|CT_179[0]          ; regout           ;
+; |musicplayer|CT_179[3]    ; |musicplayer|CT_179[3]          ; regout           ;
+; |musicplayer|CT_179[2]    ; |musicplayer|Equal4~0           ; combout          ;
+; |musicplayer|CT_179[2]    ; |musicplayer|CT_179[2]          ; regout           ;
+; |musicplayer|CT_179[4]    ; |musicplayer|CT_179[4]          ; regout           ;
+; |musicplayer|CT_179[5]    ; |musicplayer|CT_179[5]          ; regout           ;
+; |musicplayer|CT_179[7]    ; |musicplayer|CT_179[7]          ; regout           ;
+; |musicplayer|CT_179[6]    ; |musicplayer|Equal4~1           ; combout          ;
+; |musicplayer|CT_179[6]    ; |musicplayer|CT_179[6]          ; regout           ;
+; |musicplayer|CT_32[4]     ; |musicplayer|CT_32[4]           ; regout           ;
+; |musicplayer|CT_32[0]     ; |musicplayer|CT_32[0]~3         ; cout0            ;
+; |musicplayer|CT_32[0]     ; |musicplayer|CT_32[0]~3COUT1_16 ; cout1            ;
+; |musicplayer|CT_32[1]     ; |musicplayer|CT_32[1]~5         ; cout0            ;
+; |musicplayer|CT_32[1]     ; |musicplayer|CT_32[1]~5COUT1_18 ; cout1            ;
+; |musicplayer|CT_32[2]     ; |musicplayer|CT_32[2]~7         ; cout0            ;
+; |musicplayer|CT_32[2]     ; |musicplayer|CT_32[2]~7COUT1_20 ; cout1            ;
+; |musicplayer|CT_32[3]     ; |musicplayer|CT_32[3]~9         ; cout0            ;
+; |musicplayer|CT_32[3]     ; |musicplayer|CT_32[3]~9COUT1_22 ; cout1            ;
+; |musicplayer|Equal7~0     ; |musicplayer|Equal7~0           ; combout          ;
+; |musicplayer|CLK_500      ; |musicplayer|CLK_500            ; regout           ;
+; |musicplayer|CT_19[4]     ; |musicplayer|CT_19[4]           ; regout           ;
+; |musicplayer|CT_19[1]     ; |musicplayer|CT_19[1]           ; regout           ;
+; |musicplayer|CT_19[0]     ; |musicplayer|CT_19[0]           ; regout           ;
+; |musicplayer|CT_19[3]     ; |musicplayer|CT_19[3]           ; regout           ;
+; |musicplayer|CT_19[2]     ; |musicplayer|Equal8~0           ; combout          ;
+; |musicplayer|CT_19[2]     ; |musicplayer|CT_19[2]           ; regout           ;
+; |musicplayer|CT_239[1]    ; |musicplayer|CT_239[1]          ; regout           ;
+; |musicplayer|CT_239[2]    ; |musicplayer|CT_239[2]          ; regout           ;
+; |musicplayer|CT_239[3]    ; |musicplayer|CT_239[3]          ; regout           ;
+; |musicplayer|CT_239[0]    ; |musicplayer|CT_239[0]          ; regout           ;
+; |musicplayer|Equal2~0     ; |musicplayer|Equal2~0           ; combout          ;
+; |musicplayer|CT_239[5]    ; |musicplayer|CT_239[5]          ; regout           ;
+; |musicplayer|CT_239[6]    ; |musicplayer|CT_239[6]          ; regout           ;
+; |musicplayer|CT_239[7]    ; |musicplayer|CT_239[7]          ; regout           ;
+; |musicplayer|CT_239[4]    ; |musicplayer|Equal2~1           ; combout          ;
+; |musicplayer|CT_239[4]    ; |musicplayer|CT_239[4]          ; regout           ;
+; |musicplayer|CT_213[2]    ; |musicplayer|CT_213[2]          ; regout           ;
+; |musicplayer|CT_213[0]    ; |musicplayer|CT_213[0]          ; regout           ;
+; |musicplayer|CT_213[3]    ; |musicplayer|CT_213[3]          ; regout           ;
+; |musicplayer|CT_213[1]    ; |musicplayer|Equal3~0           ; combout          ;
+; |musicplayer|CT_213[1]    ; |musicplayer|CT_213[1]          ; regout           ;
+; |musicplayer|CT_213[4]    ; |musicplayer|CT_213[4]          ; regout           ;
+; |musicplayer|CT_213[6]    ; |musicplayer|CT_213[6]          ; regout           ;
+; |musicplayer|CT_213[7]    ; |musicplayer|CT_213[7]          ; regout           ;
+; |musicplayer|CT_213[5]    ; |musicplayer|Equal3~1           ; combout          ;
+; |musicplayer|CT_213[5]    ; |musicplayer|CT_213[5]          ; regout           ;
+; |musicplayer|Add6~0       ; |musicplayer|Add6~0             ; combout          ;
+; |musicplayer|Add6~0       ; |musicplayer|Add6~2             ; cout0            ;
+; |musicplayer|Add6~0       ; |musicplayer|Add6~2COUT1_48     ; cout1            ;
+; |musicplayer|Add6~5       ; |musicplayer|Add6~5             ; combout          ;
+; |musicplayer|Add6~5       ; |musicplayer|Add6~7             ; cout0            ;
+; |musicplayer|Add6~5       ; |musicplayer|Add6~7COUT1_52     ; cout1            ;
+; |musicplayer|Add6~10      ; |musicplayer|Add6~10            ; combout          ;
+; |musicplayer|Add6~10      ; |musicplayer|Add6~12            ; cout0            ;
+; |musicplayer|Add6~10      ; |musicplayer|Add6~12COUT1_54    ; cout1            ;
+; |musicplayer|Add6~15      ; |musicplayer|Add6~15            ; combout          ;
+; |musicplayer|Add6~15      ; |musicplayer|Add6~17            ; cout0            ;
+; |musicplayer|Add6~15      ; |musicplayer|Add6~17COUT1_50    ; cout1            ;
+; |musicplayer|Add6~20      ; |musicplayer|Add6~20            ; combout          ;
+; |musicplayer|Add6~25      ; |musicplayer|Add6~25            ; combout          ;
+; |musicplayer|Add6~25      ; |musicplayer|Add6~27            ; cout             ;
+; |musicplayer|Add6~30      ; |musicplayer|Add6~30            ; combout          ;
+; |musicplayer|Add6~30      ; |musicplayer|Add6~32COUT1_56    ; cout1            ;
+; |musicplayer|Add6~35      ; |musicplayer|Add6~35            ; combout          ;
+; |musicplayer|Add6~35      ; |musicplayer|Add6~37COUT1_58    ; cout1            ;
+; |musicplayer|COUNTER2[1]  ; |musicplayer|COUNTER2[1]        ; regout           ;
+; |musicplayer|COUNTER2[2]  ; |musicplayer|COUNTER2[2]        ; regout           ;
+; |musicplayer|COUNTER2[3]  ; |musicplayer|COUNTER2[3]        ; regout           ;
+; |musicplayer|COUNTER2[0]  ; |musicplayer|Equal0~0           ; combout          ;
+; |musicplayer|COUNTER2[0]  ; |musicplayer|COUNTER2[0]        ; regout           ;
+; |musicplayer|COUNTER2[4]  ; |musicplayer|COUNTER2[4]        ; regout           ;
+; |musicplayer|COUNTER2[5]  ; |musicplayer|COUNTER2[5]        ; regout           ;
+; |musicplayer|COUNTER3[3]  ; |musicplayer|COUNTER3[3]        ; regout           ;
+; |musicplayer|COUNTER3[1]  ; |musicplayer|COUNTER3[1]        ; regout           ;
+; |musicplayer|COUNTER3[4]  ; |musicplayer|COUNTER3[4]        ; regout           ;
+; |musicplayer|COUNTER3[2]  ; |musicplayer|Equal9~0           ; combout          ;
+; |musicplayer|COUNTER3[2]  ; |musicplayer|COUNTER3[2]        ; regout           ;
+; |musicplayer|COUNTER3[5]  ; |musicplayer|COUNTER3[5]        ; regout           ;
+; |musicplayer|COUNTER3[6]  ; |musicplayer|COUNTER3[6]        ; regout           ;
+; |musicplayer|COUNTER3[8]  ; |musicplayer|COUNTER3[8]        ; regout           ;
+; |musicplayer|COUNTER3[7]  ; |musicplayer|Equal9~1           ; combout          ;
+; |musicplayer|COUNTER3[7]  ; |musicplayer|COUNTER3[7]        ; regout           ;
+; |musicplayer|COUNTER3[11] ; |musicplayer|COUNTER3[11]       ; regout           ;
+; |musicplayer|COUNTER3[12] ; |musicplayer|COUNTER3[12]       ; regout           ;
+; |musicplayer|COUNTER3[10] ; |musicplayer|COUNTER3[10]       ; regout           ;
+; |musicplayer|COUNTER3[9]  ; |musicplayer|Equal9~2           ; combout          ;
+; |musicplayer|COUNTER3[9]  ; |musicplayer|COUNTER3[9]        ; regout           ;
+; |musicplayer|Equal9~3     ; |musicplayer|Equal9~3           ; combout          ;
+; |musicplayer|Add5~0       ; |musicplayer|Add5~0             ; combout          ;
+; |musicplayer|Add5~0       ; |musicplayer|Add5~2             ; cout0            ;
+; |musicplayer|Add5~0       ; |musicplayer|Add5~2COUT1_50     ; cout1            ;
+; |musicplayer|Add5~5       ; |musicplayer|Add5~5             ; combout          ;
+; |musicplayer|Add5~5       ; |musicplayer|Add5~7             ; cout0            ;
+; |musicplayer|Add5~5       ; |musicplayer|Add5~7COUT1_52     ; cout1            ;
+; |musicplayer|Add5~10      ; |musicplayer|Add5~10            ; combout          ;
+; |musicplayer|Add5~10      ; |musicplayer|Add5~12            ; cout0            ;
+; |musicplayer|Add5~10      ; |musicplayer|Add5~12COUT1_54    ; cout1            ;
+; |musicplayer|Add5~15      ; |musicplayer|Add5~15            ; combout          ;
+; |musicplayer|Add5~15      ; |musicplayer|Add5~17            ; cout0            ;
+; |musicplayer|Add5~15      ; |musicplayer|Add5~17COUT1_48    ; cout1            ;
+; |musicplayer|Add5~20      ; |musicplayer|Add5~20            ; combout          ;
+; |musicplayer|Add5~20      ; |musicplayer|Add5~22            ; cout             ;
+; |musicplayer|Add5~25      ; |musicplayer|Add5~25            ; combout          ;
+; |musicplayer|Add5~30      ; |musicplayer|Add5~30            ; combout          ;
+; |musicplayer|Add5~30      ; |musicplayer|Add5~32COUT1_56    ; cout1            ;
+; |musicplayer|Add5~35      ; |musicplayer|Add5~35            ; combout          ;
+; |musicplayer|Add5~35      ; |musicplayer|Add5~37COUT1_58    ; cout1            ;
+; |musicplayer|Add4~0       ; |musicplayer|Add4~0             ; combout          ;
+; |musicplayer|Add4~0       ; |musicplayer|Add4~2             ; cout0            ;
+; |musicplayer|Add4~0       ; |musicplayer|Add4~2COUT1_50     ; cout1            ;
+; |musicplayer|Add4~5       ; |musicplayer|Add4~5             ; combout          ;
+; |musicplayer|Add4~5       ; |musicplayer|Add4~7             ; cout0            ;
+; |musicplayer|Add4~5       ; |musicplayer|Add4~7COUT1_48     ; cout1            ;
+; |musicplayer|Add4~10      ; |musicplayer|Add4~10            ; combout          ;
+; |musicplayer|Add4~10      ; |musicplayer|Add4~12            ; cout0            ;
+; |musicplayer|Add4~10      ; |musicplayer|Add4~12COUT1_52    ; cout1            ;
+; |musicplayer|Add4~15      ; |musicplayer|Add4~15            ; combout          ;
+; |musicplayer|Add4~15      ; |musicplayer|Add4~17            ; cout0            ;
+; |musicplayer|Add4~15      ; |musicplayer|Add4~17COUT1_54    ; cout1            ;
+; |musicplayer|Add4~20      ; |musicplayer|Add4~20            ; combout          ;
+; |musicplayer|Add4~20      ; |musicplayer|Add4~22            ; cout             ;
+; |musicplayer|Add4~25      ; |musicplayer|Add4~25            ; combout          ;
+; |musicplayer|Add4~25      ; |musicplayer|Add4~27COUT1_56    ; cout1            ;
+; |musicplayer|Add4~30      ; |musicplayer|Add4~30            ; combout          ;
+; |musicplayer|Add4~35      ; |musicplayer|Add4~35            ; combout          ;
+; |musicplayer|Add4~35      ; |musicplayer|Add4~37COUT1_58    ; cout1            ;
+; |musicplayer|COUNTER1[0]  ; |musicplayer|COUNTER1[0]        ; regout           ;
+; |musicplayer|COUNTER1[1]  ; |musicplayer|COUNTER1[1]        ; regout           ;
+; |musicplayer|COUNTER1[2]  ; |musicplayer|COUNTER1[2]        ; regout           ;
+; |musicplayer|Add8~0       ; |musicplayer|Add8~0             ; combout          ;
+; |musicplayer|Add8~5       ; |musicplayer|Add8~5             ; combout          ;
+; |musicplayer|Add8~5       ; |musicplayer|Add8~7             ; cout0            ;
+; |musicplayer|Add8~5       ; |musicplayer|Add8~7COUT1_33     ; cout1            ;
+; |musicplayer|Add8~10      ; |musicplayer|Add8~10            ; combout          ;
+; |musicplayer|Add8~10      ; |musicplayer|Add8~12            ; cout0            ;
+; |musicplayer|Add8~10      ; |musicplayer|Add8~12COUT1_31    ; cout1            ;
+; |musicplayer|Add8~15      ; |musicplayer|Add8~15            ; combout          ;
+; |musicplayer|Add8~15      ; |musicplayer|Add8~17            ; cout0            ;
+; |musicplayer|Add8~15      ; |musicplayer|Add8~17COUT1_35    ; cout1            ;
+; |musicplayer|Add8~20      ; |musicplayer|Add8~20            ; combout          ;
+; |musicplayer|Add8~20      ; |musicplayer|Add8~22            ; cout0            ;
+; |musicplayer|Add8~20      ; |musicplayer|Add8~22COUT1_37    ; cout1            ;
+; |musicplayer|Add2~0       ; |musicplayer|Add2~0             ; combout          ;
+; |musicplayer|Add2~0       ; |musicplayer|Add2~2             ; cout0            ;
+; |musicplayer|Add2~0       ; |musicplayer|Add2~2COUT1_50     ; cout1            ;
+; |musicplayer|Add2~5       ; |musicplayer|Add2~5             ; combout          ;
+; |musicplayer|Add2~5       ; |musicplayer|Add2~7             ; cout0            ;
+; |musicplayer|Add2~5       ; |musicplayer|Add2~7COUT1_52     ; cout1            ;
+; |musicplayer|Add2~10      ; |musicplayer|Add2~10            ; combout          ;
+; |musicplayer|Add2~10      ; |musicplayer|Add2~12            ; cout0            ;
+; |musicplayer|Add2~10      ; |musicplayer|Add2~12COUT1_54    ; cout1            ;
+; |musicplayer|Add2~15      ; |musicplayer|Add2~15            ; combout          ;
+; |musicplayer|Add2~15      ; |musicplayer|Add2~17            ; cout0            ;
+; |musicplayer|Add2~15      ; |musicplayer|Add2~17COUT1_48    ; cout1            ;
+; |musicplayer|Add2~20      ; |musicplayer|Add2~20            ; combout          ;
+; |musicplayer|Add2~20      ; |musicplayer|Add2~22COUT1_56    ; cout1            ;
+; |musicplayer|Add2~25      ; |musicplayer|Add2~25            ; combout          ;
+; |musicplayer|Add2~25      ; |musicplayer|Add2~27COUT1_58    ; cout1            ;
+; |musicplayer|Add2~30      ; |musicplayer|Add2~30            ; combout          ;
+; |musicplayer|Add2~35      ; |musicplayer|Add2~35            ; combout          ;
+; |musicplayer|Add2~35      ; |musicplayer|Add2~37            ; cout             ;
+; |musicplayer|Add3~0       ; |musicplayer|Add3~0             ; combout          ;
+; |musicplayer|Add3~0       ; |musicplayer|Add3~2             ; cout0            ;
+; |musicplayer|Add3~0       ; |musicplayer|Add3~2COUT1_52     ; cout1            ;
+; |musicplayer|Add3~5       ; |musicplayer|Add3~5             ; combout          ;
+; |musicplayer|Add3~5       ; |musicplayer|Add3~7             ; cout0            ;
+; |musicplayer|Add3~5       ; |musicplayer|Add3~7COUT1_48     ; cout1            ;
+; |musicplayer|Add3~10      ; |musicplayer|Add3~10            ; combout          ;
+; |musicplayer|Add3~10      ; |musicplayer|Add3~12            ; cout0            ;
+; |musicplayer|Add3~10      ; |musicplayer|Add3~12COUT1_50    ; cout1            ;
+; |musicplayer|Add3~15      ; |musicplayer|Add3~15            ; combout          ;
+; |musicplayer|Add3~15      ; |musicplayer|Add3~17            ; cout0            ;
+; |musicplayer|Add3~15      ; |musicplayer|Add3~17COUT1_54    ; cout1            ;
+; |musicplayer|Add3~20      ; |musicplayer|Add3~20            ; combout          ;
+; |musicplayer|Add3~20      ; |musicplayer|Add3~22            ; cout             ;
+; |musicplayer|Add3~25      ; |musicplayer|Add3~25            ; combout          ;
+; |musicplayer|Add3~25      ; |musicplayer|Add3~27COUT1_58    ; cout1            ;
+; |musicplayer|Add3~30      ; |musicplayer|Add3~30            ; combout          ;
+; |musicplayer|Add3~35      ; |musicplayer|Add3~35            ; combout          ;
+; |musicplayer|Add3~35      ; |musicplayer|Add3~37COUT1_56    ; cout1            ;
+; |musicplayer|Add0~0       ; |musicplayer|Add0~0             ; combout          ;
+; |musicplayer|Add0~0       ; |musicplayer|Add0~2             ; cout0            ;
+; |musicplayer|Add0~0       ; |musicplayer|Add0~2COUT1_36     ; cout1            ;
+; |musicplayer|Add0~5       ; |musicplayer|Add0~5             ; combout          ;
+; |musicplayer|Add0~5       ; |musicplayer|Add0~7             ; cout0            ;
+; |musicplayer|Add0~5       ; |musicplayer|Add0~7COUT1_38     ; cout1            ;
+; |musicplayer|Add0~10      ; |musicplayer|Add0~10            ; combout          ;
+; |musicplayer|Add0~10      ; |musicplayer|Add0~12            ; cout0            ;
+; |musicplayer|Add0~10      ; |musicplayer|Add0~12COUT1_40    ; cout1            ;
+; |musicplayer|Add0~15      ; |musicplayer|Add0~15            ; combout          ;
+; |musicplayer|Add0~15      ; |musicplayer|Add0~17            ; cout             ;
+; |musicplayer|Add0~20      ; |musicplayer|Add0~20            ; combout          ;
+; |musicplayer|Add0~20      ; |musicplayer|Add0~22            ; cout0            ;
+; |musicplayer|Add0~25      ; |musicplayer|Add0~25            ; combout          ;
+; |musicplayer|Add9~0       ; |musicplayer|Add9~0             ; combout          ;
+; |musicplayer|Add9~0       ; |musicplayer|Add9~2COUT1_72     ; cout1            ;
+; |musicplayer|Add9~5       ; |musicplayer|Add9~5             ; combout          ;
+; |musicplayer|Add9~5       ; |musicplayer|Add9~7             ; cout             ;
+; |musicplayer|Add9~10      ; |musicplayer|Add9~10            ; combout          ;
+; |musicplayer|Add9~10      ; |musicplayer|Add9~12COUT1_70    ; cout1            ;
+; |musicplayer|Add9~15      ; |musicplayer|Add9~15            ; combout          ;
+; |musicplayer|Add9~15      ; |musicplayer|Add9~17COUT1_74    ; cout1            ;
+; |musicplayer|Add9~20      ; |musicplayer|Add9~20            ; combout          ;
+; |musicplayer|Add9~20      ; |musicplayer|Add9~22COUT1_76    ; cout1            ;
+; |musicplayer|Add9~25      ; |musicplayer|Add9~25            ; combout          ;
+; |musicplayer|Add9~25      ; |musicplayer|Add9~27            ; cout             ;
+; |musicplayer|Add9~30      ; |musicplayer|Add9~30            ; combout          ;
+; |musicplayer|Add9~30      ; |musicplayer|Add9~32            ; cout0            ;
+; |musicplayer|Add9~35      ; |musicplayer|Add9~35            ; combout          ;
+; |musicplayer|Add9~35      ; |musicplayer|Add9~37            ; cout0            ;
+; |musicplayer|Add9~40      ; |musicplayer|Add9~40            ; combout          ;
+; |musicplayer|Add9~40      ; |musicplayer|Add9~42            ; cout             ;
+; |musicplayer|Add9~45      ; |musicplayer|Add9~45            ; combout          ;
+; |musicplayer|Add9~50      ; |musicplayer|Add9~50            ; combout          ;
+; |musicplayer|Add9~50      ; |musicplayer|Add9~52            ; cout0            ;
+; |musicplayer|Add9~55      ; |musicplayer|Add9~55            ; combout          ;
+; |musicplayer|Add9~55      ; |musicplayer|Add9~57            ; cout0            ;
+; |musicplayer|CLK          ; |musicplayer|CLK~corein         ; combout          ;
++---------------------------+---------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                       ;
++----------------------------+--------------------------------+------------------+
+; Node Name                  ; Output Port Name               ; Output Port Type ;
++----------------------------+--------------------------------+------------------+
+; |musicplayer|NOTE[1]       ; |musicplayer|NOTE[1]           ; regout           ;
+; |musicplayer|Mux12~3       ; |musicplayer|Mux12~3           ; combout          ;
+; |musicplayer|NOTE[2]       ; |musicplayer|NOTE[2]           ; regout           ;
+; |musicplayer|Mux12~4       ; |musicplayer|Mux12~4           ; combout          ;
+; |musicplayer|musicstate[0] ; |musicplayer|musicstate[0]     ; regout           ;
+; |musicplayer|cnt4[2]       ; |musicplayer|cnt4[2]           ; regout           ;
+; |musicplayer|NOTE~0        ; |musicplayer|NOTE~0            ; combout          ;
+; |musicplayer|cnt3[3]       ; |musicplayer|cnt3[3]~3         ; cout0            ;
+; |musicplayer|cnt3[3]       ; |musicplayer|cnt3[3]~3COUT1_18 ; cout1            ;
+; |musicplayer|cnt3[2]       ; |musicplayer|cnt3[2]~5         ; cout0            ;
+; |musicplayer|cnt3[2]       ; |musicplayer|cnt3[2]~5COUT1_16 ; cout1            ;
+; |musicplayer|cnt3[1]       ; |musicplayer|cnt3[1]~7         ; cout0            ;
+; |musicplayer|cnt3[1]       ; |musicplayer|cnt3[1]~7COUT1_14 ; cout1            ;
+; |musicplayer|Equal10~0     ; |musicplayer|Equal10~0         ; combout          ;
+; |musicplayer|cnt1[1]       ; |musicplayer|cnt1[1]           ; regout           ;
+; |musicplayer|cnt1[2]       ; |musicplayer|cnt1[2]           ; regout           ;
+; |musicplayer|NOTE~3        ; |musicplayer|NOTE~3            ; combout          ;
+; |musicplayer|cnt2[1]       ; |musicplayer|cnt2[1]           ; regout           ;
+; |musicplayer|NOTE~4        ; |musicplayer|NOTE~4            ; combout          ;
+; |musicplayer|NOTE[1]~7     ; |musicplayer|NOTE[1]~7         ; combout          ;
+; |musicplayer|Mux2~0        ; |musicplayer|Mux2~0            ; combout          ;
+; |musicplayer|Equal10~3     ; |musicplayer|Equal10~3         ; combout          ;
+; |musicplayer|Mux5~0        ; |musicplayer|Mux5~0            ; combout          ;
+; |musicplayer|Mux11~0       ; |musicplayer|Mux11~0           ; combout          ;
+; |musicplayer|NOTE~11       ; |musicplayer|NOTE~11           ; combout          ;
+; |musicplayer|NOTE~12       ; |musicplayer|NOTE~12           ; combout          ;
+; |musicplayer|NOTE~13       ; |musicplayer|NOTE~13           ; combout          ;
+; |musicplayer|NOTE~14       ; |musicplayer|NOTE~14           ; combout          ;
+; |musicplayer|NOTE~15       ; |musicplayer|NOTE~15           ; combout          ;
+; |musicplayer|NOTE~16       ; |musicplayer|NOTE~16           ; combout          ;
+; |musicplayer|Add6~30       ; |musicplayer|Add6~32           ; cout0            ;
+; |musicplayer|Add6~35       ; |musicplayer|Add6~37           ; cout0            ;
+; |musicplayer|cnt4[2]~3     ; |musicplayer|cnt4[2]~3         ; combout          ;
+; |musicplayer|cnt1[1]~0     ; |musicplayer|cnt1[1]~0         ; combout          ;
+; |musicplayer|cnt2[1]~0     ; |musicplayer|cnt2[1]~0         ; combout          ;
+; |musicplayer|Add5~30       ; |musicplayer|Add5~32           ; cout0            ;
+; |musicplayer|Add5~35       ; |musicplayer|Add5~37           ; cout0            ;
+; |musicplayer|Add4~25       ; |musicplayer|Add4~27           ; cout0            ;
+; |musicplayer|Add4~35       ; |musicplayer|Add4~37           ; cout0            ;
+; |musicplayer|Add2~20       ; |musicplayer|Add2~22           ; cout0            ;
+; |musicplayer|Add2~25       ; |musicplayer|Add2~27           ; cout0            ;
+; |musicplayer|Add3~25       ; |musicplayer|Add3~27           ; cout0            ;
+; |musicplayer|Add3~35       ; |musicplayer|Add3~37           ; cout0            ;
+; |musicplayer|Add0~20       ; |musicplayer|Add0~22COUT1_42   ; cout1            ;
+; |musicplayer|Add9~0        ; |musicplayer|Add9~2            ; cout0            ;
+; |musicplayer|Add9~10       ; |musicplayer|Add9~12           ; cout0            ;
+; |musicplayer|Add9~15       ; |musicplayer|Add9~17           ; cout0            ;
+; |musicplayer|Add9~20       ; |musicplayer|Add9~22           ; cout0            ;
+; |musicplayer|Add9~30       ; |musicplayer|Add9~32COUT1_78   ; cout1            ;
+; |musicplayer|Add9~35       ; |musicplayer|Add9~37COUT1_80   ; cout1            ;
+; |musicplayer|Add9~50       ; |musicplayer|Add9~52COUT1_82   ; cout1            ;
+; |musicplayer|Add9~55       ; |musicplayer|Add9~57COUT1_84   ; cout1            ;
+; |musicplayer|check         ; |musicplayer|check~corein      ; combout          ;
+; |musicplayer|stay          ; |musicplayer|stay~corein       ; combout          ;
+; |musicplayer|pass          ; |musicplayer|pass~corein       ; combout          ;
+; |musicplayer|over          ; |musicplayer|over~corein       ; combout          ;
+; |musicplayer|beep          ; |musicplayer|beep              ; padio            ;
++----------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                       ;
++----------------------------+--------------------------------+------------------+
+; Node Name                  ; Output Port Name               ; Output Port Type ;
++----------------------------+--------------------------------+------------------+
+; |musicplayer|NOTE[1]       ; |musicplayer|NOTE[1]           ; regout           ;
+; |musicplayer|Mux12~3       ; |musicplayer|Mux12~3           ; combout          ;
+; |musicplayer|NOTE[2]       ; |musicplayer|NOTE[2]           ; regout           ;
+; |musicplayer|Mux12~4       ; |musicplayer|Mux12~4           ; combout          ;
+; |musicplayer|musicstate[0] ; |musicplayer|musicstate[0]     ; regout           ;
+; |musicplayer|cnt4[2]       ; |musicplayer|cnt4[2]           ; regout           ;
+; |musicplayer|NOTE~0        ; |musicplayer|NOTE~0            ; combout          ;
+; |musicplayer|musicstate[1] ; |musicplayer|musicstate[1]     ; regout           ;
+; |musicplayer|musicstate[2] ; |musicplayer|musicstate[2]     ; regout           ;
+; |musicplayer|cnt3[3]       ; |musicplayer|cnt3[3]~3         ; cout0            ;
+; |musicplayer|cnt3[3]       ; |musicplayer|cnt3[3]~3COUT1_18 ; cout1            ;
+; |musicplayer|cnt3[2]       ; |musicplayer|cnt3[2]~5         ; cout0            ;
+; |musicplayer|cnt3[2]       ; |musicplayer|cnt3[2]~5COUT1_16 ; cout1            ;
+; |musicplayer|cnt3[1]       ; |musicplayer|cnt3[1]~7         ; cout0            ;
+; |musicplayer|cnt3[1]       ; |musicplayer|cnt3[1]~7COUT1_14 ; cout1            ;
+; |musicplayer|NOTE~1        ; |musicplayer|NOTE~1            ; combout          ;
+; |musicplayer|NOTE~2        ; |musicplayer|NOTE~2            ; combout          ;
+; |musicplayer|Equal10~0     ; |musicplayer|Equal10~0         ; combout          ;
+; |musicplayer|cnt1[1]       ; |musicplayer|cnt1[1]           ; regout           ;
+; |musicplayer|cnt1[2]       ; |musicplayer|cnt1[2]           ; regout           ;
+; |musicplayer|NOTE~3        ; |musicplayer|NOTE~3            ; combout          ;
+; |musicplayer|cnt2[1]       ; |musicplayer|cnt2[1]           ; regout           ;
+; |musicplayer|NOTE~4        ; |musicplayer|NOTE~4            ; combout          ;
+; |musicplayer|CLK_2         ; |musicplayer|CLK_2             ; regout           ;
+; |musicplayer|NOTE[1]~7     ; |musicplayer|NOTE[1]~7         ; combout          ;
+; |musicplayer|Equal10~2     ; |musicplayer|Equal10~2         ; combout          ;
+; |musicplayer|Mux2~0        ; |musicplayer|Mux2~0            ; combout          ;
+; |musicplayer|Mux8~0        ; |musicplayer|Mux8~0            ; combout          ;
+; |musicplayer|Equal10~3     ; |musicplayer|Equal10~3         ; combout          ;
+; |musicplayer|Mux5~0        ; |musicplayer|Mux5~0            ; combout          ;
+; |musicplayer|Mux11~0       ; |musicplayer|Mux11~0           ; combout          ;
+; |musicplayer|NOTE~11       ; |musicplayer|NOTE~11           ; combout          ;
+; |musicplayer|NOTE~12       ; |musicplayer|NOTE~12           ; combout          ;
+; |musicplayer|NOTE~13       ; |musicplayer|NOTE~13           ; combout          ;
+; |musicplayer|NOTE~14       ; |musicplayer|NOTE~14           ; combout          ;
+; |musicplayer|Equal10~4     ; |musicplayer|Equal10~4         ; combout          ;
+; |musicplayer|NOTE~15       ; |musicplayer|NOTE~15           ; combout          ;
+; |musicplayer|NOTE~16       ; |musicplayer|NOTE~16           ; combout          ;
+; |musicplayer|Add6~30       ; |musicplayer|Add6~32           ; cout0            ;
+; |musicplayer|Add6~35       ; |musicplayer|Add6~37           ; cout0            ;
+; |musicplayer|cnt4[2]~3     ; |musicplayer|cnt4[2]~3         ; combout          ;
+; |musicplayer|cnt1[1]~0     ; |musicplayer|cnt1[1]~0         ; combout          ;
+; |musicplayer|cnt2[1]~0     ; |musicplayer|cnt2[1]~0         ; combout          ;
+; |musicplayer|Add5~30       ; |musicplayer|Add5~32           ; cout0            ;
+; |musicplayer|Add5~35       ; |musicplayer|Add5~37           ; cout0            ;
+; |musicplayer|Add4~25       ; |musicplayer|Add4~27           ; cout0            ;
+; |musicplayer|Add4~35       ; |musicplayer|Add4~37           ; cout0            ;
+; |musicplayer|Add2~20       ; |musicplayer|Add2~22           ; cout0            ;
+; |musicplayer|Add2~25       ; |musicplayer|Add2~27           ; cout0            ;
+; |musicplayer|Add3~25       ; |musicplayer|Add3~27           ; cout0            ;
+; |musicplayer|Add3~35       ; |musicplayer|Add3~37           ; cout0            ;
+; |musicplayer|Add0~20       ; |musicplayer|Add0~22COUT1_42   ; cout1            ;
+; |musicplayer|Add9~0        ; |musicplayer|Add9~2            ; cout0            ;
+; |musicplayer|Add9~10       ; |musicplayer|Add9~12           ; cout0            ;
+; |musicplayer|Add9~15       ; |musicplayer|Add9~17           ; cout0            ;
+; |musicplayer|Add9~20       ; |musicplayer|Add9~22           ; cout0            ;
+; |musicplayer|Add9~30       ; |musicplayer|Add9~32COUT1_78   ; cout1            ;
+; |musicplayer|Add9~35       ; |musicplayer|Add9~37COUT1_80   ; cout1            ;
+; |musicplayer|Add9~50       ; |musicplayer|Add9~52COUT1_82   ; cout1            ;
+; |musicplayer|Add9~55       ; |musicplayer|Add9~57COUT1_84   ; cout1            ;
+; |musicplayer|check         ; |musicplayer|check~corein      ; combout          ;
+; |musicplayer|stay          ; |musicplayer|stay~corein       ; combout          ;
+; |musicplayer|pass          ; |musicplayer|pass~corein       ; combout          ;
+; |musicplayer|over          ; |musicplayer|over~corein       ; combout          ;
+; |musicplayer|switch        ; |musicplayer|switch~corein     ; combout          ;
+; |musicplayer|beep          ; |musicplayer|beep              ; padio            ;
++----------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Nov 08 19:24:03 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off musicplayer -c musicplayer
+Info: Using vector source file "C:/Users/1/Desktop/shoot. v9.0/music/musicplayer.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      78.91 %
+Info: Number of transitions in simulation is 17117392
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 172 megabytes
+    Info: Processing ended: Thu Nov 08 19:24:40 2018
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:38
+
+

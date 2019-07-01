@@ -1,0 +1,172 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity musicplayer is
+port
+(
+    switch,CLK,check,stay,over,pass:in std_logic;
+     beep:out std_logic
+);
+end musicplayer;
+
+architecture MU_ARCH of musicplayer is
+signal COUNTER1:integer range 0 to 4:=0;
+signal COUNTER2:integer range 0 tO 49:=0;
+signal COUNTER3:integer range 0 tO 6249:=0;
+
+signal CT_239:integer range 0 to 238;
+signal CT_213:integer range 0 to 212;
+signal CT_179:integer range 0 to 178;
+signal CT_159:integer range 0 to 158;
+signal CT_142:integer range 0 to 141;
+signal CT_32 :integer range 0 to 31 ;
+signal CT_19 :integer range 0 to 18 ;
+
+signal CLK_M1,CLK_M2,CLK_M3,CLK_M4,CLK_M5,CLK_M6,CLK_L5:std_logic;
+signal CLK_2,CLK_50,CLK_500:std_logic;
+signal CLK_0:std_logic;
+
+signal NOTE:integer range 0 to 7;
+signal musicstate:std_logic_vector(0 to 2);
+type ry is array (integer range <>) of integer range 0 to 6;
+constant song1:ry(0 to 14):=(1,1,5,5,6,5,0,4,4,3,3,2,2,1,0) ;
+constant song2:ry(0 to 14):=(3,3,4,5,0,5,4,3,2,0,1,1,2,3,0) ;
+constant song3:ry(0 to 17):=(1,2,3,4,5,5,5,4,3,4,4,4,3,2,1,3,5,0); 
+constant song4:ry(0 to 13):=(5,5,6,5,1,6,0,5,5,6,5,2,1,0) ;
+signal cnt1:integer range 0 to 14:=0;
+signal cnt2:integer range 0 to 14:=0;
+signal cnt3:integer range 0 to 17:=0;
+signal cnt4:integer range 0 to 13:=0;
+
+begin
+	
+process(switch,check,stay,over,pass,CLK)
+begin
+     if(switch='0')then musicstate<="000";CLK_0<='0';
+     elsif CLK'event and CLK='1' then
+          if (check='1') then musicstate<="001";
+          elsif (check='0' and stay='1') then musicstate<="000";
+          elsif (check='0' and over='0') then musicstate<="010";
+          elsif (over ='1' and pass='1' ) then musicstate<="011";
+          elsif (over ='1' and pass='0' ) then musicstate<="100";
+          end if;
+     end if;
+end process;
+	
+	P1:process(CLK)           --CLK_50:500kHz
+	begin
+		if CLK'event and CLK='1' then
+			if COUNTER2=49 then
+				COUNTER2<=0;
+				CLK_50<=not CLK_50;
+			else 
+				COUNTER2<=COUNTER2+1;
+			end if;
+		end if;
+	end process P1;
+	
+	P2:process(CLK_50)        --CLK_500:50kHz
+	begin
+		if CLK_50'event and CLK_50='1' then
+			if COUNTER1=4 then
+				COUNTER1<=0;
+				CLK_500<=not CLK_500;
+			else 
+				COUNTER1<=COUNTER1+1;
+			end if;
+			
+			if CT_239=238 then
+				CT_239<=0;
+				CLK_M1<=not CLK_M1;
+			else 
+				CT_239<=CT_239+1;
+			end if;
+			
+			if CT_213=212 then
+				CT_213<=0;
+				CLK_M2<=not CLK_M2;
+			else 
+				CT_213<=CT_213+1;
+			end if;
+			
+			if CT_179=178 then
+				CT_179<=0;
+				CLK_M4<=not CLK_M4;
+			else 
+				CT_179<=CT_179+1;
+			end if;
+			
+			if CT_159=158 then
+				CT_159<=0;
+				CLK_M5<=not CLK_M5;
+			else 
+				CT_159<=CT_159+1;
+			end if;
+			
+			if CT_142=141 then
+				CT_142<=0;
+				CLK_M6<=not CLK_M6;
+			else 
+				CT_142<=CT_142+1;
+			end if;
+		end if;
+	end process P2;
+	
+	P3:process(CLK_500)
+	begin
+		if CLK_500'event and CLK_500='1' then
+			if CT_32=31 then
+				CT_32<=0;
+				CLK_L5<=not CLK_L5;
+			else 
+				CT_32<=CT_32+1;
+			end if;
+			
+			if CT_19=18 then
+				CT_19<=0;
+				CLK_M3<=not CLK_M3;
+			else 
+				CT_19<=CT_19+1;
+			end if;
+			
+			if COUNTER3=6249 then
+				COUNTER3<=0;
+				CLK_2<=not CLK_2;
+			else 
+				COUNTER3<=COUNTER3+1;
+			end if;
+		end if;
+	end process P3;
+	
+	P4:process(CLK_2)      --    clk_2:4Hz
+	begin
+		if CLK_2'event and CLK_2='1' then
+			if musicstate="000" then
+				NOTE<=0;
+		    elsif(musicstate="001")then
+                NOTE<=song1(cnt1);cnt1<=cnt1+1;
+            elsif(musicstate="010")then
+			    NOTE<=song2(cnt2);cnt2<=cnt2+1;
+			elsif(musicstate="011")then
+			    NOTE<=song3(cnt3);cnt3<=cnt3+1;
+			elsif(musicstate="100")then
+			    NOTE<=song4(cnt4);cnt4<=cnt4+1;
+			end if;
+			
+		
+	
+		end if;
+		 case NOTE is
+			when 0 => BEEP<=CLK_0;
+			when 1 => BEEP<=CLK_M1;
+			when 2 => BEEP<=CLK_M2;
+			when 3 => BEEP<=CLK_M3;
+			when 4 => BEEP<=CLK_M4;
+			when 5 => BEEP<=CLK_M5;
+			when 6 => BEEP<=CLK_M6;
+			when 7 => BEEP<=CLK_L5;
+				when others => BEEP<=CLK_0;
+					end case;
+	end process P4;
+end MU_ARCH;

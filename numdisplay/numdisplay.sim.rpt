@@ -1,0 +1,279 @@
+Simulator report for numdisplay
+Sun Nov 11 10:07:20 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 92 nodes      ;
+; Simulation Coverage         ;      74.73 %  ;
+; Total Number of Transitions ; 167020        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      74.73 % ;
+; Total nodes checked                                 ; 92           ;
+; Total output ports checked                          ; 91           ;
+; Total output ports with complete 1/0-value coverage ; 68           ;
+; Total output ports with no 1/0-value coverage       ; 17           ;
+; Total output ports with no 1-value coverage         ; 19           ;
+; Total output ports with no 0-value coverage         ; 21           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                    ;
++----------------------------+--------------------------------+------------------+
+; Node Name                  ; Output Port Name               ; Output Port Type ;
++----------------------------+--------------------------------+------------------+
+; |numdisplay|seven[1]~reg0  ; |numdisplay|seven[1]~reg0      ; regout           ;
+; |numdisplay|seven[2]~reg0  ; |numdisplay|seven[2]~reg0      ; regout           ;
+; |numdisplay|seven[3]~reg0  ; |numdisplay|seven[3]~reg0      ; regout           ;
+; |numdisplay|seven[5]~reg0  ; |numdisplay|seven[5]~reg0      ; regout           ;
+; |numdisplay|seven[6]~reg0  ; |numdisplay|seven[6]~reg0      ; regout           ;
+; |numdisplay|cat[0]~reg0    ; |numdisplay|cat[0]~reg0        ; regout           ;
+; |numdisplay|cat[1]~reg0    ; |numdisplay|cat[1]~reg0        ; regout           ;
+; |numdisplay|cat[2]~reg0    ; |numdisplay|cat[2]~reg0        ; regout           ;
+; |numdisplay|cat[3]~reg0    ; |numdisplay|cat[3]~reg0        ; regout           ;
+; |numdisplay|cat[4]~reg0    ; |numdisplay|cat[4]~reg0        ; regout           ;
+; |numdisplay|cat[5]~reg0    ; |numdisplay|cat[5]~reg0        ; regout           ;
+; |numdisplay|cat[6]~reg0    ; |numdisplay|cat[6]~reg0        ; regout           ;
+; |numdisplay|cat[7]~reg0    ; |numdisplay|cat[7]~reg0        ; regout           ;
+; |numdisplay|\p1:state[1]   ; |numdisplay|Add0~0             ; combout          ;
+; |numdisplay|\p1:state[1]   ; |numdisplay|\p1:state[1]       ; regout           ;
+; |numdisplay|Mux4~0         ; |numdisplay|Mux4~0             ; combout          ;
+; |numdisplay|Mux4~1         ; |numdisplay|Mux4~1             ; combout          ;
+; |numdisplay|Mux6~0         ; |numdisplay|Mux6~0             ; combout          ;
+; |numdisplay|Mux6~1         ; |numdisplay|Mux6~1             ; combout          ;
+; |numdisplay|seven~4        ; |numdisplay|seven~4            ; combout          ;
+; |numdisplay|Mux7~0         ; |numdisplay|Mux7~0             ; combout          ;
+; |numdisplay|Mux7~1         ; |numdisplay|Mux7~1             ; combout          ;
+; |numdisplay|seven~5        ; |numdisplay|seven~5            ; combout          ;
+; |numdisplay|Mux5~0         ; |numdisplay|Mux5~0             ; combout          ;
+; |numdisplay|Mux5~1         ; |numdisplay|Mux5~1             ; combout          ;
+; |numdisplay|seven[0]~7     ; |numdisplay|seven[0]~7         ; combout          ;
+; |numdisplay|p1~0           ; |numdisplay|p1~0               ; combout          ;
+; |numdisplay|seven~8        ; |numdisplay|seven~8            ; combout          ;
+; |numdisplay|seven~9        ; |numdisplay|seven~9            ; combout          ;
+; |numdisplay|seven~10       ; |numdisplay|seven~10           ; combout          ;
+; |numdisplay|seven[4]~11    ; |numdisplay|seven[4]~11        ; combout          ;
+; |numdisplay|seven[4]~12    ; |numdisplay|seven[4]~12        ; combout          ;
+; |numdisplay|seven[4]~13    ; |numdisplay|seven[4]~13        ; combout          ;
+; |numdisplay|seven~15       ; |numdisplay|seven~15           ; combout          ;
+; |numdisplay|cat~0          ; |numdisplay|cat~0              ; combout          ;
+; |numdisplay|cat~1          ; |numdisplay|cat~1              ; combout          ;
+; |numdisplay|cat~2          ; |numdisplay|cat~2              ; combout          ;
+; |numdisplay|cat~4          ; |numdisplay|cat~4              ; combout          ;
+; |numdisplay|cat~7          ; |numdisplay|cat~7              ; combout          ;
+; |numdisplay|p1~1           ; |numdisplay|p1~1               ; combout          ;
+; |numdisplay|cat[6]~11      ; |numdisplay|cat[6]~11          ; combout          ;
+; |numdisplay|cat~12         ; |numdisplay|cat~12             ; combout          ;
+; |numdisplay|cat~13         ; |numdisplay|cat~13             ; combout          ;
+; |numdisplay|cat~15         ; |numdisplay|cat~15             ; combout          ;
+; |numdisplay|\p1:state[1]~0 ; |numdisplay|\p1:state[1]~0     ; combout          ;
+; |numdisplay|seven[0]~16    ; |numdisplay|seven[0]~16        ; combout          ;
+; |numdisplay|clk2           ; |numdisplay|clk2~corein        ; combout          ;
+; |numdisplay|check          ; |numdisplay|check~corein       ; combout          ;
+; |numdisplay|breath         ; |numdisplay|breath~corein      ; combout          ;
+; |numdisplay|over           ; |numdisplay|over~corein        ; combout          ;
+; |numdisplay|checkcat[0]    ; |numdisplay|checkcat[0]~corein ; combout          ;
+; |numdisplay|flashstate     ; |numdisplay|flashstate~corein  ; combout          ;
+; |numdisplay|pass           ; |numdisplay|pass~corein        ; combout          ;
+; |numdisplay|checkcat[1]    ; |numdisplay|checkcat[1]~corein ; combout          ;
+; |numdisplay|checkcat[2]    ; |numdisplay|checkcat[2]~corein ; combout          ;
+; |numdisplay|seven[1]       ; |numdisplay|seven[1]           ; padio            ;
+; |numdisplay|seven[2]       ; |numdisplay|seven[2]           ; padio            ;
+; |numdisplay|seven[3]       ; |numdisplay|seven[3]           ; padio            ;
+; |numdisplay|seven[5]       ; |numdisplay|seven[5]           ; padio            ;
+; |numdisplay|seven[6]       ; |numdisplay|seven[6]           ; padio            ;
+; |numdisplay|cat[0]         ; |numdisplay|cat[0]             ; padio            ;
+; |numdisplay|cat[1]         ; |numdisplay|cat[1]             ; padio            ;
+; |numdisplay|cat[2]         ; |numdisplay|cat[2]             ; padio            ;
+; |numdisplay|cat[3]         ; |numdisplay|cat[3]             ; padio            ;
+; |numdisplay|cat[4]         ; |numdisplay|cat[4]             ; padio            ;
+; |numdisplay|cat[5]         ; |numdisplay|cat[5]             ; padio            ;
+; |numdisplay|cat[6]         ; |numdisplay|cat[6]             ; padio            ;
+; |numdisplay|cat[7]         ; |numdisplay|cat[7]             ; padio            ;
++----------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                        ;
++---------------------------+----------------------------------+------------------+
+; Node Name                 ; Output Port Name                 ; Output Port Type ;
++---------------------------+----------------------------------+------------------+
+; |numdisplay|seven[0]~6    ; |numdisplay|seven[0]~6           ; combout          ;
+; |numdisplay|shownum[3][3] ; |numdisplay|shownum[3][3]~corein ; combout          ;
+; |numdisplay|shownum[1][3] ; |numdisplay|shownum[1][3]~corein ; combout          ;
+; |numdisplay|shownum[0][3] ; |numdisplay|shownum[0][3]~corein ; combout          ;
+; |numdisplay|shownum[2][3] ; |numdisplay|shownum[2][3]~corein ; combout          ;
+; |numdisplay|shownum[3][1] ; |numdisplay|shownum[3][1]~corein ; combout          ;
+; |numdisplay|shownum[1][1] ; |numdisplay|shownum[1][1]~corein ; combout          ;
+; |numdisplay|shownum[0][1] ; |numdisplay|shownum[0][1]~corein ; combout          ;
+; |numdisplay|shownum[2][1] ; |numdisplay|shownum[2][1]~corein ; combout          ;
+; |numdisplay|shownum[3][0] ; |numdisplay|shownum[3][0]~corein ; combout          ;
+; |numdisplay|shownum[1][0] ; |numdisplay|shownum[1][0]~corein ; combout          ;
+; |numdisplay|shownum[0][0] ; |numdisplay|shownum[0][0]~corein ; combout          ;
+; |numdisplay|shownum[2][0] ; |numdisplay|shownum[2][0]~corein ; combout          ;
+; |numdisplay|shownum[3][2] ; |numdisplay|shownum[3][2]~corein ; combout          ;
+; |numdisplay|shownum[1][2] ; |numdisplay|shownum[1][2]~corein ; combout          ;
+; |numdisplay|shownum[0][2] ; |numdisplay|shownum[0][2]~corein ; combout          ;
+; |numdisplay|shownum[2][2] ; |numdisplay|shownum[2][2]~corein ; combout          ;
+; |numdisplay|clear         ; |numdisplay|clear~corein         ; combout          ;
+; |numdisplay|stay          ; |numdisplay|stay~corein          ; combout          ;
++---------------------------+----------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                        ;
++---------------------------+----------------------------------+------------------+
+; Node Name                 ; Output Port Name                 ; Output Port Type ;
++---------------------------+----------------------------------+------------------+
+; |numdisplay|seven[0]~reg0 ; |numdisplay|seven[0]~reg0        ; regout           ;
+; |numdisplay|shownum[3][3] ; |numdisplay|shownum[3][3]~corein ; combout          ;
+; |numdisplay|shownum[1][3] ; |numdisplay|shownum[1][3]~corein ; combout          ;
+; |numdisplay|shownum[0][3] ; |numdisplay|shownum[0][3]~corein ; combout          ;
+; |numdisplay|shownum[2][3] ; |numdisplay|shownum[2][3]~corein ; combout          ;
+; |numdisplay|shownum[3][1] ; |numdisplay|shownum[3][1]~corein ; combout          ;
+; |numdisplay|shownum[1][1] ; |numdisplay|shownum[1][1]~corein ; combout          ;
+; |numdisplay|shownum[0][1] ; |numdisplay|shownum[0][1]~corein ; combout          ;
+; |numdisplay|shownum[2][1] ; |numdisplay|shownum[2][1]~corein ; combout          ;
+; |numdisplay|shownum[3][0] ; |numdisplay|shownum[3][0]~corein ; combout          ;
+; |numdisplay|shownum[1][0] ; |numdisplay|shownum[1][0]~corein ; combout          ;
+; |numdisplay|shownum[0][0] ; |numdisplay|shownum[0][0]~corein ; combout          ;
+; |numdisplay|shownum[2][0] ; |numdisplay|shownum[2][0]~corein ; combout          ;
+; |numdisplay|shownum[3][2] ; |numdisplay|shownum[3][2]~corein ; combout          ;
+; |numdisplay|shownum[1][2] ; |numdisplay|shownum[1][2]~corein ; combout          ;
+; |numdisplay|shownum[0][2] ; |numdisplay|shownum[0][2]~corein ; combout          ;
+; |numdisplay|shownum[2][2] ; |numdisplay|shownum[2][2]~corein ; combout          ;
+; |numdisplay|switch        ; |numdisplay|switch~corein        ; combout          ;
+; |numdisplay|clear         ; |numdisplay|clear~corein         ; combout          ;
+; |numdisplay|seven[0]      ; |numdisplay|seven[0]             ; padio            ;
+; |numdisplay|seven[4]      ; |numdisplay|seven[4]             ; padio            ;
++---------------------------+----------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Sun Nov 11 10:07:19 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off numdisplay -c numdisplay
+Info: Using vector source file "C:/Users/1/Desktop/shoot. v9.0/numdisplay/numdisplay.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |numdisplay|cat[0]~reg0
+    Info: Register: |numdisplay|cat[1]~reg0
+    Info: Register: |numdisplay|cat[2]~reg0
+    Info: Register: |numdisplay|cat[3]~reg0
+    Info: Register: |numdisplay|cat[4]~reg0
+    Info: Register: |numdisplay|cat[5]~reg0
+    Info: Register: |numdisplay|cat[6]~reg0
+    Info: Register: |numdisplay|cat[7]~reg0
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      74.73 %
+Info: Number of transitions in simulation is 167020
+Info: Thank you for using the Quartus II software 30-day evaluation. You have 9 days left (until Nov 20, 2018) before compilation and simulation support is disabled.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Sun Nov 11 10:07:20 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

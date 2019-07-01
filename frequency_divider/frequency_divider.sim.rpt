@@ -1,0 +1,511 @@
+Simulator report for frequency_divider
+Thu Nov 01 18:29:00 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 141 nodes     ;
+; Simulation Coverage         ;      63.28 %  ;
+; Total Number of Transitions ; 59394913      ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      63.28 % ;
+; Total nodes checked                                 ; 141          ;
+; Total output ports checked                          ; 256          ;
+; Total output ports with complete 1/0-value coverage ; 162          ;
+; Total output ports with no 1/0-value coverage       ; 94           ;
+; Total output ports with no 1-value coverage         ; 94           ;
+; Total output ports with no 0-value coverage         ; 94           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                           ;
++-----------------------------+--------------------------------------+------------------+
+; Node Name                   ; Output Port Name                     ; Output Port Type ;
++-----------------------------+--------------------------------------+------------------+
+; |frequency_divider|tmp1[2]  ; |frequency_divider|tmp1[2]           ; regout           ;
+; |frequency_divider|tmp1[1]  ; |frequency_divider|tmp1[1]           ; regout           ;
+; |frequency_divider|tmp1[0]  ; |frequency_divider|tmp1[0]           ; regout           ;
+; |frequency_divider|tmp1[3]  ; |frequency_divider|Equal0~0          ; combout          ;
+; |frequency_divider|tmp1[3]  ; |frequency_divider|tmp1[3]           ; regout           ;
+; |frequency_divider|tmp1[17] ; |frequency_divider|tmp1[17]          ; regout           ;
+; |frequency_divider|tmp1[4]  ; |frequency_divider|tmp1[4]           ; regout           ;
+; |frequency_divider|tmp1[16] ; |frequency_divider|tmp1[16]          ; regout           ;
+; |frequency_divider|tmp1[14] ; |frequency_divider|tmp1[14]          ; regout           ;
+; |frequency_divider|tmp1[13] ; |frequency_divider|tmp1[13]          ; regout           ;
+; |frequency_divider|tmp1[15] ; |frequency_divider|Equal0~4          ; combout          ;
+; |frequency_divider|tmp1[15] ; |frequency_divider|tmp1[15]          ; regout           ;
+; |frequency_divider|tmp1[12] ; |frequency_divider|tmp1[12]          ; regout           ;
+; |frequency_divider|tmp1[11] ; |frequency_divider|tmp1[11]          ; regout           ;
+; |frequency_divider|tmp1[9]  ; |frequency_divider|tmp1[9]           ; regout           ;
+; |frequency_divider|tmp1[10] ; |frequency_divider|Equal0~5          ; combout          ;
+; |frequency_divider|tmp1[10] ; |frequency_divider|tmp1[10]          ; regout           ;
+; |frequency_divider|tmp1[8]  ; |frequency_divider|tmp1[8]           ; regout           ;
+; |frequency_divider|tmp1[7]  ; |frequency_divider|tmp1[7]           ; regout           ;
+; |frequency_divider|tmp1[6]  ; |frequency_divider|tmp1[6]           ; regout           ;
+; |frequency_divider|tmp1[5]  ; |frequency_divider|Equal0~6          ; combout          ;
+; |frequency_divider|tmp1[5]  ; |frequency_divider|tmp1[5]           ; regout           ;
+; |frequency_divider|tmp2[9]  ; |frequency_divider|tmp2[9]           ; regout           ;
+; |frequency_divider|tmp2[8]  ; |frequency_divider|tmp2[8]           ; regout           ;
+; |frequency_divider|tmp2[11] ; |frequency_divider|Equal1~1          ; combout          ;
+; |frequency_divider|tmp2[6]  ; |frequency_divider|tmp2[6]           ; regout           ;
+; |frequency_divider|tmp2[5]  ; |frequency_divider|tmp2[5]           ; regout           ;
+; |frequency_divider|tmp2[4]  ; |frequency_divider|tmp2[4]           ; regout           ;
+; |frequency_divider|tmp2[7]  ; |frequency_divider|Equal1~2          ; combout          ;
+; |frequency_divider|tmp2[7]  ; |frequency_divider|tmp2[7]           ; regout           ;
+; |frequency_divider|tmp3[0]  ; |frequency_divider|tmp3[0]           ; regout           ;
+; |frequency_divider|tmp3[4]  ; |frequency_divider|tmp3[4]           ; regout           ;
+; |frequency_divider|tmp3[3]  ; |frequency_divider|tmp3[3]           ; regout           ;
+; |frequency_divider|tmp3[1]  ; |frequency_divider|tmp3[1]           ; regout           ;
+; |frequency_divider|tmp3[2]  ; |frequency_divider|Equal2~0          ; combout          ;
+; |frequency_divider|tmp3[2]  ; |frequency_divider|tmp3[2]           ; regout           ;
+; |frequency_divider|tmp4[18] ; |frequency_divider|tmp4[18]          ; regout           ;
+; |frequency_divider|tmp4[19] ; |frequency_divider|tmp4[19]          ; regout           ;
+; |frequency_divider|tmp4[17] ; |frequency_divider|tmp4[17]          ; regout           ;
+; |frequency_divider|tmp4[15] ; |frequency_divider|tmp4[15]          ; regout           ;
+; |frequency_divider|tmp4[14] ; |frequency_divider|tmp4[14]          ; regout           ;
+; |frequency_divider|tmp4[16] ; |frequency_divider|Equal3~1          ; combout          ;
+; |frequency_divider|tmp4[16] ; |frequency_divider|tmp4[16]          ; regout           ;
+; |frequency_divider|tmp4[13] ; |frequency_divider|tmp4[13]          ; regout           ;
+; |frequency_divider|tmp4[10] ; |frequency_divider|tmp4[10]          ; regout           ;
+; |frequency_divider|tmp4[11] ; |frequency_divider|tmp4[11]          ; regout           ;
+; |frequency_divider|tmp4[12] ; |frequency_divider|Equal3~3          ; combout          ;
+; |frequency_divider|tmp4[12] ; |frequency_divider|tmp4[12]          ; regout           ;
+; |frequency_divider|tmp4[8]  ; |frequency_divider|tmp4[8]           ; regout           ;
+; |frequency_divider|tmp4[7]  ; |frequency_divider|tmp4[7]           ; regout           ;
+; |frequency_divider|tmp4[6]  ; |frequency_divider|tmp4[6]           ; regout           ;
+; |frequency_divider|tmp4[9]  ; |frequency_divider|Equal3~4          ; combout          ;
+; |frequency_divider|tmp4[9]  ; |frequency_divider|tmp4[9]           ; regout           ;
+; |frequency_divider|tmp4[5]  ; |frequency_divider|tmp4[5]           ; regout           ;
+; |frequency_divider|Add0~0   ; |frequency_divider|Add0~0            ; combout          ;
+; |frequency_divider|Add0~0   ; |frequency_divider|Add0~2            ; cout0            ;
+; |frequency_divider|Add0~5   ; |frequency_divider|Add0~5            ; combout          ;
+; |frequency_divider|Add0~5   ; |frequency_divider|Add0~7            ; cout0            ;
+; |frequency_divider|Add0~10  ; |frequency_divider|Add0~10           ; combout          ;
+; |frequency_divider|Add0~10  ; |frequency_divider|Add0~12           ; cout0            ;
+; |frequency_divider|Add0~15  ; |frequency_divider|Add0~15           ; combout          ;
+; |frequency_divider|Add0~15  ; |frequency_divider|Add0~17           ; cout             ;
+; |frequency_divider|Add0~20  ; |frequency_divider|Add0~20           ; combout          ;
+; |frequency_divider|Add0~20  ; |frequency_divider|Add0~22           ; cout0            ;
+; |frequency_divider|Add0~20  ; |frequency_divider|Add0~22COUT1_146  ; cout1            ;
+; |frequency_divider|Add0~55  ; |frequency_divider|Add0~55           ; combout          ;
+; |frequency_divider|Add0~60  ; |frequency_divider|Add0~60           ; combout          ;
+; |frequency_divider|Add0~60  ; |frequency_divider|Add0~62COUT1_172  ; cout1            ;
+; |frequency_divider|Add0~65  ; |frequency_divider|Add0~65           ; combout          ;
+; |frequency_divider|Add0~65  ; |frequency_divider|Add0~67           ; cout             ;
+; |frequency_divider|Add0~70  ; |frequency_divider|Add0~70           ; combout          ;
+; |frequency_divider|Add0~70  ; |frequency_divider|Add0~72           ; cout0            ;
+; |frequency_divider|Add0~75  ; |frequency_divider|Add0~75           ; combout          ;
+; |frequency_divider|Add0~75  ; |frequency_divider|Add0~77           ; cout0            ;
+; |frequency_divider|Add0~80  ; |frequency_divider|Add0~80           ; combout          ;
+; |frequency_divider|Add0~80  ; |frequency_divider|Add0~82           ; cout0            ;
+; |frequency_divider|Add0~85  ; |frequency_divider|Add0~85           ; combout          ;
+; |frequency_divider|Add0~85  ; |frequency_divider|Add0~87           ; cout0            ;
+; |frequency_divider|Add0~90  ; |frequency_divider|Add0~90           ; combout          ;
+; |frequency_divider|Add0~90  ; |frequency_divider|Add0~92           ; cout             ;
+; |frequency_divider|Add0~95  ; |frequency_divider|Add0~95           ; combout          ;
+; |frequency_divider|Add0~95  ; |frequency_divider|Add0~97COUT1_162  ; cout1            ;
+; |frequency_divider|Add0~100 ; |frequency_divider|Add0~100          ; combout          ;
+; |frequency_divider|Add0~100 ; |frequency_divider|Add0~102COUT1_160 ; cout1            ;
+; |frequency_divider|Add0~105 ; |frequency_divider|Add0~105          ; combout          ;
+; |frequency_divider|Add0~105 ; |frequency_divider|Add0~107          ; cout0            ;
+; |frequency_divider|Add0~110 ; |frequency_divider|Add0~110          ; combout          ;
+; |frequency_divider|Add0~110 ; |frequency_divider|Add0~112COUT1_158 ; cout1            ;
+; |frequency_divider|Add0~115 ; |frequency_divider|Add0~115          ; combout          ;
+; |frequency_divider|Add0~115 ; |frequency_divider|Add0~117COUT1_156 ; cout1            ;
+; |frequency_divider|Add0~120 ; |frequency_divider|Add0~120          ; combout          ;
+; |frequency_divider|Add0~120 ; |frequency_divider|Add0~122          ; cout             ;
+; |frequency_divider|Add1~20  ; |frequency_divider|Add1~20           ; combout          ;
+; |frequency_divider|Add1~20  ; |frequency_divider|Add1~22COUT1_100  ; cout1            ;
+; |frequency_divider|Add1~25  ; |frequency_divider|Add1~25           ; combout          ;
+; |frequency_divider|Add1~25  ; |frequency_divider|Add1~27COUT1_98   ; cout1            ;
+; |frequency_divider|Add1~40  ; |frequency_divider|Add1~40           ; combout          ;
+; |frequency_divider|Add1~40  ; |frequency_divider|Add1~42           ; cout0            ;
+; |frequency_divider|Add1~45  ; |frequency_divider|Add1~45           ; combout          ;
+; |frequency_divider|Add1~45  ; |frequency_divider|Add1~47           ; cout             ;
+; |frequency_divider|Add1~50  ; |frequency_divider|Add1~50           ; combout          ;
+; |frequency_divider|Add1~50  ; |frequency_divider|Add1~52           ; cout0            ;
+; |frequency_divider|Add1~55  ; |frequency_divider|Add1~55           ; combout          ;
+; |frequency_divider|Add1~55  ; |frequency_divider|Add1~57           ; cout0            ;
+; |frequency_divider|Add2~0   ; |frequency_divider|Add2~0            ; combout          ;
+; |frequency_divider|Add2~0   ; |frequency_divider|Add2~2            ; cout0            ;
+; |frequency_divider|Add2~0   ; |frequency_divider|Add2~2COUT1_31    ; cout1            ;
+; |frequency_divider|Add2~5   ; |frequency_divider|Add2~5            ; combout          ;
+; |frequency_divider|Add2~10  ; |frequency_divider|Add2~10           ; combout          ;
+; |frequency_divider|Add2~10  ; |frequency_divider|Add2~12           ; cout0            ;
+; |frequency_divider|Add2~10  ; |frequency_divider|Add2~12COUT1_37   ; cout1            ;
+; |frequency_divider|Add2~15  ; |frequency_divider|Add2~15           ; combout          ;
+; |frequency_divider|Add2~15  ; |frequency_divider|Add2~17           ; cout0            ;
+; |frequency_divider|Add2~15  ; |frequency_divider|Add2~17COUT1_35   ; cout1            ;
+; |frequency_divider|Add2~20  ; |frequency_divider|Add2~20           ; combout          ;
+; |frequency_divider|Add2~20  ; |frequency_divider|Add2~22           ; cout0            ;
+; |frequency_divider|Add2~20  ; |frequency_divider|Add2~22COUT1_33   ; cout1            ;
+; |frequency_divider|Add3~5   ; |frequency_divider|Add3~5            ; combout          ;
+; |frequency_divider|Add3~5   ; |frequency_divider|Add3~7COUT1_151   ; cout1            ;
+; |frequency_divider|Add3~15  ; |frequency_divider|Add3~15           ; combout          ;
+; |frequency_divider|Add3~15  ; |frequency_divider|Add3~17COUT1_153  ; cout1            ;
+; |frequency_divider|Add3~20  ; |frequency_divider|Add3~20           ; combout          ;
+; |frequency_divider|Add3~20  ; |frequency_divider|Add3~22COUT1_149  ; cout1            ;
+; |frequency_divider|Add3~25  ; |frequency_divider|Add3~25           ; combout          ;
+; |frequency_divider|Add3~25  ; |frequency_divider|Add3~27COUT1_147  ; cout1            ;
+; |frequency_divider|Add3~30  ; |frequency_divider|Add3~30           ; combout          ;
+; |frequency_divider|Add3~30  ; |frequency_divider|Add3~32           ; cout             ;
+; |frequency_divider|Add3~35  ; |frequency_divider|Add3~35           ; combout          ;
+; |frequency_divider|Add3~35  ; |frequency_divider|Add3~37           ; cout0            ;
+; |frequency_divider|Add3~40  ; |frequency_divider|Add3~40           ; combout          ;
+; |frequency_divider|Add3~40  ; |frequency_divider|Add3~42           ; cout0            ;
+; |frequency_divider|Add3~45  ; |frequency_divider|Add3~45           ; combout          ;
+; |frequency_divider|Add3~45  ; |frequency_divider|Add3~47           ; cout             ;
+; |frequency_divider|Add3~50  ; |frequency_divider|Add3~50           ; combout          ;
+; |frequency_divider|Add3~50  ; |frequency_divider|Add3~52           ; cout0            ;
+; |frequency_divider|Add3~55  ; |frequency_divider|Add3~55           ; combout          ;
+; |frequency_divider|Add3~55  ; |frequency_divider|Add3~57           ; cout0            ;
+; |frequency_divider|Add3~60  ; |frequency_divider|Add3~60           ; combout          ;
+; |frequency_divider|Add3~60  ; |frequency_divider|Add3~62COUT1_135  ; cout1            ;
+; |frequency_divider|Add3~65  ; |frequency_divider|Add3~65           ; combout          ;
+; |frequency_divider|Add3~65  ; |frequency_divider|Add3~67COUT1_133  ; cout1            ;
+; |frequency_divider|Add3~70  ; |frequency_divider|Add3~70           ; combout          ;
+; |frequency_divider|Add3~70  ; |frequency_divider|Add3~72COUT1_137  ; cout1            ;
+; |frequency_divider|Add3~75  ; |frequency_divider|Add3~75           ; combout          ;
+; |frequency_divider|Add3~75  ; |frequency_divider|Add3~77COUT1_131  ; cout1            ;
+; |frequency_divider|Add3~80  ; |frequency_divider|Add3~80           ; combout          ;
+; |frequency_divider|Add3~80  ; |frequency_divider|Add3~82           ; cout             ;
+; |frequency_divider|Add1~62  ; |frequency_divider|Add1~62           ; cout0            ;
+; |frequency_divider|Add3~87  ; |frequency_divider|Add3~87           ; cout0            ;
+; |frequency_divider|Add3~87  ; |frequency_divider|Add3~87COUT1_129  ; cout1            ;
+; |frequency_divider|Add1~67  ; |frequency_divider|Add1~67           ; cout             ;
+; |frequency_divider|Add3~92  ; |frequency_divider|Add3~92           ; cout0            ;
+; |frequency_divider|Add3~92  ; |frequency_divider|Add3~92COUT1_127  ; cout1            ;
+; |frequency_divider|Add1~72  ; |frequency_divider|Add1~72           ; cout0            ;
+; |frequency_divider|Add1~72  ; |frequency_divider|Add1~72COUT1_88   ; cout1            ;
+; |frequency_divider|Add3~97  ; |frequency_divider|Add3~97           ; cout0            ;
+; |frequency_divider|Add3~97  ; |frequency_divider|Add3~97COUT1_125  ; cout1            ;
+; |frequency_divider|Add3~102 ; |frequency_divider|Add3~102          ; cout0            ;
+; |frequency_divider|Add3~102 ; |frequency_divider|Add3~102COUT1_123 ; cout1            ;
+; |frequency_divider|clear    ; |frequency_divider|clear~corein      ; combout          ;
+; |frequency_divider|clk_in   ; |frequency_divider|clk_in~corein     ; combout          ;
+; |frequency_divider|clk3     ; |frequency_divider|clk3              ; padio            ;
++-----------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                              ;
++-----------------------------+--------------------------------------+------------------+
+; Node Name                   ; Output Port Name                     ; Output Port Type ;
++-----------------------------+--------------------------------------+------------------+
+; |frequency_divider|tmp1[24] ; |frequency_divider|tmp1[24]          ; regout           ;
+; |frequency_divider|tmp1[22] ; |frequency_divider|tmp1[22]          ; regout           ;
+; |frequency_divider|tmp1[21] ; |frequency_divider|tmp1[21]          ; regout           ;
+; |frequency_divider|tmp1[23] ; |frequency_divider|Equal0~1          ; combout          ;
+; |frequency_divider|tmp1[23] ; |frequency_divider|tmp1[23]          ; regout           ;
+; |frequency_divider|tmp1[20] ; |frequency_divider|tmp1[20]          ; regout           ;
+; |frequency_divider|tmp1[19] ; |frequency_divider|tmp1[19]          ; regout           ;
+; |frequency_divider|tmp1[18] ; |frequency_divider|tmp1[18]          ; regout           ;
+; |frequency_divider|tmp1[17] ; |frequency_divider|Equal0~2          ; combout          ;
+; |frequency_divider|tmp1[4]  ; |frequency_divider|Equal0~3          ; combout          ;
+; |frequency_divider|Equal0~7 ; |frequency_divider|Equal0~7          ; combout          ;
+; |frequency_divider|tmp2[15] ; |frequency_divider|tmp2[15]          ; regout           ;
+; |frequency_divider|tmp2[14] ; |frequency_divider|tmp2[14]          ; regout           ;
+; |frequency_divider|tmp2[12] ; |frequency_divider|tmp2[12]          ; regout           ;
+; |frequency_divider|tmp2[13] ; |frequency_divider|Equal1~0          ; combout          ;
+; |frequency_divider|tmp2[13] ; |frequency_divider|tmp2[13]          ; regout           ;
+; |frequency_divider|tmp2[10] ; |frequency_divider|tmp2[10]          ; regout           ;
+; |frequency_divider|tmp2[11] ; |frequency_divider|tmp2[11]          ; regout           ;
+; |frequency_divider|Equal1~3 ; |frequency_divider|Equal1~3          ; combout          ;
+; |frequency_divider|tmp4[21] ; |frequency_divider|tmp4[21]          ; regout           ;
+; |frequency_divider|tmp4[20] ; |frequency_divider|Equal3~0          ; combout          ;
+; |frequency_divider|tmp4[20] ; |frequency_divider|tmp4[20]          ; regout           ;
+; |frequency_divider|Equal3~2 ; |frequency_divider|Equal3~2          ; combout          ;
+; |frequency_divider|Equal3~5 ; |frequency_divider|Equal3~5          ; combout          ;
+; |frequency_divider|Add0~0   ; |frequency_divider|Add0~2COUT1_152   ; cout1            ;
+; |frequency_divider|Add0~5   ; |frequency_divider|Add0~7COUT1_150   ; cout1            ;
+; |frequency_divider|Add0~10  ; |frequency_divider|Add0~12COUT1_148  ; cout1            ;
+; |frequency_divider|Add0~25  ; |frequency_divider|Add0~25           ; combout          ;
+; |frequency_divider|Add0~30  ; |frequency_divider|Add0~30           ; combout          ;
+; |frequency_divider|Add0~30  ; |frequency_divider|Add0~32           ; cout0            ;
+; |frequency_divider|Add0~30  ; |frequency_divider|Add0~32COUT1_180  ; cout1            ;
+; |frequency_divider|Add0~35  ; |frequency_divider|Add0~35           ; combout          ;
+; |frequency_divider|Add0~35  ; |frequency_divider|Add0~37           ; cout             ;
+; |frequency_divider|Add0~40  ; |frequency_divider|Add0~40           ; combout          ;
+; |frequency_divider|Add0~40  ; |frequency_divider|Add0~42           ; cout0            ;
+; |frequency_divider|Add0~40  ; |frequency_divider|Add0~42COUT1_182  ; cout1            ;
+; |frequency_divider|Add0~45  ; |frequency_divider|Add0~45           ; combout          ;
+; |frequency_divider|Add0~45  ; |frequency_divider|Add0~47           ; cout0            ;
+; |frequency_divider|Add0~45  ; |frequency_divider|Add0~47COUT1_178  ; cout1            ;
+; |frequency_divider|Add0~50  ; |frequency_divider|Add0~50           ; combout          ;
+; |frequency_divider|Add0~50  ; |frequency_divider|Add0~52           ; cout0            ;
+; |frequency_divider|Add0~50  ; |frequency_divider|Add0~52COUT1_176  ; cout1            ;
+; |frequency_divider|Add0~55  ; |frequency_divider|Add0~57           ; cout0            ;
+; |frequency_divider|Add0~55  ; |frequency_divider|Add0~57COUT1_174  ; cout1            ;
+; |frequency_divider|Add0~60  ; |frequency_divider|Add0~62           ; cout0            ;
+; |frequency_divider|Add0~70  ; |frequency_divider|Add0~72COUT1_168  ; cout1            ;
+; |frequency_divider|Add0~75  ; |frequency_divider|Add0~77COUT1_166  ; cout1            ;
+; |frequency_divider|Add0~80  ; |frequency_divider|Add0~82COUT1_170  ; cout1            ;
+; |frequency_divider|Add0~85  ; |frequency_divider|Add0~87COUT1_164  ; cout1            ;
+; |frequency_divider|Add0~95  ; |frequency_divider|Add0~97           ; cout0            ;
+; |frequency_divider|Add0~100 ; |frequency_divider|Add0~102          ; cout0            ;
+; |frequency_divider|Add0~105 ; |frequency_divider|Add0~107COUT1_154 ; cout1            ;
+; |frequency_divider|Add0~110 ; |frequency_divider|Add0~112          ; cout0            ;
+; |frequency_divider|Add0~115 ; |frequency_divider|Add0~117          ; cout0            ;
+; |frequency_divider|Add1~0   ; |frequency_divider|Add1~0            ; combout          ;
+; |frequency_divider|Add1~5   ; |frequency_divider|Add1~5            ; combout          ;
+; |frequency_divider|Add1~5   ; |frequency_divider|Add1~7            ; cout0            ;
+; |frequency_divider|Add1~5   ; |frequency_divider|Add1~7COUT1_108   ; cout1            ;
+; |frequency_divider|Add1~10  ; |frequency_divider|Add1~10           ; combout          ;
+; |frequency_divider|Add1~10  ; |frequency_divider|Add1~12           ; cout0            ;
+; |frequency_divider|Add1~10  ; |frequency_divider|Add1~12COUT1_106  ; cout1            ;
+; |frequency_divider|Add1~15  ; |frequency_divider|Add1~15           ; combout          ;
+; |frequency_divider|Add1~15  ; |frequency_divider|Add1~17           ; cout             ;
+; |frequency_divider|Add1~20  ; |frequency_divider|Add1~22           ; cout0            ;
+; |frequency_divider|Add1~25  ; |frequency_divider|Add1~27           ; cout0            ;
+; |frequency_divider|Add1~30  ; |frequency_divider|Add1~30           ; combout          ;
+; |frequency_divider|Add1~30  ; |frequency_divider|Add1~32           ; cout0            ;
+; |frequency_divider|Add1~30  ; |frequency_divider|Add1~32COUT1_104  ; cout1            ;
+; |frequency_divider|Add1~35  ; |frequency_divider|Add1~35           ; combout          ;
+; |frequency_divider|Add1~35  ; |frequency_divider|Add1~37           ; cout0            ;
+; |frequency_divider|Add1~35  ; |frequency_divider|Add1~37COUT1_102  ; cout1            ;
+; |frequency_divider|Add1~40  ; |frequency_divider|Add1~42COUT1_96   ; cout1            ;
+; |frequency_divider|Add1~50  ; |frequency_divider|Add1~52COUT1_94   ; cout1            ;
+; |frequency_divider|Add1~55  ; |frequency_divider|Add1~57COUT1_92   ; cout1            ;
+; |frequency_divider|Add3~0   ; |frequency_divider|Add3~0            ; combout          ;
+; |frequency_divider|Add3~5   ; |frequency_divider|Add3~7            ; cout0            ;
+; |frequency_divider|Add3~10  ; |frequency_divider|Add3~10           ; combout          ;
+; |frequency_divider|Add3~10  ; |frequency_divider|Add3~12           ; cout             ;
+; |frequency_divider|Add3~15  ; |frequency_divider|Add3~17           ; cout0            ;
+; |frequency_divider|Add3~20  ; |frequency_divider|Add3~22           ; cout0            ;
+; |frequency_divider|Add3~25  ; |frequency_divider|Add3~27           ; cout0            ;
+; |frequency_divider|Add3~35  ; |frequency_divider|Add3~37COUT1_145  ; cout1            ;
+; |frequency_divider|Add3~40  ; |frequency_divider|Add3~42COUT1_143  ; cout1            ;
+; |frequency_divider|Add3~50  ; |frequency_divider|Add3~52COUT1_141  ; cout1            ;
+; |frequency_divider|Add3~55  ; |frequency_divider|Add3~57COUT1_139  ; cout1            ;
+; |frequency_divider|Add3~60  ; |frequency_divider|Add3~62           ; cout0            ;
+; |frequency_divider|Add3~65  ; |frequency_divider|Add3~67           ; cout0            ;
+; |frequency_divider|Add3~70  ; |frequency_divider|Add3~72           ; cout0            ;
+; |frequency_divider|Add3~75  ; |frequency_divider|Add3~77           ; cout0            ;
+; |frequency_divider|Add1~62  ; |frequency_divider|Add1~62COUT1_90   ; cout1            ;
+; |frequency_divider|clk1     ; |frequency_divider|clk1              ; padio            ;
+; |frequency_divider|clk2     ; |frequency_divider|clk2              ; padio            ;
+; |frequency_divider|clk4     ; |frequency_divider|clk4              ; padio            ;
+; |frequency_divider|clk5     ; |frequency_divider|clk5              ; padio            ;
++-----------------------------+--------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                              ;
++-----------------------------+--------------------------------------+------------------+
+; Node Name                   ; Output Port Name                     ; Output Port Type ;
++-----------------------------+--------------------------------------+------------------+
+; |frequency_divider|tmp1[24] ; |frequency_divider|tmp1[24]          ; regout           ;
+; |frequency_divider|tmp1[22] ; |frequency_divider|tmp1[22]          ; regout           ;
+; |frequency_divider|tmp1[21] ; |frequency_divider|tmp1[21]          ; regout           ;
+; |frequency_divider|tmp1[23] ; |frequency_divider|Equal0~1          ; combout          ;
+; |frequency_divider|tmp1[23] ; |frequency_divider|tmp1[23]          ; regout           ;
+; |frequency_divider|tmp1[20] ; |frequency_divider|tmp1[20]          ; regout           ;
+; |frequency_divider|tmp1[19] ; |frequency_divider|tmp1[19]          ; regout           ;
+; |frequency_divider|tmp1[18] ; |frequency_divider|tmp1[18]          ; regout           ;
+; |frequency_divider|tmp1[17] ; |frequency_divider|Equal0~2          ; combout          ;
+; |frequency_divider|tmp1[4]  ; |frequency_divider|Equal0~3          ; combout          ;
+; |frequency_divider|Equal0~7 ; |frequency_divider|Equal0~7          ; combout          ;
+; |frequency_divider|tmp2[15] ; |frequency_divider|tmp2[15]          ; regout           ;
+; |frequency_divider|tmp2[14] ; |frequency_divider|tmp2[14]          ; regout           ;
+; |frequency_divider|tmp2[12] ; |frequency_divider|tmp2[12]          ; regout           ;
+; |frequency_divider|tmp2[13] ; |frequency_divider|Equal1~0          ; combout          ;
+; |frequency_divider|tmp2[13] ; |frequency_divider|tmp2[13]          ; regout           ;
+; |frequency_divider|tmp2[10] ; |frequency_divider|tmp2[10]          ; regout           ;
+; |frequency_divider|tmp2[11] ; |frequency_divider|tmp2[11]          ; regout           ;
+; |frequency_divider|Equal1~3 ; |frequency_divider|Equal1~3          ; combout          ;
+; |frequency_divider|tmp4[21] ; |frequency_divider|tmp4[21]          ; regout           ;
+; |frequency_divider|tmp4[20] ; |frequency_divider|Equal3~0          ; combout          ;
+; |frequency_divider|tmp4[20] ; |frequency_divider|tmp4[20]          ; regout           ;
+; |frequency_divider|Equal3~2 ; |frequency_divider|Equal3~2          ; combout          ;
+; |frequency_divider|Equal3~5 ; |frequency_divider|Equal3~5          ; combout          ;
+; |frequency_divider|Add0~0   ; |frequency_divider|Add0~2COUT1_152   ; cout1            ;
+; |frequency_divider|Add0~5   ; |frequency_divider|Add0~7COUT1_150   ; cout1            ;
+; |frequency_divider|Add0~10  ; |frequency_divider|Add0~12COUT1_148  ; cout1            ;
+; |frequency_divider|Add0~25  ; |frequency_divider|Add0~25           ; combout          ;
+; |frequency_divider|Add0~30  ; |frequency_divider|Add0~30           ; combout          ;
+; |frequency_divider|Add0~30  ; |frequency_divider|Add0~32           ; cout0            ;
+; |frequency_divider|Add0~30  ; |frequency_divider|Add0~32COUT1_180  ; cout1            ;
+; |frequency_divider|Add0~35  ; |frequency_divider|Add0~35           ; combout          ;
+; |frequency_divider|Add0~35  ; |frequency_divider|Add0~37           ; cout             ;
+; |frequency_divider|Add0~40  ; |frequency_divider|Add0~40           ; combout          ;
+; |frequency_divider|Add0~40  ; |frequency_divider|Add0~42           ; cout0            ;
+; |frequency_divider|Add0~40  ; |frequency_divider|Add0~42COUT1_182  ; cout1            ;
+; |frequency_divider|Add0~45  ; |frequency_divider|Add0~45           ; combout          ;
+; |frequency_divider|Add0~45  ; |frequency_divider|Add0~47           ; cout0            ;
+; |frequency_divider|Add0~45  ; |frequency_divider|Add0~47COUT1_178  ; cout1            ;
+; |frequency_divider|Add0~50  ; |frequency_divider|Add0~50           ; combout          ;
+; |frequency_divider|Add0~50  ; |frequency_divider|Add0~52           ; cout0            ;
+; |frequency_divider|Add0~50  ; |frequency_divider|Add0~52COUT1_176  ; cout1            ;
+; |frequency_divider|Add0~55  ; |frequency_divider|Add0~57           ; cout0            ;
+; |frequency_divider|Add0~55  ; |frequency_divider|Add0~57COUT1_174  ; cout1            ;
+; |frequency_divider|Add0~60  ; |frequency_divider|Add0~62           ; cout0            ;
+; |frequency_divider|Add0~70  ; |frequency_divider|Add0~72COUT1_168  ; cout1            ;
+; |frequency_divider|Add0~75  ; |frequency_divider|Add0~77COUT1_166  ; cout1            ;
+; |frequency_divider|Add0~80  ; |frequency_divider|Add0~82COUT1_170  ; cout1            ;
+; |frequency_divider|Add0~85  ; |frequency_divider|Add0~87COUT1_164  ; cout1            ;
+; |frequency_divider|Add0~95  ; |frequency_divider|Add0~97           ; cout0            ;
+; |frequency_divider|Add0~100 ; |frequency_divider|Add0~102          ; cout0            ;
+; |frequency_divider|Add0~105 ; |frequency_divider|Add0~107COUT1_154 ; cout1            ;
+; |frequency_divider|Add0~110 ; |frequency_divider|Add0~112          ; cout0            ;
+; |frequency_divider|Add0~115 ; |frequency_divider|Add0~117          ; cout0            ;
+; |frequency_divider|Add1~0   ; |frequency_divider|Add1~0            ; combout          ;
+; |frequency_divider|Add1~5   ; |frequency_divider|Add1~5            ; combout          ;
+; |frequency_divider|Add1~5   ; |frequency_divider|Add1~7            ; cout0            ;
+; |frequency_divider|Add1~5   ; |frequency_divider|Add1~7COUT1_108   ; cout1            ;
+; |frequency_divider|Add1~10  ; |frequency_divider|Add1~10           ; combout          ;
+; |frequency_divider|Add1~10  ; |frequency_divider|Add1~12           ; cout0            ;
+; |frequency_divider|Add1~10  ; |frequency_divider|Add1~12COUT1_106  ; cout1            ;
+; |frequency_divider|Add1~15  ; |frequency_divider|Add1~15           ; combout          ;
+; |frequency_divider|Add1~15  ; |frequency_divider|Add1~17           ; cout             ;
+; |frequency_divider|Add1~20  ; |frequency_divider|Add1~22           ; cout0            ;
+; |frequency_divider|Add1~25  ; |frequency_divider|Add1~27           ; cout0            ;
+; |frequency_divider|Add1~30  ; |frequency_divider|Add1~30           ; combout          ;
+; |frequency_divider|Add1~30  ; |frequency_divider|Add1~32           ; cout0            ;
+; |frequency_divider|Add1~30  ; |frequency_divider|Add1~32COUT1_104  ; cout1            ;
+; |frequency_divider|Add1~35  ; |frequency_divider|Add1~35           ; combout          ;
+; |frequency_divider|Add1~35  ; |frequency_divider|Add1~37           ; cout0            ;
+; |frequency_divider|Add1~35  ; |frequency_divider|Add1~37COUT1_102  ; cout1            ;
+; |frequency_divider|Add1~40  ; |frequency_divider|Add1~42COUT1_96   ; cout1            ;
+; |frequency_divider|Add1~50  ; |frequency_divider|Add1~52COUT1_94   ; cout1            ;
+; |frequency_divider|Add1~55  ; |frequency_divider|Add1~57COUT1_92   ; cout1            ;
+; |frequency_divider|Add3~0   ; |frequency_divider|Add3~0            ; combout          ;
+; |frequency_divider|Add3~5   ; |frequency_divider|Add3~7            ; cout0            ;
+; |frequency_divider|Add3~10  ; |frequency_divider|Add3~10           ; combout          ;
+; |frequency_divider|Add3~10  ; |frequency_divider|Add3~12           ; cout             ;
+; |frequency_divider|Add3~15  ; |frequency_divider|Add3~17           ; cout0            ;
+; |frequency_divider|Add3~20  ; |frequency_divider|Add3~22           ; cout0            ;
+; |frequency_divider|Add3~25  ; |frequency_divider|Add3~27           ; cout0            ;
+; |frequency_divider|Add3~35  ; |frequency_divider|Add3~37COUT1_145  ; cout1            ;
+; |frequency_divider|Add3~40  ; |frequency_divider|Add3~42COUT1_143  ; cout1            ;
+; |frequency_divider|Add3~50  ; |frequency_divider|Add3~52COUT1_141  ; cout1            ;
+; |frequency_divider|Add3~55  ; |frequency_divider|Add3~57COUT1_139  ; cout1            ;
+; |frequency_divider|Add3~60  ; |frequency_divider|Add3~62           ; cout0            ;
+; |frequency_divider|Add3~65  ; |frequency_divider|Add3~67           ; cout0            ;
+; |frequency_divider|Add3~70  ; |frequency_divider|Add3~72           ; cout0            ;
+; |frequency_divider|Add3~75  ; |frequency_divider|Add3~77           ; cout0            ;
+; |frequency_divider|Add1~62  ; |frequency_divider|Add1~62COUT1_90   ; cout1            ;
+; |frequency_divider|clk1     ; |frequency_divider|clk1              ; padio            ;
+; |frequency_divider|clk2     ; |frequency_divider|clk2              ; padio            ;
+; |frequency_divider|clk4     ; |frequency_divider|clk4              ; padio            ;
+; |frequency_divider|clk5     ; |frequency_divider|clk5              ; padio            ;
++-----------------------------+--------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Thu Nov 01 18:26:56 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off frequency_divider -c frequency_divider
+Info: Using vector source file "C:/Users/1/Desktop/shoot·Ö¿ª/frequency_divider/frequency_divider.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      63.28 %
+Info: Number of transitions in simulation is 59394913
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 171 megabytes
+    Info: Processing ended: Thu Nov 01 18:29:00 2018
+    Info: Elapsed time: 00:02:04
+    Info: Total CPU time (on all processors): 00:02:04
+
+

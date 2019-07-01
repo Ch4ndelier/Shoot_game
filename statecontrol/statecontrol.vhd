@@ -1,0 +1,75 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity statecontrol is    
+port(
+	clk4,switch,clear:in std_logic;
+    check,stay,breath,flashstate:out std_logic;
+    checkcat,checkrow:out integer range 0 to 7; 
+    cntbreath:out integer range 0 to 29
+	);
+end statecontrol;
+
+architecture sc of statecontrol is
+
+signal checkrowt,checkcatt:integer range 0 to 7;
+signal cntbreatht:integer range 0 to 29;
+
+begin
+
+p9:process(switch,clk4)                                  --control module of check
+variable temp1:integer range 0 to 1:=0;
+variable cntcheck:integer range 0 to 47:=0;
+begin
+  if switch='0' then
+        check<='1';
+        checkrowt<=7;checkcatt<=7;
+        cntcheck:=0;
+        temp1:=0;
+  elsif(clk4'event and clk4='1') then
+      temp1:=temp1+1;cntcheck:=cntcheck+1;
+      if temp1=1 then checkrowt<=checkrowt-1;checkcatt<=checkcatt-1;
+      end if;
+      if cntcheck=47 then check<='0';
+      end if;
+  end if;
+end process;
+
+p10:process(clear,switch)                                --control module of stay
+begin
+  if switch='0' then
+        stay<='1';
+  elsif(clear='1')then stay<='0';
+  end if;
+end process;
+
+p11:process(clear,switch,clk4)                           --control module of breath
+begin
+  if clear='1' then
+        breath<='1'; cntbreatht<=0; 
+  elsif(switch='0')   then 
+        breath<='1'; cntbreatht<=0; 
+  elsif(clk4'event and clk4='1') then
+        cntbreatht<=cntbreatht+1;
+        if(cntbreatht=29) then breath<='0';cntbreatht<=0;
+        end if;
+  end if;
+end process;
+
+p15:process(clk4)                                        --control module of flash
+variable flashtemp:integer range 0 to 5:=0;
+begin
+     if(clk4'event and clk4='1') then 
+        flashtemp:=flashtemp+1;
+        if(flashtemp=2) then flashstate<='0';
+        elsif(flashtemp=5)then flashstate<='1';
+        end if;
+     end if;
+end process;
+
+checkrow<=checkrowt;
+checkcat<=checkcatt;
+cntbreath<=cntbreatht;
+
+end sc;

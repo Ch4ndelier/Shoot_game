@@ -1,0 +1,28 @@
+|musicplayer
+switch => musicstate[2].ACLR
+switch => musicstate[1].ACLR
+switch => musicstate[0].ACLR
+CLK => CLK_50.CLK
+CLK => COUNTER2[0].CLK
+CLK => COUNTER2[1].CLK
+CLK => COUNTER2[2].CLK
+CLK => COUNTER2[3].CLK
+CLK => COUNTER2[4].CLK
+CLK => COUNTER2[5].CLK
+CLK => musicstate[2].CLK
+CLK => musicstate[1].CLK
+CLK => musicstate[0].CLK
+check => musicstate.OUTPUTSELECT
+check => musicstate.OUTPUTSELECT
+check => musicstate.OUTPUTSELECT
+check => process_0.IN0
+check => process_0.IN0
+stay => process_0.IN1
+over => process_0.IN0
+over => process_0.IN0
+over => process_0.IN1
+pass => process_0.IN1
+pass => process_0.IN1
+beep <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+
+

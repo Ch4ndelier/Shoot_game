@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sat Nov 03 12:48:47 2018
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : mxdisplay
+Top-level Entity Name : mxdisplay
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 206 / 1,270 ( 16 % )
+Total pins : 90 / 116 ( 78 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

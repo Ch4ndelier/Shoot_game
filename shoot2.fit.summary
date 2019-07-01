@@ -1,0 +1,11 @@
+Fitter Status : Successful - Mon Nov 12 23:04:39 2018
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : shoot2
+Top-level Entity Name : shoot2
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 733 / 1,270 ( 58 % )
+Total pins : 51 / 116 ( 44 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

@@ -1,0 +1,557 @@
+Simulator report for mxdisplay
+Sun Nov 11 11:27:17 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 296 nodes     ;
+; Simulation Coverage         ;      64.97 %  ;
+; Total Number of Transitions ; 442166        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      64.97 % ;
+; Total nodes checked                                 ; 296          ;
+; Total output ports checked                          ; 294          ;
+; Total output ports with complete 1/0-value coverage ; 191          ;
+; Total output ports with no 1/0-value coverage       ; 90           ;
+; Total output ports with no 1-value coverage         ; 93           ;
+; Total output ports with no 0-value coverage         ; 100          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                   ;
++---------------------------+--------------------------------+------------------+
+; Node Name                 ; Output Port Name               ; Output Port Type ;
++---------------------------+--------------------------------+------------------+
+; |mxdisplay|row1[0]~reg0   ; |mxdisplay|row1[0]~reg0        ; regout           ;
+; |mxdisplay|row1[1]~reg0   ; |mxdisplay|row1[1]~reg0        ; regout           ;
+; |mxdisplay|row1[2]~reg0   ; |mxdisplay|row1[2]~reg0        ; regout           ;
+; |mxdisplay|row1[3]~reg0   ; |mxdisplay|row1[3]~reg0        ; regout           ;
+; |mxdisplay|row1[4]~reg0   ; |mxdisplay|row1[4]~reg0        ; regout           ;
+; |mxdisplay|row1[5]~reg0   ; |mxdisplay|row1[5]~reg0        ; regout           ;
+; |mxdisplay|row1[6]~reg0   ; |mxdisplay|row1[6]~reg0        ; regout           ;
+; |mxdisplay|row1[7]~reg0   ; |mxdisplay|row1[7]~reg0        ; regout           ;
+; |mxdisplay|col1[0]~reg0   ; |mxdisplay|col1[0]~reg0        ; regout           ;
+; |mxdisplay|col1[1]~reg0   ; |mxdisplay|col1[1]~reg0        ; regout           ;
+; |mxdisplay|col1[2]~reg0   ; |mxdisplay|col1[2]~reg0        ; regout           ;
+; |mxdisplay|col1[3]~reg0   ; |mxdisplay|col1[3]~reg0        ; regout           ;
+; |mxdisplay|col1[4]~reg0   ; |mxdisplay|col1[4]~reg0        ; regout           ;
+; |mxdisplay|col1[5]~reg0   ; |mxdisplay|col1[5]~reg0        ; regout           ;
+; |mxdisplay|col1[6]~reg0   ; |mxdisplay|col1[6]~reg0        ; regout           ;
+; |mxdisplay|col1[7]~reg0   ; |mxdisplay|col1[7]~reg0        ; regout           ;
+; |mxdisplay|col2[0]~reg0   ; |mxdisplay|col2[0]~reg0        ; regout           ;
+; |mxdisplay|col2[1]~reg0   ; |mxdisplay|col2[1]~reg0        ; regout           ;
+; |mxdisplay|col2[2]~reg0   ; |mxdisplay|col2[2]~reg0        ; regout           ;
+; |mxdisplay|col2[3]~reg0   ; |mxdisplay|col2[3]~reg0        ; regout           ;
+; |mxdisplay|col2[4]~reg0   ; |mxdisplay|col2[4]~reg0        ; regout           ;
+; |mxdisplay|col2[5]~reg0   ; |mxdisplay|col2[5]~reg0        ; regout           ;
+; |mxdisplay|col2[7]~reg0   ; |mxdisplay|col2[7]~reg0        ; regout           ;
+; |mxdisplay|row1[2]~1      ; |mxdisplay|row1[2]~1           ; combout          ;
+; |mxdisplay|Mux42~0        ; |mxdisplay|Mux42~0             ; combout          ;
+; |mxdisplay|Mux0~0         ; |mxdisplay|Mux0~0              ; combout          ;
+; |mxdisplay|Mux0~1         ; |mxdisplay|Mux0~1              ; combout          ;
+; |mxdisplay|Mux1~0         ; |mxdisplay|Mux1~0              ; combout          ;
+; |mxdisplay|Mux1~1         ; |mxdisplay|Mux1~1              ; combout          ;
+; |mxdisplay|Mux2~0         ; |mxdisplay|Mux2~0              ; combout          ;
+; |mxdisplay|Mux2~1         ; |mxdisplay|Mux2~1              ; combout          ;
+; |mxdisplay|Decoder1~0     ; |mxdisplay|Decoder1~0          ; combout          ;
+; |mxdisplay|p1~1           ; |mxdisplay|p1~1                ; combout          ;
+; |mxdisplay|point[1]       ; |mxdisplay|row1[2]~2           ; combout          ;
+; |mxdisplay|point[1]       ; |mxdisplay|point[1]            ; regout           ;
+; |mxdisplay|p1~2           ; |mxdisplay|p1~2                ; combout          ;
+; |mxdisplay|row1[2]~3      ; |mxdisplay|row1[2]~3           ; combout          ;
+; |mxdisplay|\p1:temp1[0]   ; |mxdisplay|\p1:temp1[0]        ; regout           ;
+; |mxdisplay|\p1:temp1[1]   ; |mxdisplay|\p1:temp1[1]        ; regout           ;
+; |mxdisplay|Add0~0         ; |mxdisplay|Add0~0              ; combout          ;
+; |mxdisplay|\p1:temp1[4]   ; |mxdisplay|Add0~1              ; combout          ;
+; |mxdisplay|\p1:temp1[3]   ; |mxdisplay|Add0~2              ; combout          ;
+; |mxdisplay|\p1:temp1[3]   ; |mxdisplay|\p1:temp1[3]        ; regout           ;
+; |mxdisplay|LessThan0~1    ; |mxdisplay|LessThan0~1         ; combout          ;
+; |mxdisplay|LessThan0~2    ; |mxdisplay|LessThan0~2         ; combout          ;
+; |mxdisplay|LessThan0~3    ; |mxdisplay|LessThan0~3         ; combout          ;
+; |mxdisplay|col2~26        ; |mxdisplay|col2~26             ; combout          ;
+; |mxdisplay|row1[2]~4      ; |mxdisplay|row1[2]~4           ; combout          ;
+; |mxdisplay|row1[2]~5      ; |mxdisplay|row1[2]~5           ; combout          ;
+; |mxdisplay|row1~6         ; |mxdisplay|row1~6              ; combout          ;
+; |mxdisplay|row1~7         ; |mxdisplay|row1~7              ; combout          ;
+; |mxdisplay|row1~9         ; |mxdisplay|row1~9              ; combout          ;
+; |mxdisplay|row1~10        ; |mxdisplay|row1~10             ; combout          ;
+; |mxdisplay|\p1:temp1[4]~0 ; |mxdisplay|\p1:temp1[4]~0      ; combout          ;
+; |mxdisplay|Mux42~1        ; |mxdisplay|Mux42~1             ; combout          ;
+; |mxdisplay|Decoder1~1     ; |mxdisplay|Decoder1~1          ; combout          ;
+; |mxdisplay|row1~13        ; |mxdisplay|row1~13             ; combout          ;
+; |mxdisplay|row1~14        ; |mxdisplay|row1~14             ; combout          ;
+; |mxdisplay|row1~15        ; |mxdisplay|row1~15             ; combout          ;
+; |mxdisplay|Mux42~2        ; |mxdisplay|Mux42~2             ; combout          ;
+; |mxdisplay|row1~18        ; |mxdisplay|row1~18             ; combout          ;
+; |mxdisplay|row1~19        ; |mxdisplay|row1~19             ; combout          ;
+; |mxdisplay|row1~20        ; |mxdisplay|row1~20             ; combout          ;
+; |mxdisplay|Mux42~3        ; |mxdisplay|Mux42~3             ; combout          ;
+; |mxdisplay|row1~23        ; |mxdisplay|row1~23             ; combout          ;
+; |mxdisplay|row1~24        ; |mxdisplay|row1~24             ; combout          ;
+; |mxdisplay|Mux42~4        ; |mxdisplay|Mux42~4             ; combout          ;
+; |mxdisplay|Decoder1~4     ; |mxdisplay|Decoder1~4          ; combout          ;
+; |mxdisplay|row1~27        ; |mxdisplay|row1~27             ; combout          ;
+; |mxdisplay|row1~28        ; |mxdisplay|row1~28             ; combout          ;
+; |mxdisplay|row1~29        ; |mxdisplay|row1~29             ; combout          ;
+; |mxdisplay|Mux42~5        ; |mxdisplay|Mux42~5             ; combout          ;
+; |mxdisplay|Decoder1~5     ; |mxdisplay|Decoder1~5          ; combout          ;
+; |mxdisplay|row1~32        ; |mxdisplay|row1~32             ; combout          ;
+; |mxdisplay|row1~33        ; |mxdisplay|row1~33             ; combout          ;
+; |mxdisplay|row1~34        ; |mxdisplay|row1~34             ; combout          ;
+; |mxdisplay|Mux42~6        ; |mxdisplay|Mux42~6             ; combout          ;
+; |mxdisplay|row1~37        ; |mxdisplay|row1~37             ; combout          ;
+; |mxdisplay|row1~38        ; |mxdisplay|row1~38             ; combout          ;
+; |mxdisplay|Mux42~7        ; |mxdisplay|Mux42~7             ; combout          ;
+; |mxdisplay|Decoder1~7     ; |mxdisplay|Decoder1~7          ; combout          ;
+; |mxdisplay|row1~41        ; |mxdisplay|row1~41             ; combout          ;
+; |mxdisplay|row1~42        ; |mxdisplay|row1~42             ; combout          ;
+; |mxdisplay|Mux11~1        ; |mxdisplay|Mux11~1             ; combout          ;
+; |mxdisplay|Mux10~0        ; |mxdisplay|Mux10~0             ; combout          ;
+; |mxdisplay|Mux10~1        ; |mxdisplay|Mux10~1             ; combout          ;
+; |mxdisplay|Mux9~0         ; |mxdisplay|Mux9~0              ; combout          ;
+; |mxdisplay|Mux9~1         ; |mxdisplay|Mux9~1              ; combout          ;
+; |mxdisplay|col1~18        ; |mxdisplay|col1~18             ; combout          ;
+; |mxdisplay|col1~19        ; |mxdisplay|col1~19             ; combout          ;
+; |mxdisplay|col1~20        ; |mxdisplay|col1~20             ; combout          ;
+; |mxdisplay|col1~21        ; |mxdisplay|col1~21             ; combout          ;
+; |mxdisplay|col1~22        ; |mxdisplay|col1~22             ; combout          ;
+; |mxdisplay|p1~7           ; |mxdisplay|p1~7                ; combout          ;
+; |mxdisplay|p1~8           ; |mxdisplay|p1~8                ; combout          ;
+; |mxdisplay|col1~23        ; |mxdisplay|col1~23             ; combout          ;
+; |mxdisplay|col1~24        ; |mxdisplay|col1~24             ; combout          ;
+; |mxdisplay|col1~26        ; |mxdisplay|col1~26             ; combout          ;
+; |mxdisplay|col1~27        ; |mxdisplay|col1~27             ; combout          ;
+; |mxdisplay|col1~28        ; |mxdisplay|col1~28             ; combout          ;
+; |mxdisplay|col1~30        ; |mxdisplay|col1~30             ; combout          ;
+; |mxdisplay|col1~32        ; |mxdisplay|col1~32             ; combout          ;
+; |mxdisplay|col1~34        ; |mxdisplay|col1~34             ; combout          ;
+; |mxdisplay|col1~35        ; |mxdisplay|col1~35             ; combout          ;
+; |mxdisplay|col1~37        ; |mxdisplay|col1~37             ; combout          ;
+; |mxdisplay|col1~42        ; |mxdisplay|col1~42             ; combout          ;
+; |mxdisplay|col1~45        ; |mxdisplay|col1~45             ; combout          ;
+; |mxdisplay|Mux5~0         ; |mxdisplay|Mux5~0              ; combout          ;
+; |mxdisplay|Mux5~1         ; |mxdisplay|Mux5~1              ; combout          ;
+; |mxdisplay|Mux3~0         ; |mxdisplay|Mux3~0              ; combout          ;
+; |mxdisplay|Mux3~1         ; |mxdisplay|Mux3~1              ; combout          ;
+; |mxdisplay|Mux4~0         ; |mxdisplay|Mux4~0              ; combout          ;
+; |mxdisplay|Mux4~1         ; |mxdisplay|Mux4~1              ; combout          ;
+; |mxdisplay|Decoder2~0     ; |mxdisplay|Decoder2~0          ; combout          ;
+; |mxdisplay|col2~31        ; |mxdisplay|col2~31             ; combout          ;
+; |mxdisplay|col2~32        ; |mxdisplay|col2~32             ; combout          ;
+; |mxdisplay|col2~33        ; |mxdisplay|col2~33             ; combout          ;
+; |mxdisplay|col2~34        ; |mxdisplay|col2~34             ; combout          ;
+; |mxdisplay|Mux38~0        ; |mxdisplay|Mux38~0             ; combout          ;
+; |mxdisplay|Decoder2~1     ; |mxdisplay|Decoder2~1          ; combout          ;
+; |mxdisplay|col2~35        ; |mxdisplay|col2~35             ; combout          ;
+; |mxdisplay|col2~36        ; |mxdisplay|col2~36             ; combout          ;
+; |mxdisplay|Mux39~0        ; |mxdisplay|Mux39~0             ; combout          ;
+; |mxdisplay|Decoder2~2     ; |mxdisplay|Decoder2~2          ; combout          ;
+; |mxdisplay|col2~38        ; |mxdisplay|col2~38             ; combout          ;
+; |mxdisplay|col2~39        ; |mxdisplay|col2~39             ; combout          ;
+; |mxdisplay|col2~40        ; |mxdisplay|col2~40             ; combout          ;
+; |mxdisplay|Add1~0         ; |mxdisplay|Add1~0              ; combout          ;
+; |mxdisplay|col2~41        ; |mxdisplay|col2~41             ; combout          ;
+; |mxdisplay|col2~42        ; |mxdisplay|col2~42             ; combout          ;
+; |mxdisplay|col2~44        ; |mxdisplay|col2~44             ; combout          ;
+; |mxdisplay|col2~45        ; |mxdisplay|col2~45             ; combout          ;
+; |mxdisplay|Decoder2~3     ; |mxdisplay|Decoder2~3          ; combout          ;
+; |mxdisplay|col2~47        ; |mxdisplay|col2~47             ; combout          ;
+; |mxdisplay|col2~48        ; |mxdisplay|col2~48             ; combout          ;
+; |mxdisplay|Decoder2~4     ; |mxdisplay|Decoder2~4          ; combout          ;
+; |mxdisplay|col2~49        ; |mxdisplay|col2~49             ; combout          ;
+; |mxdisplay|col2~50        ; |mxdisplay|col2~50             ; combout          ;
+; |mxdisplay|Decoder2~5     ; |mxdisplay|Decoder2~5          ; combout          ;
+; |mxdisplay|col2~52        ; |mxdisplay|col2~52             ; combout          ;
+; |mxdisplay|col2~53        ; |mxdisplay|col2~53             ; combout          ;
+; |mxdisplay|col2~55        ; |mxdisplay|col2~55             ; combout          ;
+; |mxdisplay|col2~56        ; |mxdisplay|col2~56             ; combout          ;
+; |mxdisplay|col2~57        ; |mxdisplay|col2~57             ; combout          ;
+; |mxdisplay|\p1:temp1[4]~1 ; |mxdisplay|\p1:temp1[4]~1      ; combout          ;
+; |mxdisplay|col1~47        ; |mxdisplay|col1~47             ; combout          ;
+; |mxdisplay|col1~48        ; |mxdisplay|col1~48             ; combout          ;
+; |mxdisplay|col1~50        ; |mxdisplay|col1~50             ; combout          ;
+; |mxdisplay|col1~52        ; |mxdisplay|col1~52             ; combout          ;
+; |mxdisplay|col2~59        ; |mxdisplay|col2~59             ; combout          ;
+; |mxdisplay|col2~69        ; |mxdisplay|col2~69             ; combout          ;
+; |mxdisplay|point[0]~8     ; |mxdisplay|point[0]~8          ; combout          ;
+; |mxdisplay|blr[2]         ; |mxdisplay|blr[2]~corein       ; combout          ;
+; |mxdisplay|blr[1]         ; |mxdisplay|blr[1]~corein       ; combout          ;
+; |mxdisplay|blr[0]         ; |mxdisplay|blr[0]~corein       ; combout          ;
+; |mxdisplay|check          ; |mxdisplay|check~corein        ; combout          ;
+; |mxdisplay|breath         ; |mxdisplay|breath~corein       ; combout          ;
+; |mxdisplay|over           ; |mxdisplay|over~corein         ; combout          ;
+; |mxdisplay|cntbreath[4]   ; |mxdisplay|cntbreath[4]~corein ; combout          ;
+; |mxdisplay|cntbreath[3]   ; |mxdisplay|cntbreath[3]~corein ; combout          ;
+; |mxdisplay|cntbreath[2]   ; |mxdisplay|cntbreath[2]~corein ; combout          ;
+; |mxdisplay|checkrow[0]    ; |mxdisplay|checkrow[0]~corein  ; combout          ;
+; |mxdisplay|checkrow[1]    ; |mxdisplay|checkrow[1]~corein  ; combout          ;
+; |mxdisplay|checkrow[2]    ; |mxdisplay|checkrow[2]~corein  ; combout          ;
+; |mxdisplay|clk3           ; |mxdisplay|clk3~corein         ; combout          ;
+; |mxdisplay|clear          ; |mxdisplay|clear~corein        ; combout          ;
+; |mxdisplay|pass           ; |mxdisplay|pass~corein         ; combout          ;
+; |mxdisplay|row1[0]        ; |mxdisplay|row1[0]             ; padio            ;
+; |mxdisplay|row1[1]        ; |mxdisplay|row1[1]             ; padio            ;
+; |mxdisplay|row1[2]        ; |mxdisplay|row1[2]             ; padio            ;
+; |mxdisplay|row1[3]        ; |mxdisplay|row1[3]             ; padio            ;
+; |mxdisplay|row1[4]        ; |mxdisplay|row1[4]             ; padio            ;
+; |mxdisplay|row1[5]        ; |mxdisplay|row1[5]             ; padio            ;
+; |mxdisplay|row1[6]        ; |mxdisplay|row1[6]             ; padio            ;
+; |mxdisplay|row1[7]        ; |mxdisplay|row1[7]             ; padio            ;
+; |mxdisplay|col1[0]        ; |mxdisplay|col1[0]             ; padio            ;
+; |mxdisplay|col1[1]        ; |mxdisplay|col1[1]             ; padio            ;
+; |mxdisplay|col1[2]        ; |mxdisplay|col1[2]             ; padio            ;
+; |mxdisplay|col1[3]        ; |mxdisplay|col1[3]             ; padio            ;
+; |mxdisplay|col1[4]        ; |mxdisplay|col1[4]             ; padio            ;
+; |mxdisplay|col1[5]        ; |mxdisplay|col1[5]             ; padio            ;
+; |mxdisplay|col1[6]        ; |mxdisplay|col1[6]             ; padio            ;
+; |mxdisplay|col1[7]        ; |mxdisplay|col1[7]             ; padio            ;
+; |mxdisplay|col2[0]        ; |mxdisplay|col2[0]             ; padio            ;
+; |mxdisplay|col2[1]        ; |mxdisplay|col2[1]             ; padio            ;
+; |mxdisplay|col2[2]        ; |mxdisplay|col2[2]             ; padio            ;
+; |mxdisplay|col2[3]        ; |mxdisplay|col2[3]             ; padio            ;
+; |mxdisplay|col2[4]        ; |mxdisplay|col2[4]             ; padio            ;
+; |mxdisplay|col2[5]        ; |mxdisplay|col2[5]             ; padio            ;
+; |mxdisplay|col2[6]        ; |mxdisplay|col2[6]             ; padio            ;
+; |mxdisplay|col2[7]        ; |mxdisplay|col2[7]             ; padio            ;
++---------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-----------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                    ;
++-------------------------+--------------------------------+------------------+
+; Node Name               ; Output Port Name               ; Output Port Type ;
++-------------------------+--------------------------------+------------------+
+; |mxdisplay|p1~0         ; |mxdisplay|p1~0                ; combout          ;
+; |mxdisplay|Mux8~0       ; |mxdisplay|Mux8~0              ; combout          ;
+; |mxdisplay|Mux8~1       ; |mxdisplay|Mux8~1              ; combout          ;
+; |mxdisplay|Mux6~0       ; |mxdisplay|Mux6~0              ; combout          ;
+; |mxdisplay|Mux6~1       ; |mxdisplay|Mux6~1              ; combout          ;
+; |mxdisplay|Mux7~0       ; |mxdisplay|Mux7~0              ; combout          ;
+; |mxdisplay|Mux7~1       ; |mxdisplay|Mux7~1              ; combout          ;
+; |mxdisplay|Decoder5~0   ; |mxdisplay|Decoder5~0          ; combout          ;
+; |mxdisplay|LessThan0~0  ; |mxdisplay|LessThan0~0         ; combout          ;
+; |mxdisplay|Decoder5~1   ; |mxdisplay|Decoder5~1          ; combout          ;
+; |mxdisplay|Decoder5~2   ; |mxdisplay|Decoder5~2          ; combout          ;
+; |mxdisplay|Decoder1~2   ; |mxdisplay|Decoder1~2          ; combout          ;
+; |mxdisplay|Decoder5~3   ; |mxdisplay|Decoder5~3          ; combout          ;
+; |mxdisplay|Decoder1~3   ; |mxdisplay|Decoder1~3          ; combout          ;
+; |mxdisplay|Decoder5~4   ; |mxdisplay|Decoder5~4          ; combout          ;
+; |mxdisplay|Decoder5~5   ; |mxdisplay|Decoder5~5          ; combout          ;
+; |mxdisplay|Decoder5~6   ; |mxdisplay|Decoder5~6          ; combout          ;
+; |mxdisplay|Decoder1~6   ; |mxdisplay|Decoder1~6          ; combout          ;
+; |mxdisplay|Decoder5~7   ; |mxdisplay|Decoder5~7          ; combout          ;
+; |mxdisplay|Mux11~0      ; |mxdisplay|Mux11~0             ; combout          ;
+; |mxdisplay|col2~27      ; |mxdisplay|col2~27             ; combout          ;
+; |mxdisplay|p1~3         ; |mxdisplay|p1~3                ; combout          ;
+; |mxdisplay|p1~4         ; |mxdisplay|p1~4                ; combout          ;
+; |mxdisplay|p1~5         ; |mxdisplay|p1~5                ; combout          ;
+; |mxdisplay|p1~6         ; |mxdisplay|p1~6                ; combout          ;
+; |mxdisplay|col2~28      ; |mxdisplay|col2~28             ; combout          ;
+; |mxdisplay|col1~31      ; |mxdisplay|col1~31             ; combout          ;
+; |mxdisplay|col2~29      ; |mxdisplay|col2~29             ; combout          ;
+; |mxdisplay|col1~39      ; |mxdisplay|col1~39             ; combout          ;
+; |mxdisplay|col1~41      ; |mxdisplay|col1~41             ; combout          ;
+; |mxdisplay|col1~44      ; |mxdisplay|col1~44             ; combout          ;
+; |mxdisplay|col2~30      ; |mxdisplay|col2~30             ; combout          ;
+; |mxdisplay|col2~37      ; |mxdisplay|col2~37             ; combout          ;
+; |mxdisplay|col2~43      ; |mxdisplay|col2~43             ; combout          ;
+; |mxdisplay|col2~51      ; |mxdisplay|col2~51             ; combout          ;
+; |mxdisplay|col1~49      ; |mxdisplay|col1~49             ; combout          ;
+; |mxdisplay|col1~51      ; |mxdisplay|col1~51             ; combout          ;
+; |mxdisplay|col2~60      ; |mxdisplay|col2~60             ; combout          ;
+; |mxdisplay|col2~62      ; |mxdisplay|col2~62             ; combout          ;
+; |mxdisplay|col2~65      ; |mxdisplay|col2~65             ; combout          ;
+; |mxdisplay|col2~67      ; |mxdisplay|col2~67             ; combout          ;
+; |mxdisplay|p1~9         ; |mxdisplay|p1~9                ; combout          ;
+; |mxdisplay|p1~10        ; |mxdisplay|p1~10               ; combout          ;
+; |mxdisplay|blout        ; |mxdisplay|blout~corein        ; combout          ;
+; |mxdisplay|ishit        ; |mxdisplay|ishit~corein        ; combout          ;
+; |mxdisplay|tgtr[2][0]   ; |mxdisplay|tgtr[2][0]~corein   ; combout          ;
+; |mxdisplay|tgtr[0][0]   ; |mxdisplay|tgtr[0][0]~corein   ; combout          ;
+; |mxdisplay|tgtr[1][0]   ; |mxdisplay|tgtr[1][0]~corein   ; combout          ;
+; |mxdisplay|tgtr[2][2]   ; |mxdisplay|tgtr[2][2]~corein   ; combout          ;
+; |mxdisplay|tgtr[0][2]   ; |mxdisplay|tgtr[0][2]~corein   ; combout          ;
+; |mxdisplay|tgtr[1][2]   ; |mxdisplay|tgtr[1][2]~corein   ; combout          ;
+; |mxdisplay|tgtr[2][1]   ; |mxdisplay|tgtr[2][1]~corein   ; combout          ;
+; |mxdisplay|tgtr[0][1]   ; |mxdisplay|tgtr[0][1]~corein   ; combout          ;
+; |mxdisplay|tgtr[1][1]   ; |mxdisplay|tgtr[1][1]~corein   ; combout          ;
+; |mxdisplay|fpr[2][2]    ; |mxdisplay|fpr[2][2]~corein    ; combout          ;
+; |mxdisplay|fpr[1][2]    ; |mxdisplay|fpr[1][2]~corein    ; combout          ;
+; |mxdisplay|fpr[0][2]    ; |mxdisplay|fpr[0][2]~corein    ; combout          ;
+; |mxdisplay|fpr[3][2]    ; |mxdisplay|fpr[3][2]~corein    ; combout          ;
+; |mxdisplay|fpr[2][1]    ; |mxdisplay|fpr[2][1]~corein    ; combout          ;
+; |mxdisplay|fpr[1][1]    ; |mxdisplay|fpr[1][1]~corein    ; combout          ;
+; |mxdisplay|fpr[0][1]    ; |mxdisplay|fpr[0][1]~corein    ; combout          ;
+; |mxdisplay|fpr[3][1]    ; |mxdisplay|fpr[3][1]~corein    ; combout          ;
+; |mxdisplay|fpr[2][0]    ; |mxdisplay|fpr[2][0]~corein    ; combout          ;
+; |mxdisplay|fpr[1][0]    ; |mxdisplay|fpr[1][0]~corein    ; combout          ;
+; |mxdisplay|fpr[0][0]    ; |mxdisplay|fpr[0][0]~corein    ; combout          ;
+; |mxdisplay|fpr[3][0]    ; |mxdisplay|fpr[3][0]~corein    ; combout          ;
+; |mxdisplay|cntbreath[1] ; |mxdisplay|cntbreath[1]~corein ; combout          ;
+; |mxdisplay|cntbreath[0] ; |mxdisplay|cntbreath[0]~corein ; combout          ;
+; |mxdisplay|stay         ; |mxdisplay|stay~corein         ; combout          ;
+; |mxdisplay|tgtc[2][0]   ; |mxdisplay|tgtc[2][0]~corein   ; combout          ;
+; |mxdisplay|tgtc[0][0]   ; |mxdisplay|tgtc[0][0]~corein   ; combout          ;
+; |mxdisplay|tgtc[1][0]   ; |mxdisplay|tgtc[1][0]~corein   ; combout          ;
+; |mxdisplay|tgtc[2][1]   ; |mxdisplay|tgtc[2][1]~corein   ; combout          ;
+; |mxdisplay|tgtc[0][1]   ; |mxdisplay|tgtc[0][1]~corein   ; combout          ;
+; |mxdisplay|tgtc[1][1]   ; |mxdisplay|tgtc[1][1]~corein   ; combout          ;
+; |mxdisplay|tgtc[2][2]   ; |mxdisplay|tgtc[2][2]~corein   ; combout          ;
+; |mxdisplay|tgtc[0][2]   ; |mxdisplay|tgtc[0][2]~corein   ; combout          ;
+; |mxdisplay|tgtc[1][2]   ; |mxdisplay|tgtc[1][2]~corein   ; combout          ;
+; |mxdisplay|blc[0]       ; |mxdisplay|blc[0]~corein       ; combout          ;
+; |mxdisplay|blc[1]       ; |mxdisplay|blc[1]~corein       ; combout          ;
+; |mxdisplay|blc[2]       ; |mxdisplay|blc[2]~corein       ; combout          ;
+; |mxdisplay|fpc[2][0]    ; |mxdisplay|fpc[2][0]~corein    ; combout          ;
+; |mxdisplay|fpc[1][0]    ; |mxdisplay|fpc[1][0]~corein    ; combout          ;
+; |mxdisplay|fpc[0][0]    ; |mxdisplay|fpc[0][0]~corein    ; combout          ;
+; |mxdisplay|fpc[3][0]    ; |mxdisplay|fpc[3][0]~corein    ; combout          ;
+; |mxdisplay|fpc[2][2]    ; |mxdisplay|fpc[2][2]~corein    ; combout          ;
+; |mxdisplay|fpc[1][2]    ; |mxdisplay|fpc[1][2]~corein    ; combout          ;
+; |mxdisplay|fpc[0][2]    ; |mxdisplay|fpc[0][2]~corein    ; combout          ;
+; |mxdisplay|fpc[3][2]    ; |mxdisplay|fpc[3][2]~corein    ; combout          ;
+; |mxdisplay|fpc[1][1]    ; |mxdisplay|fpc[1][1]~corein    ; combout          ;
+; |mxdisplay|fpc[2][1]    ; |mxdisplay|fpc[2][1]~corein    ; combout          ;
+; |mxdisplay|fpc[0][1]    ; |mxdisplay|fpc[0][1]~corein    ; combout          ;
+; |mxdisplay|fpc[3][1]    ; |mxdisplay|fpc[3][1]~corein    ; combout          ;
++-------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-----------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                    ;
++-------------------------+--------------------------------+------------------+
+; Node Name               ; Output Port Name               ; Output Port Type ;
++-------------------------+--------------------------------+------------------+
+; |mxdisplay|p1~0         ; |mxdisplay|p1~0                ; combout          ;
+; |mxdisplay|row1~0       ; |mxdisplay|row1~0              ; combout          ;
+; |mxdisplay|Mux8~0       ; |mxdisplay|Mux8~0              ; combout          ;
+; |mxdisplay|Mux8~1       ; |mxdisplay|Mux8~1              ; combout          ;
+; |mxdisplay|Mux6~0       ; |mxdisplay|Mux6~0              ; combout          ;
+; |mxdisplay|Mux6~1       ; |mxdisplay|Mux6~1              ; combout          ;
+; |mxdisplay|Mux7~0       ; |mxdisplay|Mux7~0              ; combout          ;
+; |mxdisplay|Mux7~1       ; |mxdisplay|Mux7~1              ; combout          ;
+; |mxdisplay|Decoder5~0   ; |mxdisplay|Decoder5~0          ; combout          ;
+; |mxdisplay|LessThan0~0  ; |mxdisplay|LessThan0~0         ; combout          ;
+; |mxdisplay|row1~8       ; |mxdisplay|row1~8              ; combout          ;
+; |mxdisplay|row1~12      ; |mxdisplay|row1~12             ; combout          ;
+; |mxdisplay|Decoder5~1   ; |mxdisplay|Decoder5~1          ; combout          ;
+; |mxdisplay|row1~17      ; |mxdisplay|row1~17             ; combout          ;
+; |mxdisplay|Decoder5~2   ; |mxdisplay|Decoder5~2          ; combout          ;
+; |mxdisplay|Decoder1~2   ; |mxdisplay|Decoder1~2          ; combout          ;
+; |mxdisplay|row1~22      ; |mxdisplay|row1~22             ; combout          ;
+; |mxdisplay|Decoder5~3   ; |mxdisplay|Decoder5~3          ; combout          ;
+; |mxdisplay|Decoder1~3   ; |mxdisplay|Decoder1~3          ; combout          ;
+; |mxdisplay|row1~26      ; |mxdisplay|row1~26             ; combout          ;
+; |mxdisplay|Decoder5~4   ; |mxdisplay|Decoder5~4          ; combout          ;
+; |mxdisplay|row1~31      ; |mxdisplay|row1~31             ; combout          ;
+; |mxdisplay|Decoder5~5   ; |mxdisplay|Decoder5~5          ; combout          ;
+; |mxdisplay|row1~36      ; |mxdisplay|row1~36             ; combout          ;
+; |mxdisplay|Decoder5~6   ; |mxdisplay|Decoder5~6          ; combout          ;
+; |mxdisplay|Decoder1~6   ; |mxdisplay|Decoder1~6          ; combout          ;
+; |mxdisplay|row1~40      ; |mxdisplay|row1~40             ; combout          ;
+; |mxdisplay|Decoder5~7   ; |mxdisplay|Decoder5~7          ; combout          ;
+; |mxdisplay|Mux11~0      ; |mxdisplay|Mux11~0             ; combout          ;
+; |mxdisplay|col2~27      ; |mxdisplay|col2~27             ; combout          ;
+; |mxdisplay|p1~3         ; |mxdisplay|p1~3                ; combout          ;
+; |mxdisplay|p1~4         ; |mxdisplay|p1~4                ; combout          ;
+; |mxdisplay|p1~5         ; |mxdisplay|p1~5                ; combout          ;
+; |mxdisplay|p1~6         ; |mxdisplay|p1~6                ; combout          ;
+; |mxdisplay|col2~28      ; |mxdisplay|col2~28             ; combout          ;
+; |mxdisplay|col1~31      ; |mxdisplay|col1~31             ; combout          ;
+; |mxdisplay|col2~29      ; |mxdisplay|col2~29             ; combout          ;
+; |mxdisplay|col1~39      ; |mxdisplay|col1~39             ; combout          ;
+; |mxdisplay|col1~41      ; |mxdisplay|col1~41             ; combout          ;
+; |mxdisplay|col1~44      ; |mxdisplay|col1~44             ; combout          ;
+; |mxdisplay|col2~37      ; |mxdisplay|col2~37             ; combout          ;
+; |mxdisplay|col2~51      ; |mxdisplay|col2~51             ; combout          ;
+; |mxdisplay|col1~49      ; |mxdisplay|col1~49             ; combout          ;
+; |mxdisplay|col1~51      ; |mxdisplay|col1~51             ; combout          ;
+; |mxdisplay|col2~60      ; |mxdisplay|col2~60             ; combout          ;
+; |mxdisplay|col2~62      ; |mxdisplay|col2~62             ; combout          ;
+; |mxdisplay|col2~65      ; |mxdisplay|col2~65             ; combout          ;
+; |mxdisplay|col2~67      ; |mxdisplay|col2~67             ; combout          ;
+; |mxdisplay|p1~9         ; |mxdisplay|p1~9                ; combout          ;
+; |mxdisplay|p1~10        ; |mxdisplay|p1~10               ; combout          ;
+; |mxdisplay|blout        ; |mxdisplay|blout~corein        ; combout          ;
+; |mxdisplay|ishit        ; |mxdisplay|ishit~corein        ; combout          ;
+; |mxdisplay|tgtr[2][0]   ; |mxdisplay|tgtr[2][0]~corein   ; combout          ;
+; |mxdisplay|tgtr[0][0]   ; |mxdisplay|tgtr[0][0]~corein   ; combout          ;
+; |mxdisplay|tgtr[1][0]   ; |mxdisplay|tgtr[1][0]~corein   ; combout          ;
+; |mxdisplay|tgtr[2][2]   ; |mxdisplay|tgtr[2][2]~corein   ; combout          ;
+; |mxdisplay|tgtr[0][2]   ; |mxdisplay|tgtr[0][2]~corein   ; combout          ;
+; |mxdisplay|tgtr[1][2]   ; |mxdisplay|tgtr[1][2]~corein   ; combout          ;
+; |mxdisplay|tgtr[2][1]   ; |mxdisplay|tgtr[2][1]~corein   ; combout          ;
+; |mxdisplay|tgtr[0][1]   ; |mxdisplay|tgtr[0][1]~corein   ; combout          ;
+; |mxdisplay|tgtr[1][1]   ; |mxdisplay|tgtr[1][1]~corein   ; combout          ;
+; |mxdisplay|fpr[2][2]    ; |mxdisplay|fpr[2][2]~corein    ; combout          ;
+; |mxdisplay|fpr[1][2]    ; |mxdisplay|fpr[1][2]~corein    ; combout          ;
+; |mxdisplay|fpr[0][2]    ; |mxdisplay|fpr[0][2]~corein    ; combout          ;
+; |mxdisplay|fpr[3][2]    ; |mxdisplay|fpr[3][2]~corein    ; combout          ;
+; |mxdisplay|fpr[2][1]    ; |mxdisplay|fpr[2][1]~corein    ; combout          ;
+; |mxdisplay|fpr[1][1]    ; |mxdisplay|fpr[1][1]~corein    ; combout          ;
+; |mxdisplay|fpr[0][1]    ; |mxdisplay|fpr[0][1]~corein    ; combout          ;
+; |mxdisplay|fpr[3][1]    ; |mxdisplay|fpr[3][1]~corein    ; combout          ;
+; |mxdisplay|fpr[2][0]    ; |mxdisplay|fpr[2][0]~corein    ; combout          ;
+; |mxdisplay|fpr[1][0]    ; |mxdisplay|fpr[1][0]~corein    ; combout          ;
+; |mxdisplay|fpr[0][0]    ; |mxdisplay|fpr[0][0]~corein    ; combout          ;
+; |mxdisplay|fpr[3][0]    ; |mxdisplay|fpr[3][0]~corein    ; combout          ;
+; |mxdisplay|cntbreath[1] ; |mxdisplay|cntbreath[1]~corein ; combout          ;
+; |mxdisplay|cntbreath[0] ; |mxdisplay|cntbreath[0]~corein ; combout          ;
+; |mxdisplay|switch       ; |mxdisplay|switch~corein       ; combout          ;
+; |mxdisplay|tgtc[2][0]   ; |mxdisplay|tgtc[2][0]~corein   ; combout          ;
+; |mxdisplay|tgtc[0][0]   ; |mxdisplay|tgtc[0][0]~corein   ; combout          ;
+; |mxdisplay|tgtc[1][0]   ; |mxdisplay|tgtc[1][0]~corein   ; combout          ;
+; |mxdisplay|tgtc[2][1]   ; |mxdisplay|tgtc[2][1]~corein   ; combout          ;
+; |mxdisplay|tgtc[0][1]   ; |mxdisplay|tgtc[0][1]~corein   ; combout          ;
+; |mxdisplay|tgtc[1][1]   ; |mxdisplay|tgtc[1][1]~corein   ; combout          ;
+; |mxdisplay|tgtc[2][2]   ; |mxdisplay|tgtc[2][2]~corein   ; combout          ;
+; |mxdisplay|tgtc[0][2]   ; |mxdisplay|tgtc[0][2]~corein   ; combout          ;
+; |mxdisplay|tgtc[1][2]   ; |mxdisplay|tgtc[1][2]~corein   ; combout          ;
+; |mxdisplay|blc[0]       ; |mxdisplay|blc[0]~corein       ; combout          ;
+; |mxdisplay|blc[1]       ; |mxdisplay|blc[1]~corein       ; combout          ;
+; |mxdisplay|blc[2]       ; |mxdisplay|blc[2]~corein       ; combout          ;
+; |mxdisplay|fpc[2][0]    ; |mxdisplay|fpc[2][0]~corein    ; combout          ;
+; |mxdisplay|fpc[1][0]    ; |mxdisplay|fpc[1][0]~corein    ; combout          ;
+; |mxdisplay|fpc[0][0]    ; |mxdisplay|fpc[0][0]~corein    ; combout          ;
+; |mxdisplay|fpc[3][0]    ; |mxdisplay|fpc[3][0]~corein    ; combout          ;
+; |mxdisplay|fpc[2][2]    ; |mxdisplay|fpc[2][2]~corein    ; combout          ;
+; |mxdisplay|fpc[1][2]    ; |mxdisplay|fpc[1][2]~corein    ; combout          ;
+; |mxdisplay|fpc[0][2]    ; |mxdisplay|fpc[0][2]~corein    ; combout          ;
+; |mxdisplay|fpc[3][2]    ; |mxdisplay|fpc[3][2]~corein    ; combout          ;
+; |mxdisplay|fpc[1][1]    ; |mxdisplay|fpc[1][1]~corein    ; combout          ;
+; |mxdisplay|fpc[2][1]    ; |mxdisplay|fpc[2][1]~corein    ; combout          ;
+; |mxdisplay|fpc[0][1]    ; |mxdisplay|fpc[0][1]~corein    ; combout          ;
+; |mxdisplay|fpc[3][1]    ; |mxdisplay|fpc[3][1]~corein    ; combout          ;
++-------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Sun Nov 11 11:27:15 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off mxdisplay -c mxdisplay
+Info: Using vector source file "C:/Users/1/Desktop/shoot. v9.0/mxdisplay/mxdisplay.vwf"
+Warning: Can't find signal in vector source file for input pin "|mxdisplay|blout"
+Warning: Can't find signal in vector source file for input pin "|mxdisplay|ishit"
+Info: Inverted registers were found during simulation
+    Info: Register: |mxdisplay|row1[0]~reg0
+    Info: Register: |mxdisplay|row1[1]~reg0
+    Info: Register: |mxdisplay|row1[2]~reg0
+    Info: Register: |mxdisplay|row1[3]~reg0
+    Info: Register: |mxdisplay|row1[4]~reg0
+    Info: Register: |mxdisplay|row1[5]~reg0
+    Info: Register: |mxdisplay|row1[6]~reg0
+    Info: Register: |mxdisplay|row1[7]~reg0
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      64.97 %
+Info: Number of transitions in simulation is 442166
+Info: Thank you for using the Quartus II software 30-day evaluation. You have 9 days left (until Nov 20, 2018) before compilation and simulation support is disabled.
+Info: Quartus II Simulator was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 172 megabytes
+    Info: Processing ended: Sun Nov 11 11:27:17 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+

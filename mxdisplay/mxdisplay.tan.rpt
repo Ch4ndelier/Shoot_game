@@ -1,0 +1,854 @@
+Classic Timing Analyzer report for mxdisplay
+Sat Nov 03 12:48:49 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clk3'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                      ;
++------------------------------+-------+---------------+----------------------------------+--------------+--------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From         ; To           ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+--------------+--------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 10.135 ns                        ; blc[0]       ; col2[0]~reg0 ; --         ; clk3     ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.037 ns                         ; col2[2]~reg0 ; col2[2]      ; clk3       ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.180 ns                        ; stay         ; col2[5]~reg0 ; --         ; clk3     ; 0            ;
+; Clock Setup: 'clk3'          ; N/A   ; None          ; 80.57 MHz ( period = 12.411 ns ) ; point[1]     ; row1[7]~reg0 ; clk3       ; clk3     ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;              ;              ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+--------------+--------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EPM1270T144C5      ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; Off                ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clk3            ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ;   0.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk3'                                                                                                                                                                              ;
++-------+------------------------------------------------+--------------+--------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From         ; To           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+--------------+--------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 80.57 MHz ( period = 12.411 ns )               ; point[1]     ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.702 ns               ;
+; N/A   ; 81.21 MHz ( period = 12.314 ns )               ; point[1]     ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.605 ns               ;
+; N/A   ; 82.26 MHz ( period = 12.156 ns )               ; \p1:temp1[0] ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.447 ns               ;
+; N/A   ; 82.49 MHz ( period = 12.122 ns )               ; \p1:temp1[0] ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.413 ns               ;
+; N/A   ; 82.50 MHz ( period = 12.121 ns )               ; \p1:temp1[0] ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.412 ns               ;
+; N/A   ; 82.54 MHz ( period = 12.116 ns )               ; point[1]     ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.407 ns               ;
+; N/A   ; 83.64 MHz ( period = 11.956 ns )               ; \p1:temp1[0] ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.247 ns               ;
+; N/A   ; 84.20 MHz ( period = 11.877 ns )               ; \p1:temp1[0] ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.168 ns               ;
+; N/A   ; 84.52 MHz ( period = 11.832 ns )               ; \p1:temp1[0] ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.123 ns               ;
+; N/A   ; 84.55 MHz ( period = 11.828 ns )               ; \p1:temp1[0] ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.119 ns               ;
+; N/A   ; 84.85 MHz ( period = 11.785 ns )               ; \p1:temp1[1] ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.076 ns               ;
+; N/A   ; 85.01 MHz ( period = 11.764 ns )               ; point[0]     ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.055 ns               ;
+; N/A   ; 85.10 MHz ( period = 11.751 ns )               ; \p1:temp1[1] ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.042 ns               ;
+; N/A   ; 85.11 MHz ( period = 11.750 ns )               ; \p1:temp1[1] ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 11.041 ns               ;
+; N/A   ; 85.55 MHz ( period = 11.689 ns )               ; \p1:temp1[0] ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.980 ns               ;
+; N/A   ; 85.67 MHz ( period = 11.673 ns )               ; point[0]     ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.964 ns               ;
+; N/A   ; 85.89 MHz ( period = 11.643 ns )               ; \p1:temp1[0] ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.934 ns               ;
+; N/A   ; 86.14 MHz ( period = 11.609 ns )               ; point[1]     ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.900 ns               ;
+; N/A   ; 86.32 MHz ( period = 11.585 ns )               ; \p1:temp1[1] ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.876 ns               ;
+; N/A   ; 86.64 MHz ( period = 11.542 ns )               ; point[0]     ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.833 ns               ;
+; N/A   ; 86.69 MHz ( period = 11.536 ns )               ; point[0]     ; col1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.827 ns               ;
+; N/A   ; 86.70 MHz ( period = 11.534 ns )               ; point[0]     ; col1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.825 ns               ;
+; N/A   ; 86.74 MHz ( period = 11.529 ns )               ; point[1]     ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.820 ns               ;
+; N/A   ; 86.78 MHz ( period = 11.524 ns )               ; point[1]     ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.815 ns               ;
+; N/A   ; 86.91 MHz ( period = 11.506 ns )               ; \p1:temp1[1] ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.797 ns               ;
+; N/A   ; 86.99 MHz ( period = 11.496 ns )               ; \p1:temp1[0] ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.787 ns               ;
+; N/A   ; 87.05 MHz ( period = 11.487 ns )               ; \p1:temp1[0] ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.778 ns               ;
+; N/A   ; 87.14 MHz ( period = 11.476 ns )               ; point[0]     ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.767 ns               ;
+; N/A   ; 87.25 MHz ( period = 11.461 ns )               ; \p1:temp1[1] ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.752 ns               ;
+; N/A   ; 87.28 MHz ( period = 11.457 ns )               ; \p1:temp1[1] ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.748 ns               ;
+; N/A   ; 87.32 MHz ( period = 11.452 ns )               ; \p1:temp1[0] ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.743 ns               ;
+; N/A   ; 87.37 MHz ( period = 11.446 ns )               ; \p1:temp1[0] ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.737 ns               ;
+; N/A   ; 87.67 MHz ( period = 11.406 ns )               ; \p1:temp1[0] ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.697 ns               ;
+; N/A   ; 87.69 MHz ( period = 11.404 ns )               ; point[0]     ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.695 ns               ;
+; N/A   ; 88.00 MHz ( period = 11.363 ns )               ; point[0]     ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.654 ns               ;
+; N/A   ; 88.11 MHz ( period = 11.350 ns )               ; \p1:temp1[3] ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.641 ns               ;
+; N/A   ; 88.35 MHz ( period = 11.318 ns )               ; \p1:temp1[1] ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.609 ns               ;
+; N/A   ; 88.37 MHz ( period = 11.316 ns )               ; \p1:temp1[3] ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.607 ns               ;
+; N/A   ; 88.38 MHz ( period = 11.315 ns )               ; \p1:temp1[3] ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.606 ns               ;
+; N/A   ; 88.42 MHz ( period = 11.310 ns )               ; point[1]     ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.601 ns               ;
+; N/A   ; 88.50 MHz ( period = 11.299 ns )               ; point[1]     ; col1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.590 ns               ;
+; N/A   ; 88.52 MHz ( period = 11.297 ns )               ; point[1]     ; col1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.588 ns               ;
+; N/A   ; 88.72 MHz ( period = 11.272 ns )               ; \p1:temp1[1] ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.563 ns               ;
+; N/A   ; 89.22 MHz ( period = 11.208 ns )               ; point[1]     ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.499 ns               ;
+; N/A   ; 89.69 MHz ( period = 11.150 ns )               ; \p1:temp1[3] ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.441 ns               ;
+; N/A   ; 89.89 MHz ( period = 11.125 ns )               ; \p1:temp1[1] ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.416 ns               ;
+; N/A   ; 89.93 MHz ( period = 11.120 ns )               ; \p1:temp1[2] ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.411 ns               ;
+; N/A   ; 89.96 MHz ( period = 11.116 ns )               ; \p1:temp1[1] ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.407 ns               ;
+; N/A   ; 90.20 MHz ( period = 11.086 ns )               ; \p1:temp1[2] ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.377 ns               ;
+; N/A   ; 90.21 MHz ( period = 11.085 ns )               ; point[0]     ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.376 ns               ;
+; N/A   ; 90.21 MHz ( period = 11.085 ns )               ; \p1:temp1[2] ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.376 ns               ;
+; N/A   ; 90.24 MHz ( period = 11.081 ns )               ; \p1:temp1[1] ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.372 ns               ;
+; N/A   ; 90.29 MHz ( period = 11.075 ns )               ; \p1:temp1[1] ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.366 ns               ;
+; N/A   ; 90.33 MHz ( period = 11.071 ns )               ; \p1:temp1[3] ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.362 ns               ;
+; N/A   ; 90.60 MHz ( period = 11.037 ns )               ; point[1]     ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.328 ns               ;
+; N/A   ; 90.62 MHz ( period = 11.035 ns )               ; \p1:temp1[1] ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.326 ns               ;
+; N/A   ; 90.69 MHz ( period = 11.026 ns )               ; \p1:temp1[3] ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.317 ns               ;
+; N/A   ; 90.73 MHz ( period = 11.022 ns )               ; \p1:temp1[3] ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.313 ns               ;
+; N/A   ; 90.92 MHz ( period = 10.999 ns )               ; point[1]     ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.290 ns               ;
+; N/A   ; 91.42 MHz ( period = 10.939 ns )               ; point[1]     ; col1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.230 ns               ;
+; N/A   ; 91.44 MHz ( period = 10.936 ns )               ; point[0]     ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.227 ns               ;
+; N/A   ; 91.55 MHz ( period = 10.923 ns )               ; point[0]     ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.214 ns               ;
+; N/A   ; 91.58 MHz ( period = 10.920 ns )               ; \p1:temp1[2] ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.211 ns               ;
+; N/A   ; 91.63 MHz ( period = 10.914 ns )               ; \p1:temp1[0] ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.205 ns               ;
+; N/A   ; 91.84 MHz ( period = 10.888 ns )               ; point[0]     ; col1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.179 ns               ;
+; N/A   ; 91.89 MHz ( period = 10.883 ns )               ; \p1:temp1[3] ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.174 ns               ;
+; N/A   ; 91.89 MHz ( period = 10.882 ns )               ; point[0]     ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.173 ns               ;
+; N/A   ; 91.89 MHz ( period = 10.882 ns )               ; point[0]     ; col1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.173 ns               ;
+; N/A   ; 92.24 MHz ( period = 10.841 ns )               ; \p1:temp1[2] ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.132 ns               ;
+; N/A   ; 92.28 MHz ( period = 10.837 ns )               ; \p1:temp1[3] ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.128 ns               ;
+; N/A   ; 92.29 MHz ( period = 10.835 ns )               ; point[1]     ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.126 ns               ;
+; N/A   ; 92.31 MHz ( period = 10.833 ns )               ; \p1:temp1[0] ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.124 ns               ;
+; N/A   ; 92.63 MHz ( period = 10.796 ns )               ; \p1:temp1[2] ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.087 ns               ;
+; N/A   ; 92.66 MHz ( period = 10.792 ns )               ; \p1:temp1[2] ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.083 ns               ;
+; N/A   ; 92.81 MHz ( period = 10.775 ns )               ; point[1]     ; col1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.066 ns               ;
+; N/A   ; 92.99 MHz ( period = 10.754 ns )               ; point[1]     ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.045 ns               ;
+; N/A   ; 93.35 MHz ( period = 10.712 ns )               ; point[0]     ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 10.003 ns               ;
+; N/A   ; 93.55 MHz ( period = 10.690 ns )               ; \p1:temp1[3] ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.981 ns                ;
+; N/A   ; 93.60 MHz ( period = 10.684 ns )               ; point[1]     ; col1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.975 ns                ;
+; N/A   ; 93.62 MHz ( period = 10.681 ns )               ; \p1:temp1[3] ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.972 ns                ;
+; N/A   ; 93.78 MHz ( period = 10.663 ns )               ; point[0]     ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.954 ns                ;
+; N/A   ; 93.87 MHz ( period = 10.653 ns )               ; \p1:temp1[2] ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.944 ns                ;
+; N/A   ; 93.93 MHz ( period = 10.646 ns )               ; \p1:temp1[3] ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.937 ns                ;
+; N/A   ; 93.98 MHz ( period = 10.640 ns )               ; \p1:temp1[3] ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.931 ns                ;
+; N/A   ; 94.07 MHz ( period = 10.630 ns )               ; point[0]     ; col1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.921 ns                ;
+; N/A   ; 94.28 MHz ( period = 10.607 ns )               ; \p1:temp1[2] ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.898 ns                ;
+; N/A   ; 94.28 MHz ( period = 10.607 ns )               ; point[0]     ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.898 ns                ;
+; N/A   ; 94.34 MHz ( period = 10.600 ns )               ; \p1:temp1[3] ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.891 ns                ;
+; N/A   ; 94.49 MHz ( period = 10.583 ns )               ; point[0]     ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.874 ns                ;
+; N/A   ; 94.85 MHz ( period = 10.543 ns )               ; \p1:temp1[1] ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.834 ns                ;
+; N/A   ; 95.07 MHz ( period = 10.519 ns )               ; point[1]     ; col1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.810 ns                ;
+; N/A   ; 95.23 MHz ( period = 10.501 ns )               ; point[0]     ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.792 ns                ;
+; N/A   ; 95.50 MHz ( period = 10.471 ns )               ; point[0]     ; col1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.762 ns                ;
+; N/A   ; 95.58 MHz ( period = 10.462 ns )               ; \p1:temp1[1] ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.753 ns                ;
+; N/A   ; 95.60 MHz ( period = 10.460 ns )               ; \p1:temp1[2] ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.751 ns                ;
+; N/A   ; 95.68 MHz ( period = 10.451 ns )               ; \p1:temp1[2] ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.742 ns                ;
+; N/A   ; 95.80 MHz ( period = 10.438 ns )               ; point[1]     ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.729 ns                ;
+; N/A   ; 96.01 MHz ( period = 10.416 ns )               ; \p1:temp1[2] ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.707 ns                ;
+; N/A   ; 96.04 MHz ( period = 10.412 ns )               ; point[1]     ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.703 ns                ;
+; N/A   ; 96.06 MHz ( period = 10.410 ns )               ; \p1:temp1[2] ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.701 ns                ;
+; N/A   ; 96.43 MHz ( period = 10.370 ns )               ; \p1:temp1[2] ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.661 ns                ;
+; N/A   ; 96.64 MHz ( period = 10.348 ns )               ; point[2]     ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.639 ns                ;
+; N/A   ; 97.25 MHz ( period = 10.283 ns )               ; point[0]     ; col1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.574 ns                ;
+; N/A   ; 97.73 MHz ( period = 10.232 ns )               ; \p1:temp1[0] ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 9.523 ns                ;
+; N/A   ; 98.31 MHz ( period = 10.172 ns )               ; point[1]     ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.463 ns                ;
+; N/A   ; 98.49 MHz ( period = 10.153 ns )               ; point[0]     ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.444 ns                ;
+; N/A   ; 98.54 MHz ( period = 10.148 ns )               ; point[2]     ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.439 ns                ;
+; N/A   ; 98.93 MHz ( period = 10.108 ns )               ; \p1:temp1[3] ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.399 ns                ;
+; N/A   ; 99.31 MHz ( period = 10.069 ns )               ; point[2]     ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.360 ns                ;
+; N/A   ; 99.73 MHz ( period = 10.027 ns )               ; \p1:temp1[3] ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.318 ns                ;
+; N/A   ; 100.73 MHz ( period = 9.928 ns )               ; point[1]     ; col1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.219 ns                ;
+; N/A   ; 100.88 MHz ( period = 9.913 ns )               ; \p1:temp1[4] ; row1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.204 ns                ;
+; N/A   ; 101.15 MHz ( period = 9.886 ns )               ; point[1]     ; col1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.177 ns                ;
+; N/A   ; 101.20 MHz ( period = 9.881 ns )               ; point[2]     ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.172 ns                ;
+; N/A   ; 101.22 MHz ( period = 9.879 ns )               ; point[0]     ; col1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.170 ns                ;
+; N/A   ; 101.22 MHz ( period = 9.879 ns )               ; \p1:temp1[4] ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.170 ns                ;
+; N/A   ; 101.24 MHz ( period = 9.878 ns )               ; \p1:temp1[2] ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.169 ns                ;
+; N/A   ; 101.24 MHz ( period = 9.878 ns )               ; \p1:temp1[4] ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.169 ns                ;
+; N/A   ; 101.41 MHz ( period = 9.861 ns )               ; \p1:temp1[1] ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 9.152 ns                ;
+; N/A   ; 102.07 MHz ( period = 9.797 ns )               ; \p1:temp1[2] ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.088 ns                ;
+; N/A   ; 102.08 MHz ( period = 9.796 ns )               ; point[1]     ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.087 ns                ;
+; N/A   ; 102.95 MHz ( period = 9.713 ns )               ; \p1:temp1[4] ; row1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 9.004 ns                ;
+; N/A   ; 103.22 MHz ( period = 9.688 ns )               ; point[2]     ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.979 ns                ;
+; N/A   ; 103.32 MHz ( period = 9.679 ns )               ; point[2]     ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.970 ns                ;
+; N/A   ; 103.80 MHz ( period = 9.634 ns )               ; \p1:temp1[4] ; row1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.925 ns                ;
+; N/A   ; 104.29 MHz ( period = 9.589 ns )               ; \p1:temp1[4] ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.880 ns                ;
+; N/A   ; 104.33 MHz ( period = 9.585 ns )               ; \p1:temp1[4] ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.876 ns                ;
+; N/A   ; 105.01 MHz ( period = 9.523 ns )               ; point[2]     ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.814 ns                ;
+; N/A   ; 105.02 MHz ( period = 9.522 ns )               ; point[2]     ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.813 ns                ;
+; N/A   ; 105.86 MHz ( period = 9.446 ns )               ; \p1:temp1[4] ; row1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.737 ns                ;
+; N/A   ; 106.09 MHz ( period = 9.426 ns )               ; \p1:temp1[3] ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 8.717 ns                ;
+; N/A   ; 106.38 MHz ( period = 9.400 ns )               ; \p1:temp1[4] ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.691 ns                ;
+; N/A   ; 108.07 MHz ( period = 9.253 ns )               ; \p1:temp1[4] ; row1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.544 ns                ;
+; N/A   ; 108.18 MHz ( period = 9.244 ns )               ; \p1:temp1[4] ; row1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.535 ns                ;
+; N/A   ; 108.31 MHz ( period = 9.233 ns )               ; point[2]     ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.524 ns                ;
+; N/A   ; 108.35 MHz ( period = 9.229 ns )               ; point[2]     ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.520 ns                ;
+; N/A   ; 108.59 MHz ( period = 9.209 ns )               ; \p1:temp1[4] ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.500 ns                ;
+; N/A   ; 108.66 MHz ( period = 9.203 ns )               ; \p1:temp1[4] ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.494 ns                ;
+; N/A   ; 108.74 MHz ( period = 9.196 ns )               ; \p1:temp1[2] ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 8.487 ns                ;
+; N/A   ; 109.13 MHz ( period = 9.163 ns )               ; \p1:temp1[4] ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.454 ns                ;
+; N/A   ; 109.82 MHz ( period = 9.106 ns )               ; point[2]     ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.397 ns                ;
+; N/A   ; 110.57 MHz ( period = 9.044 ns )               ; point[2]     ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.335 ns                ;
+; N/A   ; 110.68 MHz ( period = 9.035 ns )               ; \p1:temp1[0] ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 8.326 ns                ;
+; N/A   ; 110.68 MHz ( period = 9.035 ns )               ; \p1:temp1[0] ; point[0]     ; clk3       ; clk3     ; None                        ; None                      ; 8.326 ns                ;
+; N/A   ; 110.80 MHz ( period = 9.025 ns )               ; point[2]     ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.316 ns                ;
+; N/A   ; 112.96 MHz ( period = 8.853 ns )               ; point[2]     ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.144 ns                ;
+; N/A   ; 113.03 MHz ( period = 8.847 ns )               ; point[2]     ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.138 ns                ;
+; N/A   ; 113.55 MHz ( period = 8.807 ns )               ; point[2]     ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 8.098 ns                ;
+; N/A   ; 115.33 MHz ( period = 8.671 ns )               ; \p1:temp1[4] ; row1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 7.962 ns                ;
+; N/A   ; 115.42 MHz ( period = 8.664 ns )               ; \p1:temp1[1] ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 7.955 ns                ;
+; N/A   ; 115.42 MHz ( period = 8.664 ns )               ; \p1:temp1[1] ; point[0]     ; clk3       ; clk3     ; None                        ; None                      ; 7.955 ns                ;
+; N/A   ; 116.41 MHz ( period = 8.590 ns )               ; \p1:temp1[4] ; row1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 7.881 ns                ;
+; N/A   ; 121.52 MHz ( period = 8.229 ns )               ; \p1:temp1[3] ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 7.520 ns                ;
+; N/A   ; 121.52 MHz ( period = 8.229 ns )               ; \p1:temp1[3] ; point[0]     ; clk3       ; clk3     ; None                        ; None                      ; 7.520 ns                ;
+; N/A   ; 125.02 MHz ( period = 7.999 ns )               ; \p1:temp1[2] ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 7.290 ns                ;
+; N/A   ; 125.02 MHz ( period = 7.999 ns )               ; \p1:temp1[2] ; point[0]     ; clk3       ; clk3     ; None                        ; None                      ; 7.290 ns                ;
+; N/A   ; 125.17 MHz ( period = 7.989 ns )               ; \p1:temp1[4] ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 7.280 ns                ;
+; N/A   ; 147.23 MHz ( period = 6.792 ns )               ; \p1:temp1[4] ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 6.083 ns                ;
+; N/A   ; 147.23 MHz ( period = 6.792 ns )               ; \p1:temp1[4] ; point[0]     ; clk3       ; clk3     ; None                        ; None                      ; 6.083 ns                ;
+; N/A   ; 150.42 MHz ( period = 6.648 ns )               ; point[2]     ; col1[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.939 ns                ;
+; N/A   ; 150.53 MHz ( period = 6.643 ns )               ; point[2]     ; col1[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.934 ns                ;
+; N/A   ; 150.65 MHz ( period = 6.638 ns )               ; point[2]     ; col1[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.929 ns                ;
+; N/A   ; 150.65 MHz ( period = 6.638 ns )               ; point[2]     ; col1[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.929 ns                ;
+; N/A   ; 150.69 MHz ( period = 6.636 ns )               ; point[2]     ; col1[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.927 ns                ;
+; N/A   ; 150.72 MHz ( period = 6.635 ns )               ; point[2]     ; col1[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.926 ns                ;
+; N/A   ; 150.74 MHz ( period = 6.634 ns )               ; point[2]     ; col1[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.925 ns                ;
+; N/A   ; 150.88 MHz ( period = 6.628 ns )               ; point[2]     ; col1[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.919 ns                ;
+; N/A   ; 153.12 MHz ( period = 6.531 ns )               ; point[1]     ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 5.822 ns                ;
+; N/A   ; 156.05 MHz ( period = 6.408 ns )               ; point[0]     ; point[1]     ; clk3       ; clk3     ; None                        ; None                      ; 5.699 ns                ;
+; N/A   ; 174.31 MHz ( period = 5.737 ns )               ; col2[0]~reg0 ; col2[0]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 5.028 ns                ;
+; N/A   ; 184.50 MHz ( period = 5.420 ns )               ; point[1]     ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 4.711 ns                ;
+; N/A   ; 210.61 MHz ( period = 4.748 ns )               ; col2[7]~reg0 ; col2[7]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 4.039 ns                ;
+; N/A   ; 220.41 MHz ( period = 4.537 ns )               ; col2[3]~reg0 ; col2[3]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 3.828 ns                ;
+; N/A   ; 222.77 MHz ( period = 4.489 ns )               ; \p1:temp1[0] ; \p1:temp1[1] ; clk3       ; clk3     ; None                        ; None                      ; 3.780 ns                ;
+; N/A   ; 236.13 MHz ( period = 4.235 ns )               ; \p1:temp1[1] ; \p1:temp1[2] ; clk3       ; clk3     ; None                        ; None                      ; 3.526 ns                ;
+; N/A   ; 239.98 MHz ( period = 4.167 ns )               ; point[0]     ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 3.458 ns                ;
+; N/A   ; 253.94 MHz ( period = 3.938 ns )               ; \p1:temp1[0] ; \p1:temp1[4] ; clk3       ; clk3     ; None                        ; None                      ; 3.229 ns                ;
+; N/A   ; 255.36 MHz ( period = 3.916 ns )               ; \p1:temp1[0] ; \p1:temp1[0] ; clk3       ; clk3     ; None                        ; None                      ; 3.207 ns                ;
+; N/A   ; 264.62 MHz ( period = 3.779 ns )               ; \p1:temp1[0] ; \p1:temp1[2] ; clk3       ; clk3     ; None                        ; None                      ; 3.070 ns                ;
+; N/A   ; 280.35 MHz ( period = 3.567 ns )               ; \p1:temp1[1] ; \p1:temp1[4] ; clk3       ; clk3     ; None                        ; None                      ; 2.858 ns                ;
+; N/A   ; 287.44 MHz ( period = 3.479 ns )               ; col2[2]~reg0 ; col2[2]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 2.770 ns                ;
+; N/A   ; 294.72 MHz ( period = 3.393 ns )               ; col2[5]~reg0 ; col2[5]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 2.684 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[1] ; \p1:temp1[1] ; clk3       ; clk3     ; None                        ; None                      ; 2.571 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; col2[1]~reg0 ; col2[1]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 2.528 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; col2[4]~reg0 ; col2[4]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 2.528 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[3] ; \p1:temp1[4] ; clk3       ; clk3     ; None                        ; None                      ; 2.353 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[0] ; \p1:temp1[3] ; clk3       ; clk3     ; None                        ; None                      ; 2.124 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[2] ; \p1:temp1[4] ; clk3       ; clk3     ; None                        ; None                      ; 2.071 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[1] ; \p1:temp1[3] ; clk3       ; clk3     ; None                        ; None                      ; 1.994 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[2] ; \p1:temp1[3] ; clk3       ; clk3     ; None                        ; None                      ; 1.955 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[2] ; \p1:temp1[2] ; clk3       ; clk3     ; None                        ; None                      ; 1.935 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; point[0]     ; point[0]     ; clk3       ; clk3     ; None                        ; None                      ; 1.788 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; point[2]     ; point[2]     ; clk3       ; clk3     ; None                        ; None                      ; 1.764 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; col2[6]~reg0 ; col2[6]~reg0 ; clk3       ; clk3     ; None                        ; None                      ; 1.753 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[3] ; \p1:temp1[3] ; clk3       ; clk3     ; None                        ; None                      ; 0.923 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; \p1:temp1[4] ; \p1:temp1[4] ; clk3       ; clk3     ; None                        ; None                      ; 0.923 ns                ;
++-------+------------------------------------------------+--------------+--------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------+--------------+----------+
+; Slack                                   ; Required tsu                                        ; Actual tsu ; From         ; To           ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------+--------------+----------+
+; N/A                                     ; None                                                ; 10.135 ns  ; blc[0]       ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 10.049 ns  ; blc[1]       ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.979 ns   ; blc[0]       ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.935 ns   ; tgtc[1][1]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.922 ns   ; cntbreath[1] ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.893 ns   ; blc[1]       ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.888 ns   ; cntbreath[1] ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.887 ns   ; cntbreath[1] ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.792 ns   ; over         ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.779 ns   ; tgtc[1][1]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.778 ns   ; blc[0]       ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.777 ns   ; blc[0]       ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.776 ns   ; blc[0]       ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.774 ns   ; blc[0]       ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.770 ns   ; blc[0]       ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.769 ns   ; blc[0]       ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.769 ns   ; blc[0]       ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.747 ns   ; fpc[2][1]    ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.723 ns   ; tgtc[0][0]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.722 ns   ; cntbreath[1] ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.694 ns   ; check        ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.692 ns   ; blc[1]       ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.691 ns   ; blc[1]       ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.690 ns   ; blc[1]       ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.688 ns   ; blc[1]       ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.684 ns   ; blc[1]       ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.683 ns   ; blc[1]       ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.683 ns   ; blc[1]       ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.667 ns   ; blc[0]       ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.659 ns   ; fpr[0][2]    ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.643 ns   ; cntbreath[1] ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.598 ns   ; cntbreath[1] ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.594 ns   ; cntbreath[1] ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.592 ns   ; over         ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.581 ns   ; blc[1]       ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.578 ns   ; tgtc[1][1]   ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.577 ns   ; tgtc[1][1]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.576 ns   ; tgtc[1][1]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.574 ns   ; tgtc[1][1]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.570 ns   ; tgtc[1][1]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.570 ns   ; tgtc[0][1]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.569 ns   ; tgtc[1][1]   ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.569 ns   ; tgtc[1][1]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.568 ns   ; blc[0]       ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.567 ns   ; blc[0]       ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.567 ns   ; tgtc[0][0]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.562 ns   ; fpr[0][2]    ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.557 ns   ; tgtc[2][0]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.513 ns   ; over         ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.494 ns   ; check        ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.485 ns   ; fpc[1][2]    ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.482 ns   ; blc[1]       ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.481 ns   ; blc[1]       ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.467 ns   ; tgtc[1][1]   ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.465 ns   ; breath       ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.455 ns   ; cntbreath[1] ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.415 ns   ; check        ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.414 ns   ; tgtc[0][1]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.409 ns   ; cntbreath[1] ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.401 ns   ; tgtc[2][0]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.376 ns   ; blc[2]       ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.368 ns   ; tgtc[1][1]   ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.367 ns   ; tgtc[1][1]   ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.366 ns   ; tgtc[0][0]   ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.365 ns   ; tgtc[0][0]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.364 ns   ; tgtc[0][0]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.364 ns   ; fpr[0][2]    ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.362 ns   ; tgtc[0][0]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.358 ns   ; tgtc[0][0]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.357 ns   ; tgtc[0][0]   ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.357 ns   ; tgtc[0][0]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.356 ns   ; tgtc[2][1]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.328 ns   ; fpc[1][2]    ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.325 ns   ; tgtc[1][0]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.325 ns   ; over         ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.281 ns   ; fpr[1][2]    ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.265 ns   ; breath       ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.262 ns   ; cntbreath[1] ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.255 ns   ; tgtc[0][0]   ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.253 ns   ; fpc[0][1]    ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.253 ns   ; cntbreath[1] ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.239 ns   ; blc[0]       ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.232 ns   ; blc[0]       ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.227 ns   ; check        ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.226 ns   ; blc[0]       ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.220 ns   ; blc[2]       ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.218 ns   ; cntbreath[1] ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.213 ns   ; tgtc[0][1]   ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.212 ns   ; tgtc[0][1]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.212 ns   ; cntbreath[1] ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.211 ns   ; tgtc[0][1]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.209 ns   ; tgtc[0][1]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.205 ns   ; tgtc[0][1]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.204 ns   ; tgtc[0][1]   ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.204 ns   ; tgtc[0][1]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.200 ns   ; tgtc[2][1]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.200 ns   ; tgtc[2][0]   ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.199 ns   ; tgtc[2][0]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.198 ns   ; tgtc[2][0]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.196 ns   ; tgtc[2][0]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.192 ns   ; tgtc[2][0]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.191 ns   ; tgtc[2][0]   ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.191 ns   ; tgtc[2][0]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.186 ns   ; breath       ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.184 ns   ; fpr[1][2]    ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.173 ns   ; fpc[0][2]    ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.172 ns   ; cntbreath[1] ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.169 ns   ; tgtc[1][0]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.161 ns   ; check        ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.156 ns   ; tgtc[0][0]   ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.155 ns   ; tgtc[0][0]   ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.153 ns   ; blc[1]       ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.146 ns   ; blc[1]       ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.140 ns   ; blc[1]       ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.132 ns   ; over         ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.123 ns   ; over         ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.102 ns   ; tgtc[0][1]   ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.089 ns   ; tgtc[2][0]   ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.045 ns   ; fpc[1][2]    ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.039 ns   ; tgtc[1][1]   ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.034 ns   ; check        ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.032 ns   ; tgtc[1][1]   ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.032 ns   ; fpr[2][0]    ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.026 ns   ; tgtc[1][1]   ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.025 ns   ; check        ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.019 ns   ; blc[2]       ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.018 ns   ; blc[2]       ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.017 ns   ; blc[2]       ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.016 ns   ; fpc[0][2]    ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.015 ns   ; blc[2]       ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.011 ns   ; blc[2]       ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.010 ns   ; blc[2]       ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.010 ns   ; blc[2]       ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.005 ns   ; check        ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.003 ns   ; tgtc[0][1]   ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 9.002 ns   ; tgtc[0][1]   ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.999 ns   ; tgtc[2][1]   ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.998 ns   ; tgtc[2][1]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.998 ns   ; breath       ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.997 ns   ; tgtc[2][1]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.995 ns   ; tgtc[2][1]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.991 ns   ; tgtc[2][1]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.990 ns   ; tgtc[2][1]   ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.990 ns   ; tgtc[2][1]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.990 ns   ; tgtc[2][0]   ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.989 ns   ; tgtc[2][0]   ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.986 ns   ; fpc[0][0]    ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.986 ns   ; fpr[1][2]    ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.981 ns   ; tgtr[0][0]   ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.968 ns   ; tgtc[1][0]   ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.967 ns   ; tgtc[1][0]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.966 ns   ; tgtc[1][0]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.964 ns   ; tgtc[2][2]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.964 ns   ; tgtc[1][0]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.962 ns   ; tgtc[2][2]   ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.960 ns   ; tgtc[1][0]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.959 ns   ; tgtc[1][0]   ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.959 ns   ; tgtc[1][0]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.946 ns   ; fpr[1][1]    ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.908 ns   ; blc[2]       ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.903 ns   ; fpr[2][0]    ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.901 ns   ; fpr[2][0]    ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.888 ns   ; tgtc[2][1]   ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.882 ns   ; fpc[2][1]    ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.857 ns   ; tgtc[1][0]   ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.857 ns   ; fpr[0][2]    ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.835 ns   ; fpr[2][0]    ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.831 ns   ; fpr[1][1]    ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.827 ns   ; tgtc[0][0]   ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.825 ns   ; tgtr[0][0]   ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.820 ns   ; tgtc[0][0]   ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.817 ns   ; cntbreath[0] ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.814 ns   ; tgtc[0][0]   ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.809 ns   ; blc[2]       ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.808 ns   ; blc[2]       ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.805 ns   ; breath       ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.796 ns   ; breath       ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.789 ns   ; tgtc[2][1]   ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.788 ns   ; tgtc[2][1]   ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.786 ns   ; over         ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.783 ns   ; cntbreath[0] ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.782 ns   ; cntbreath[0] ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.777 ns   ; fpr[0][2]    ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.768 ns   ; check        ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.767 ns   ; check        ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.758 ns   ; tgtc[1][0]   ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.757 ns   ; tgtc[1][0]   ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.750 ns   ; breath       ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.733 ns   ; fpc[0][2]    ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.729 ns   ; fpc[1][2]    ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.703 ns   ; fpc[1][2]    ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.693 ns   ; check        ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.691 ns   ; tgtr[0][2]   ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.686 ns   ; tgtr[0][0]   ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.680 ns   ; cntbreath[1] ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.677 ns   ; fpc[1][1]    ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.674 ns   ; tgtc[0][1]   ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.667 ns   ; tgtc[0][1]   ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.661 ns   ; tgtc[0][1]   ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; 8.661 ns   ; tgtc[2][0]   ; col1[7]~reg0 ; clk3     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;              ;              ;          ;
++-----------------------------------------+-----------------------------------------------------+------------+--------------+--------------+----------+
+
+
++-------------------------------------------------------------------------+
+; tco                                                                     ;
++-------+--------------+------------+--------------+---------+------------+
+; Slack ; Required tco ; Actual tco ; From         ; To      ; From Clock ;
++-------+--------------+------------+--------------+---------+------------+
+; N/A   ; None         ; 9.037 ns   ; col2[2]~reg0 ; col2[2] ; clk3       ;
+; N/A   ; None         ; 9.002 ns   ; col2[7]~reg0 ; col2[7] ; clk3       ;
+; N/A   ; None         ; 8.984 ns   ; col2[5]~reg0 ; col2[5] ; clk3       ;
+; N/A   ; None         ; 8.761 ns   ; col2[0]~reg0 ; col2[0] ; clk3       ;
+; N/A   ; None         ; 8.738 ns   ; col1[1]~reg0 ; col1[1] ; clk3       ;
+; N/A   ; None         ; 8.645 ns   ; col1[2]~reg0 ; col1[2] ; clk3       ;
+; N/A   ; None         ; 8.630 ns   ; col1[4]~reg0 ; col1[4] ; clk3       ;
+; N/A   ; None         ; 8.584 ns   ; col1[7]~reg0 ; col1[7] ; clk3       ;
+; N/A   ; None         ; 8.557 ns   ; col1[6]~reg0 ; col1[6] ; clk3       ;
+; N/A   ; None         ; 8.556 ns   ; col2[6]~reg0 ; col2[6] ; clk3       ;
+; N/A   ; None         ; 8.551 ns   ; col1[3]~reg0 ; col1[3] ; clk3       ;
+; N/A   ; None         ; 8.545 ns   ; row1[1]~reg0 ; row1[1] ; clk3       ;
+; N/A   ; None         ; 8.542 ns   ; col1[0]~reg0 ; col1[0] ; clk3       ;
+; N/A   ; None         ; 8.541 ns   ; col2[4]~reg0 ; col2[4] ; clk3       ;
+; N/A   ; None         ; 8.541 ns   ; col2[1]~reg0 ; col2[1] ; clk3       ;
+; N/A   ; None         ; 8.535 ns   ; col1[5]~reg0 ; col1[5] ; clk3       ;
+; N/A   ; None         ; 8.494 ns   ; row1[7]~reg0 ; row1[7] ; clk3       ;
+; N/A   ; None         ; 8.390 ns   ; row1[3]~reg0 ; row1[3] ; clk3       ;
+; N/A   ; None         ; 7.941 ns   ; row1[4]~reg0 ; row1[4] ; clk3       ;
+; N/A   ; None         ; 7.305 ns   ; row1[5]~reg0 ; row1[5] ; clk3       ;
+; N/A   ; None         ; 7.298 ns   ; col2[3]~reg0 ; col2[3] ; clk3       ;
+; N/A   ; None         ; 7.295 ns   ; row1[6]~reg0 ; row1[6] ; clk3       ;
+; N/A   ; None         ; 7.285 ns   ; row1[2]~reg0 ; row1[2] ; clk3       ;
+; N/A   ; None         ; 7.285 ns   ; row1[0]~reg0 ; row1[0] ; clk3       ;
++-------+--------------+------------+--------------+---------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                 ;
++-----------------------------------------+-----------------------------------------------------+-----------+--------------+--------------+----------+
+; Minimum Slack                           ; Required th                                         ; Actual th ; From         ; To           ; To Clock ;
++-----------------------------------------+-----------------------------------------------------+-----------+--------------+--------------+----------+
+; N/A                                     ; None                                                ; -1.180 ns ; stay         ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.223 ns ; checkrow[1]  ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.241 ns ; checkrow[1]  ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.382 ns ; check        ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.514 ns ; stay         ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.518 ns ; stay         ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.612 ns ; breath       ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.655 ns ; stay         ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.746 ns ; checkrow[1]  ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.750 ns ; checkrow[1]  ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.875 ns ; check        ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.878 ns ; check        ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.892 ns ; check        ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -1.892 ns ; check        ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.009 ns ; check        ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.015 ns ; check        ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.093 ns ; check        ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.100 ns ; check        ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.114 ns ; stay         ; point[1]     ; clk3     ;
+; N/A                                     ; None                                                ; -2.114 ns ; stay         ; point[0]     ; clk3     ;
+; N/A                                     ; None                                                ; -2.142 ns ; breath       ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.142 ns ; breath       ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.143 ns ; breath       ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.147 ns ; breath       ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.149 ns ; breath       ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.150 ns ; breath       ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.151 ns ; breath       ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.252 ns ; stay         ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.297 ns ; check        ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.301 ns ; check        ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.414 ns ; blc[1]       ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.543 ns ; check        ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.546 ns ; check        ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.566 ns ; breath       ; point[1]     ; clk3     ;
+; N/A                                     ; None                                                ; -2.566 ns ; breath       ; point[0]     ; clk3     ;
+; N/A                                     ; None                                                ; -2.644 ns ; checkrow[2]  ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.647 ns ; checkrow[0]  ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.747 ns ; check        ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -2.985 ns ; blr[0]       ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.005 ns ; blc[1]       ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.076 ns ; blr[1]       ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.088 ns ; blr[1]       ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.102 ns ; stay         ; \p1:temp1[1] ; clk3     ;
+; N/A                                     ; None                                                ; -3.102 ns ; stay         ; \p1:temp1[0] ; clk3     ;
+; N/A                                     ; None                                                ; -3.102 ns ; stay         ; \p1:temp1[3] ; clk3     ;
+; N/A                                     ; None                                                ; -3.113 ns ; blc[2]       ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.117 ns ; blc[2]       ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.181 ns ; breath       ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.183 ns ; blc[2]       ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.190 ns ; blc[1]       ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.200 ns ; blr[1]       ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.209 ns ; blr[0]       ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.295 ns ; clear        ; \p1:temp1[1] ; clk3     ;
+; N/A                                     ; None                                                ; -3.295 ns ; clear        ; \p1:temp1[0] ; clk3     ;
+; N/A                                     ; None                                                ; -3.295 ns ; clear        ; \p1:temp1[3] ; clk3     ;
+; N/A                                     ; None                                                ; -3.311 ns ; stay         ; point[2]     ; clk3     ;
+; N/A                                     ; None                                                ; -3.317 ns ; blr[0]       ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.325 ns ; breath       ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.328 ns ; blr[2]       ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.340 ns ; breath       ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.349 ns ; breath       ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.366 ns ; blr[2]       ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.447 ns ; checkrow[0]  ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.494 ns ; over         ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.495 ns ; checkrow[1]  ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.528 ns ; breath       ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.574 ns ; breath       ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.586 ns ; breath       ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.600 ns ; breath       ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.604 ns ; checkrow[0]  ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.612 ns ; checkrow[0]  ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.624 ns ; blr[1]       ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.626 ns ; blr[0]       ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.638 ns ; over         ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.653 ns ; over         ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.655 ns ; blr[2]       ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.662 ns ; over         ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.680 ns ; blc[1]       ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.706 ns ; switch       ; \p1:temp1[1] ; clk3     ;
+; N/A                                     ; None                                                ; -3.706 ns ; switch       ; \p1:temp1[0] ; clk3     ;
+; N/A                                     ; None                                                ; -3.706 ns ; switch       ; \p1:temp1[3] ; clk3     ;
+; N/A                                     ; None                                                ; -3.736 ns ; blc[2]       ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.748 ns ; blc[2]       ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.749 ns ; blr[1]       ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.763 ns ; breath       ; point[2]     ; clk3     ;
+; N/A                                     ; None                                                ; -3.765 ns ; blc[2]       ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.797 ns ; stay         ; \p1:temp1[2] ; clk3     ;
+; N/A                                     ; None                                                ; -3.797 ns ; stay         ; \p1:temp1[4] ; clk3     ;
+; N/A                                     ; None                                                ; -3.803 ns ; breath       ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.828 ns ; over         ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.852 ns ; pass         ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.865 ns ; checkrow[0]  ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.870 ns ; checkrow[0]  ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.872 ns ; over         ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.874 ns ; over         ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.883 ns ; breath       ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.886 ns ; over         ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.906 ns ; blr[2]       ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.913 ns ; over         ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.935 ns ; checkrow[0]  ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.962 ns ; check        ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.963 ns ; tgtr[0][2]   ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.964 ns ; blr[1]       ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -3.990 ns ; clear        ; \p1:temp1[2] ; clk3     ;
+; N/A                                     ; None                                                ; -3.990 ns ; clear        ; \p1:temp1[4] ; clk3     ;
+; N/A                                     ; None                                                ; -4.002 ns ; breath       ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.032 ns ; checkrow[1]  ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.035 ns ; check        ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.054 ns ; checkrow[1]  ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.078 ns ; fpc[2][2]    ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.080 ns ; fpc[2][2]    ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.100 ns ; stay         ; row1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.116 ns ; over         ; col2[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.145 ns ; over         ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.170 ns ; blr[2]       ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.183 ns ; over         ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.186 ns ; blr[2]       ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.201 ns ; stay         ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.217 ns ; breath       ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.223 ns ; pass         ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.225 ns ; breath       ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.237 ns ; cntbreath[4] ; point[1]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.237 ns ; cntbreath[4] ; point[0]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.255 ns ; blout        ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.298 ns ; over         ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.302 ns ; over         ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.307 ns ; stay         ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.318 ns ; stay         ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.321 ns ; blc[0]       ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.321 ns ; breath       ; \p1:temp1[1] ; clk3     ;
+; N/A                                     ; None                                                ; -4.321 ns ; breath       ; \p1:temp1[0] ; clk3     ;
+; N/A                                     ; None                                                ; -4.321 ns ; breath       ; \p1:temp1[3] ; clk3     ;
+; N/A                                     ; None                                                ; -4.401 ns ; switch       ; \p1:temp1[2] ; clk3     ;
+; N/A                                     ; None                                                ; -4.401 ns ; switch       ; \p1:temp1[4] ; clk3     ;
+; N/A                                     ; None                                                ; -4.402 ns ; over         ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.402 ns ; over         ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.403 ns ; over         ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.407 ns ; over         ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.409 ns ; over         ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.410 ns ; over         ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.410 ns ; check        ; point[1]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.410 ns ; check        ; point[0]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.410 ns ; stay         ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.411 ns ; over         ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.419 ns ; tgtc[2][1]   ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.458 ns ; stay         ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.460 ns ; blc[1]       ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.460 ns ; stay         ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.500 ns ; check        ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.511 ns ; check        ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.517 ns ; over         ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.525 ns ; over         ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.530 ns ; tgtc[2][1]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.574 ns ; pass         ; col2[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.591 ns ; tgtc[2][1]   ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.598 ns ; tgtc[2][1]   ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.603 ns ; check        ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.610 ns ; stay         ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.611 ns ; stay         ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.614 ns ; pass         ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.616 ns ; tgtc[1][0]   ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.620 ns ; pass         ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.620 ns ; tgtc[2][1]   ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.640 ns ; tgtr[0][2]   ; col2[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.646 ns ; tgtr[0][2]   ; col2[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.651 ns ; check        ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.653 ns ; tgtr[0][2]   ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.653 ns ; check        ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.702 ns ; checkrow[0]  ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.719 ns ; stay         ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.722 ns ; stay         ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.723 ns ; cntbreath[3] ; point[1]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.723 ns ; cntbreath[3] ; point[0]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.725 ns ; stay         ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.731 ns ; stay         ; col1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.731 ns ; stay         ; col1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.731 ns ; checkrow[2]  ; row1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.732 ns ; stay         ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.736 ns ; stay         ; col1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.738 ns ; stay         ; col1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.739 ns ; stay         ; col1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.740 ns ; stay         ; col1[1]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.746 ns ; pass         ; col1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.753 ns ; checkrow[2]  ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.754 ns ; check        ; \p1:temp1[1] ; clk3     ;
+; N/A                                     ; None                                                ; -4.754 ns ; check        ; \p1:temp1[0] ; clk3     ;
+; N/A                                     ; None                                                ; -4.754 ns ; check        ; \p1:temp1[3] ; clk3     ;
+; N/A                                     ; None                                                ; -4.779 ns ; checkrow[2]  ; row1[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.803 ns ; check        ; row1[0]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.808 ns ; tgtc[1][0]   ; col1[2]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.811 ns ; pass         ; col2[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.822 ns ; pass         ; col2[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.837 ns ; blr[0]       ; row1[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.853 ns ; blr[0]       ; row1[5]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.870 ns ; fpc[3][2]    ; col2[7]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.872 ns ; fpc[3][2]    ; col2[3]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.915 ns ; check        ; row1[6]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.918 ns ; check        ; row1[4]~reg0 ; clk3     ;
+; N/A                                     ; None                                                ; -4.924 ns ; cntbreath[2] ; point[1]     ; clk3     ;
+; N/A                                     ; None                                                ; -4.924 ns ; cntbreath[2] ; point[0]     ; clk3     ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;           ;              ;              ;          ;
++-----------------------------------------+-----------------------------------------------------+-----------+--------------+--------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Sat Nov 03 12:48:49 2018
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off mxdisplay -c mxdisplay
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Started post-fitting delay annotation
+Info: Delay annotation completed successfully
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clk3" is an undefined clock
+Info: Clock "clk3" has Internal fmax of 80.57 MHz between source register "point[1]" and destination register "row1[7]~reg0" (period= 12.411 ns)
+    Info: + Longest register to register delay is 11.702 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X9_Y8_N2; Fanout = 40; REG Node = 'point[1]'
+        Info: 2: + IC(2.234 ns) + CELL(0.511 ns) = 2.745 ns; Loc. = LC_X10_Y8_N0; Fanout = 1; COMB Node = 'Mux0~0'
+        Info: 3: + IC(2.471 ns) + CELL(0.200 ns) = 5.416 ns; Loc. = LC_X6_Y8_N5; Fanout = 8; COMB Node = 'Mux0~1'
+        Info: 4: + IC(0.803 ns) + CELL(0.511 ns) = 6.730 ns; Loc. = LC_X6_Y8_N3; Fanout = 1; COMB Node = 'Decoder1~7'
+        Info: 5: + IC(2.428 ns) + CELL(0.914 ns) = 10.072 ns; Loc. = LC_X4_Y10_N4; Fanout = 1; COMB Node = 'row1~41'
+        Info: 6: + IC(0.534 ns) + CELL(0.200 ns) = 10.806 ns; Loc. = LC_X4_Y10_N5; Fanout = 1; COMB Node = 'row1~42'
+        Info: 7: + IC(0.305 ns) + CELL(0.591 ns) = 11.702 ns; Loc. = LC_X4_Y10_N6; Fanout = 1; REG Node = 'row1[7]~reg0'
+        Info: Total cell delay = 2.927 ns ( 25.01 % )
+        Info: Total interconnect delay = 8.775 ns ( 74.99 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk3" to destination register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 32; CLK Node = 'clk3'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X4_Y10_N6; Fanout = 1; REG Node = 'row1[7]~reg0'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+        Info: - Longest clock path from clock "clk3" to source register is 3.819 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 32; CLK Node = 'clk3'
+            Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X9_Y8_N2; Fanout = 40; REG Node = 'point[1]'
+            Info: Total cell delay = 2.081 ns ( 54.49 % )
+            Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Micro setup delay of destination is 0.333 ns
+Info: tsu for register "col2[0]~reg0" (data pin = "blc[0]", clock pin = "clk3") is 10.135 ns
+    Info: + Longest pin to register delay is 13.621 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_98; Fanout = 17; PIN Node = 'blc[0]'
+        Info: 2: + IC(3.230 ns) + CELL(0.511 ns) = 4.873 ns; Loc. = LC_X9_Y7_N9; Fanout = 1; COMB Node = 'p1~5'
+        Info: 3: + IC(1.907 ns) + CELL(0.511 ns) = 7.291 ns; Loc. = LC_X8_Y6_N9; Fanout = 1; COMB Node = 'p1~6'
+        Info: 4: + IC(0.733 ns) + CELL(0.200 ns) = 8.224 ns; Loc. = LC_X8_Y6_N0; Fanout = 3; COMB Node = 'p1~8'
+        Info: 5: + IC(0.305 ns) + CELL(0.200 ns) = 8.729 ns; Loc. = LC_X8_Y6_N1; Fanout = 6; COMB Node = 'col2~30'
+        Info: 6: + IC(1.208 ns) + CELL(0.511 ns) = 10.448 ns; Loc. = LC_X9_Y6_N9; Fanout = 1; COMB Node = 'col2~60'
+        Info: 7: + IC(0.723 ns) + CELL(0.200 ns) = 11.371 ns; Loc. = LC_X9_Y6_N1; Fanout = 1; COMB Node = 'col2~33'
+        Info: 8: + IC(0.721 ns) + CELL(0.200 ns) = 12.292 ns; Loc. = LC_X9_Y6_N3; Fanout = 1; COMB Node = 'col2~34'
+        Info: 9: + IC(0.738 ns) + CELL(0.591 ns) = 13.621 ns; Loc. = LC_X9_Y6_N0; Fanout = 2; REG Node = 'col2[0]~reg0'
+        Info: Total cell delay = 4.056 ns ( 29.78 % )
+        Info: Total interconnect delay = 9.565 ns ( 70.22 % )
+    Info: + Micro setup delay of destination is 0.333 ns
+    Info: - Shortest clock path from clock "clk3" to destination register is 3.819 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 32; CLK Node = 'clk3'
+        Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X9_Y6_N0; Fanout = 2; REG Node = 'col2[0]~reg0'
+        Info: Total cell delay = 2.081 ns ( 54.49 % )
+        Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+Info: tco from clock "clk3" to destination pin "col2[2]" through register "col2[2]~reg0" is 9.037 ns
+    Info: + Longest clock path from clock "clk3" to source register is 3.819 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 32; CLK Node = 'clk3'
+        Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X7_Y6_N3; Fanout = 2; REG Node = 'col2[2]~reg0'
+        Info: Total cell delay = 2.081 ns ( 54.49 % )
+        Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: + Micro clock to output delay of source is 0.376 ns
+    Info: + Longest register to pin delay is 4.842 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X7_Y6_N3; Fanout = 2; REG Node = 'col2[2]~reg0'
+        Info: 2: + IC(2.520 ns) + CELL(2.322 ns) = 4.842 ns; Loc. = PIN_27; Fanout = 0; PIN Node = 'col2[2]'
+        Info: Total cell delay = 2.322 ns ( 47.96 % )
+        Info: Total interconnect delay = 2.520 ns ( 52.04 % )
+Info: th for register "col2[5]~reg0" (data pin = "stay", clock pin = "clk3") is -1.180 ns
+    Info: + Longest clock path from clock "clk3" to destination register is 3.819 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 32; CLK Node = 'clk3'
+        Info: 2: + IC(1.738 ns) + CELL(0.918 ns) = 3.819 ns; Loc. = LC_X10_Y6_N3; Fanout = 2; REG Node = 'col2[5]~reg0'
+        Info: Total cell delay = 2.081 ns ( 54.49 % )
+        Info: Total interconnect delay = 1.738 ns ( 45.51 % )
+    Info: + Micro hold delay of destination is 0.221 ns
+    Info: - Shortest pin to register delay is 5.220 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_120; Fanout = 9; PIN Node = 'stay'
+        Info: 2: + IC(2.905 ns) + CELL(1.183 ns) = 5.220 ns; Loc. = LC_X10_Y6_N3; Fanout = 2; REG Node = 'col2[5]~reg0'
+        Info: Total cell delay = 2.315 ns ( 44.35 % )
+        Info: Total interconnect delay = 2.905 ns ( 55.65 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 197 megabytes
+    Info: Processing ended: Sat Nov 03 12:48:50 2018
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

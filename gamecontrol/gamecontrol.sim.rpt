@@ -1,0 +1,441 @@
+Simulator report for gamecontrol
+Sun Nov 11 13:15:03 2018
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 205 nodes     ;
+; Simulation Coverage         ;      50.98 %  ;
+; Total Number of Transitions ; 152681        ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      50.98 % ;
+; Total nodes checked                                 ; 205          ;
+; Total output ports checked                          ; 204          ;
+; Total output ports with complete 1/0-value coverage ; 104          ;
+; Total output ports with no 1/0-value coverage       ; 73           ;
+; Total output ports with no 1-value coverage         ; 80           ;
+; Total output ports with no 0-value coverage         ; 93           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                      ;
++-------------------------------+-------------------------------+------------------+
+; Node Name                     ; Output Port Name              ; Output Port Type ;
++-------------------------------+-------------------------------+------------------+
+; |gamecontrol|tgtct[0][1]      ; |gamecontrol|tgtct[0][1]      ; regout           ;
+; |gamecontrol|tgtct[0][2]      ; |gamecontrol|tgtct[0][2]      ; regout           ;
+; |gamecontrol|tgtct[1][0]      ; |gamecontrol|tgtct[1][0]      ; regout           ;
+; |gamecontrol|tgtct[1][1]      ; |gamecontrol|tgtct[1][1]      ; regout           ;
+; |gamecontrol|tgtct[1][2]      ; |gamecontrol|tgtct[1][2]      ; regout           ;
+; |gamecontrol|tgtct[2][0]      ; |gamecontrol|tgtct[2][0]      ; regout           ;
+; |gamecontrol|tgtct[2][1]      ; |gamecontrol|tgtct[2][1]      ; regout           ;
+; |gamecontrol|tgtct[2][2]      ; |gamecontrol|tgtct[2][2]      ; regout           ;
+; |gamecontrol|blct[0]          ; |gamecontrol|blct[0]          ; regout           ;
+; |gamecontrol|fpc[0][0]~reg0   ; |gamecontrol|fpc[0][0]~reg0   ; regout           ;
+; |gamecontrol|fpc[1][1]~reg0   ; |gamecontrol|fpc[1][1]~reg0   ; regout           ;
+; |gamecontrol|fpc[1][2]~reg0   ; |gamecontrol|fpc[1][2]~reg0   ; regout           ;
+; |gamecontrol|fpc[2][0]~reg0   ; |gamecontrol|fpc[2][0]~reg0   ; regout           ;
+; |gamecontrol|fpc[2][1]~reg0   ; |gamecontrol|fpc[2][1]~reg0   ; regout           ;
+; |gamecontrol|fpc[3][0]~reg0   ; |gamecontrol|fpc[3][0]~reg0   ; regout           ;
+; |gamecontrol|fpc[3][1]~reg0   ; |gamecontrol|fpc[3][1]~reg0   ; regout           ;
+; |gamecontrol|shownumt[0][2]   ; |gamecontrol|shownumt[0][2]   ; regout           ;
+; |gamecontrol|shownumt[0][3]   ; |gamecontrol|shownumt[0][3]   ; regout           ;
+; |gamecontrol|ishitt           ; |gamecontrol|ishitt           ; regout           ;
+; |gamecontrol|tgtct[2][0]~0    ; |gamecontrol|tgtct[2][0]~0    ; combout          ;
+; |gamecontrol|tgtct[2][2]~4    ; |gamecontrol|tgtct[2][2]~4    ; combout          ;
+; |gamecontrol|tgtrt[0][1]~0    ; |gamecontrol|tgtrt[0][1]~0    ; combout          ;
+; |gamecontrol|tgtrt[0][1]~1    ; |gamecontrol|tgtrt[0][1]~1    ; combout          ;
+; |gamecontrol|tgtct~7          ; |gamecontrol|tgtct~7          ; combout          ;
+; |gamecontrol|tgtrt[2][2]~2    ; |gamecontrol|tgtrt[2][2]~2    ; combout          ;
+; |gamecontrol|tgtrt[2][2]~3    ; |gamecontrol|tgtrt[2][2]~3    ; combout          ;
+; |gamecontrol|tgtrt[2][2]~4    ; |gamecontrol|tgtrt[2][2]~4    ; combout          ;
+; |gamecontrol|blrt[1]          ; |gamecontrol|blrt[1]          ; regout           ;
+; |gamecontrol|fpstate[1]       ; |gamecontrol|fpstate[1]       ; regout           ;
+; |gamecontrol|fpc[1][0]~reg0   ; |gamecontrol|Mux16~0          ; combout          ;
+; |gamecontrol|fpc[1][0]~reg0   ; |gamecontrol|fpc[1][0]~reg0   ; regout           ;
+; |gamecontrol|fpc[0][1]~reg0   ; |gamecontrol|Mux15~0          ; combout          ;
+; |gamecontrol|fpc[0][1]~reg0   ; |gamecontrol|fpc[0][1]~reg0   ; regout           ;
+; |gamecontrol|Equal5~0         ; |gamecontrol|Equal5~0         ; combout          ;
+; |gamecontrol|shownumt[1][0]~2 ; |gamecontrol|shownumt[1][0]~2 ; combout          ;
+; |gamecontrol|p8~0             ; |gamecontrol|p8~0             ; combout          ;
+; |gamecontrol|p8~1             ; |gamecontrol|p8~1             ; combout          ;
+; |gamecontrol|blct[2]          ; |gamecontrol|p8~2             ; combout          ;
+; |gamecontrol|p8~3             ; |gamecontrol|p8~3             ; combout          ;
+; |gamecontrol|p8~4             ; |gamecontrol|p8~4             ; combout          ;
+; |gamecontrol|p8~5             ; |gamecontrol|p8~5             ; combout          ;
+; |gamecontrol|blct[1]          ; |gamecontrol|p8~6             ; combout          ;
+; |gamecontrol|blct[1]          ; |gamecontrol|blct[1]          ; regout           ;
+; |gamecontrol|p8~7             ; |gamecontrol|p8~7             ; combout          ;
+; |gamecontrol|p8~8             ; |gamecontrol|p8~8             ; combout          ;
+; |gamecontrol|p8~9             ; |gamecontrol|p8~9             ; combout          ;
+; |gamecontrol|p8~10            ; |gamecontrol|p8~10            ; combout          ;
+; |gamecontrol|p8~11            ; |gamecontrol|p8~11            ; combout          ;
+; |gamecontrol|shownumt~5       ; |gamecontrol|shownumt~5       ; combout          ;
+; |gamecontrol|Add6~0           ; |gamecontrol|Add6~0           ; combout          ;
+; |gamecontrol|bloutt           ; |gamecontrol|bloutt           ; regout           ;
+; |gamecontrol|p7~0             ; |gamecontrol|p7~0             ; combout          ;
+; |gamecontrol|ishitt~0         ; |gamecontrol|ishitt~0         ; combout          ;
+; |gamecontrol|ishitt~1         ; |gamecontrol|ishitt~1         ; combout          ;
+; |gamecontrol|p8~12            ; |gamecontrol|p8~12            ; combout          ;
+; |gamecontrol|p8~13            ; |gamecontrol|p8~13            ; combout          ;
+; |gamecontrol|pass~1           ; |gamecontrol|pass~1           ; combout          ;
+; |gamecontrol|\p5:rdmtmp[3]~0  ; |gamecontrol|\p5:rdmtmp[3]~0  ; combout          ;
+; |gamecontrol|fpstate~0        ; |gamecontrol|fpstate~0        ; combout          ;
+; |gamecontrol|fpstate~2        ; |gamecontrol|fpstate~2        ; combout          ;
+; |gamecontrol|Add11~20         ; |gamecontrol|Add11~20         ; combout          ;
+; |gamecontrol|fpstate~4        ; |gamecontrol|fpstate~4        ; combout          ;
+; |gamecontrol|clk5             ; |gamecontrol|clk5~corein      ; combout          ;
+; |gamecontrol|clear            ; |gamecontrol|clear~corein     ; combout          ;
+; |gamecontrol|clk4             ; |gamecontrol|clk4~corein      ; combout          ;
+; |gamecontrol|clk1             ; |gamecontrol|clk1~corein      ; combout          ;
+; |gamecontrol|fire             ; |gamecontrol|fire~corein      ; combout          ;
+; |gamecontrol|speedup          ; |gamecontrol|speedup~corein   ; combout          ;
+; |gamecontrol|random           ; |gamecontrol|random~corein    ; combout          ;
+; |gamecontrol|usual            ; |gamecontrol|usual~corein     ; combout          ;
+; |gamecontrol|fplftmove        ; |gamecontrol|fplftmove~corein ; combout          ;
+; |gamecontrol|fprtmove         ; |gamecontrol|fprtmove~corein  ; combout          ;
+; |gamecontrol|tgtc[0][0]       ; |gamecontrol|tgtc[0][0]       ; padio            ;
+; |gamecontrol|tgtc[0][1]       ; |gamecontrol|tgtc[0][1]       ; padio            ;
+; |gamecontrol|tgtc[0][2]       ; |gamecontrol|tgtc[0][2]       ; padio            ;
+; |gamecontrol|tgtc[1][0]       ; |gamecontrol|tgtc[1][0]       ; padio            ;
+; |gamecontrol|tgtc[1][1]       ; |gamecontrol|tgtc[1][1]       ; padio            ;
+; |gamecontrol|tgtc[1][2]       ; |gamecontrol|tgtc[1][2]       ; padio            ;
+; |gamecontrol|tgtc[2][0]       ; |gamecontrol|tgtc[2][0]       ; padio            ;
+; |gamecontrol|tgtc[2][1]       ; |gamecontrol|tgtc[2][1]       ; padio            ;
+; |gamecontrol|tgtc[2][2]       ; |gamecontrol|tgtc[2][2]       ; padio            ;
+; |gamecontrol|blr[0]           ; |gamecontrol|blr[0]           ; padio            ;
+; |gamecontrol|blr[1]           ; |gamecontrol|blr[1]           ; padio            ;
+; |gamecontrol|blr[2]           ; |gamecontrol|blr[2]           ; padio            ;
+; |gamecontrol|blc[0]           ; |gamecontrol|blc[0]           ; padio            ;
+; |gamecontrol|blc[1]           ; |gamecontrol|blc[1]           ; padio            ;
+; |gamecontrol|fpc[0][0]        ; |gamecontrol|fpc[0][0]        ; padio            ;
+; |gamecontrol|fpc[0][1]        ; |gamecontrol|fpc[0][1]        ; padio            ;
+; |gamecontrol|fpc[1][0]        ; |gamecontrol|fpc[1][0]        ; padio            ;
+; |gamecontrol|fpc[1][1]        ; |gamecontrol|fpc[1][1]        ; padio            ;
+; |gamecontrol|fpc[1][2]        ; |gamecontrol|fpc[1][2]        ; padio            ;
+; |gamecontrol|fpc[2][0]        ; |gamecontrol|fpc[2][0]        ; padio            ;
+; |gamecontrol|fpc[2][1]        ; |gamecontrol|fpc[2][1]        ; padio            ;
+; |gamecontrol|fpc[3][0]        ; |gamecontrol|fpc[3][0]        ; padio            ;
+; |gamecontrol|fpc[3][1]        ; |gamecontrol|fpc[3][1]        ; padio            ;
+; |gamecontrol|shownum[0][0]    ; |gamecontrol|shownum[0][0]    ; padio            ;
+; |gamecontrol|shownum[0][1]    ; |gamecontrol|shownum[0][1]    ; padio            ;
+; |gamecontrol|shownum[0][2]    ; |gamecontrol|shownum[0][2]    ; padio            ;
+; |gamecontrol|shownum[0][3]    ; |gamecontrol|shownum[0][3]    ; padio            ;
+; |gamecontrol|shownum[1][0]    ; |gamecontrol|shownum[1][0]    ; padio            ;
+; |gamecontrol|shownum[1][1]    ; |gamecontrol|shownum[1][1]    ; padio            ;
+; |gamecontrol|shownum[1][2]    ; |gamecontrol|shownum[1][2]    ; padio            ;
+; |gamecontrol|blout            ; |gamecontrol|blout            ; padio            ;
+; |gamecontrol|ishit            ; |gamecontrol|ishit            ; padio            ;
++-------------------------------+-------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |gamecontrol|tgtrt[0][0]       ; |gamecontrol|tgtrt[0][0]       ; regout           ;
+; |gamecontrol|tgtrt[0][1]       ; |gamecontrol|tgtrt[0][1]       ; regout           ;
+; |gamecontrol|tgtrt[0][2]       ; |gamecontrol|tgtrt[0][2]       ; regout           ;
+; |gamecontrol|tgtrt[1][0]       ; |gamecontrol|tgtrt[1][0]       ; regout           ;
+; |gamecontrol|tgtrt[1][1]       ; |gamecontrol|tgtrt[1][1]       ; regout           ;
+; |gamecontrol|tgtrt[1][2]       ; |gamecontrol|tgtrt[1][2]       ; regout           ;
+; |gamecontrol|tgtrt[2][0]       ; |gamecontrol|tgtrt[2][0]       ; regout           ;
+; |gamecontrol|tgtrt[2][1]       ; |gamecontrol|tgtrt[2][1]       ; regout           ;
+; |gamecontrol|tgtrt[2][2]       ; |gamecontrol|tgtrt[2][2]       ; regout           ;
+; |gamecontrol|pass~reg0         ; |gamecontrol|pass~reg0         ; regout           ;
+; |gamecontrol|speedstate[1]     ; |gamecontrol|speedstate[1]     ; regout           ;
+; |gamecontrol|\p5:speedtmp2[0]  ; |gamecontrol|\p5:speedtmp2[0]  ; regout           ;
+; |gamecontrol|tgtct~1           ; |gamecontrol|tgtct~1           ; combout          ;
+; |gamecontrol|tgtct~2           ; |gamecontrol|tgtct~2           ; combout          ;
+; |gamecontrol|p5~0              ; |gamecontrol|p5~0              ; combout          ;
+; |gamecontrol|p5~1              ; |gamecontrol|p5~1              ; combout          ;
+; |gamecontrol|\p5:rdmtmp[3]     ; |gamecontrol|\p5:rdmtmp[3]     ; regout           ;
+; |gamecontrol|\p5:rdmtmp[2]     ; |gamecontrol|\p5:rdmtmp[2]     ; regout           ;
+; |gamecontrol|\p5:rdmtmp[1]     ; |gamecontrol|\p5:rdmtmp[1]     ; regout           ;
+; |gamecontrol|Mux2~0            ; |gamecontrol|Mux2~0            ; combout          ;
+; |gamecontrol|p6~0              ; |gamecontrol|p6~0              ; combout          ;
+; |gamecontrol|shownumt~4        ; |gamecontrol|shownumt~4        ; combout          ;
+; |gamecontrol|Add11~1           ; |gamecontrol|Add11~3           ; cout0            ;
+; |gamecontrol|Add11~1           ; |gamecontrol|Add11~3COUT1_36   ; cout1            ;
+; |gamecontrol|Add11~6           ; |gamecontrol|Add11~6           ; combout          ;
+; |gamecontrol|shownumt~8        ; |gamecontrol|shownumt~8        ; combout          ;
+; |gamecontrol|LessThan1~0       ; |gamecontrol|LessThan1~0       ; combout          ;
+; |gamecontrol|shownumt[3][2]~9  ; |gamecontrol|shownumt[3][2]~9  ; combout          ;
+; |gamecontrol|shownumt[3][1]~13 ; |gamecontrol|shownumt[3][1]~13 ; combout          ;
+; |gamecontrol|Add13~0           ; |gamecontrol|Add13~2           ; cout0            ;
+; |gamecontrol|Add13~0           ; |gamecontrol|Add13~2COUT1_42   ; cout1            ;
+; |gamecontrol|Add13~5           ; |gamecontrol|Add13~5           ; combout          ;
+; |gamecontrol|Add13~5           ; |gamecontrol|Add13~7           ; cout0            ;
+; |gamecontrol|Add13~5           ; |gamecontrol|Add13~7COUT1_44   ; cout1            ;
+; |gamecontrol|Add13~10          ; |gamecontrol|Add13~10          ; combout          ;
+; |gamecontrol|Add13~10          ; |gamecontrol|Add13~12          ; cout0            ;
+; |gamecontrol|Add13~10          ; |gamecontrol|Add13~12COUT1_46  ; cout1            ;
+; |gamecontrol|LessThan2~0       ; |gamecontrol|LessThan2~0       ; combout          ;
+; |gamecontrol|Add13~15          ; |gamecontrol|Add13~15          ; combout          ;
+; |gamecontrol|Add13~15          ; |gamecontrol|Add13~17          ; cout             ;
+; |gamecontrol|Add13~20          ; |gamecontrol|Add13~20          ; combout          ;
+; |gamecontrol|Add13~20          ; |gamecontrol|Add13~22          ; cout0            ;
+; |gamecontrol|Add13~20          ; |gamecontrol|Add13~22COUT1_48  ; cout1            ;
+; |gamecontrol|Add13~25          ; |gamecontrol|Add13~25          ; combout          ;
+; |gamecontrol|Add13~25          ; |gamecontrol|Add13~27          ; cout0            ;
+; |gamecontrol|Add13~25          ; |gamecontrol|Add13~27COUT1_50  ; cout1            ;
+; |gamecontrol|Add13~30          ; |gamecontrol|Add13~30          ; combout          ;
+; |gamecontrol|pass~0            ; |gamecontrol|pass~0            ; combout          ;
+; |gamecontrol|Add11~11          ; |gamecontrol|Add11~11          ; combout          ;
+; |gamecontrol|Add11~15          ; |gamecontrol|Add11~15          ; cout0            ;
+; |gamecontrol|Add11~15          ; |gamecontrol|Add11~15COUT1_34  ; cout1            ;
+; |gamecontrol|Add11~18          ; |gamecontrol|Add11~18          ; combout          ;
+; |gamecontrol|Add12~0           ; |gamecontrol|Add12~0           ; combout          ;
+; |gamecontrol|Add12~1           ; |gamecontrol|Add12~1           ; combout          ;
+; |gamecontrol|Add12~2           ; |gamecontrol|Add12~2           ; combout          ;
+; |gamecontrol|Add12~3           ; |gamecontrol|Add12~3           ; combout          ;
+; |gamecontrol|Add11~19          ; |gamecontrol|Add11~19          ; combout          ;
+; |gamecontrol|Add11~23          ; |gamecontrol|Add11~23          ; cout0            ;
+; |gamecontrol|Add11~23          ; |gamecontrol|Add11~23COUT1_32  ; cout1            ;
+; |gamecontrol|Add11~26          ; |gamecontrol|Add11~26          ; combout          ;
+; |gamecontrol|breath            ; |gamecontrol|breath~corein     ; combout          ;
+; |gamecontrol|speeddown         ; |gamecontrol|speeddown~corein  ; combout          ;
+; |gamecontrol|tgtr[0][0]        ; |gamecontrol|tgtr[0][0]        ; padio            ;
+; |gamecontrol|tgtr[0][1]        ; |gamecontrol|tgtr[0][1]        ; padio            ;
+; |gamecontrol|tgtr[0][2]        ; |gamecontrol|tgtr[0][2]        ; padio            ;
+; |gamecontrol|tgtr[1][0]        ; |gamecontrol|tgtr[1][0]        ; padio            ;
+; |gamecontrol|tgtr[1][1]        ; |gamecontrol|tgtr[1][1]        ; padio            ;
+; |gamecontrol|tgtr[1][2]        ; |gamecontrol|tgtr[1][2]        ; padio            ;
+; |gamecontrol|tgtr[2][0]        ; |gamecontrol|tgtr[2][0]        ; padio            ;
+; |gamecontrol|tgtr[2][1]        ; |gamecontrol|tgtr[2][1]        ; padio            ;
+; |gamecontrol|tgtr[2][2]        ; |gamecontrol|tgtr[2][2]        ; padio            ;
+; |gamecontrol|shownum[1][3]     ; |gamecontrol|shownum[1][3]     ; padio            ;
+; |gamecontrol|shownum[2][0]     ; |gamecontrol|shownum[2][0]     ; padio            ;
+; |gamecontrol|shownum[2][2]     ; |gamecontrol|shownum[2][2]     ; padio            ;
+; |gamecontrol|shownum[2][3]     ; |gamecontrol|shownum[2][3]     ; padio            ;
+; |gamecontrol|shownum[3][0]     ; |gamecontrol|shownum[3][0]     ; padio            ;
+; |gamecontrol|shownum[3][1]     ; |gamecontrol|shownum[3][1]     ; padio            ;
+; |gamecontrol|shownum[3][2]     ; |gamecontrol|shownum[3][2]     ; padio            ;
+; |gamecontrol|shownum[3][3]     ; |gamecontrol|shownum[3][3]     ; padio            ;
+; |gamecontrol|pass              ; |gamecontrol|pass              ; padio            ;
++--------------------------------+--------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |gamecontrol|tgtrt[0][1]       ; |gamecontrol|tgtrt[0][1]       ; regout           ;
+; |gamecontrol|tgtrt[0][2]       ; |gamecontrol|tgtrt[0][2]       ; regout           ;
+; |gamecontrol|tgtrt[1][1]       ; |gamecontrol|tgtrt[1][1]       ; regout           ;
+; |gamecontrol|tgtrt[1][2]       ; |gamecontrol|tgtrt[1][2]       ; regout           ;
+; |gamecontrol|tgtrt[2][1]       ; |gamecontrol|tgtrt[2][1]       ; regout           ;
+; |gamecontrol|tgtrt[2][2]       ; |gamecontrol|tgtrt[2][2]       ; regout           ;
+; |gamecontrol|fpc[2][2]~reg0    ; |gamecontrol|fpc[2][2]~reg0    ; regout           ;
+; |gamecontrol|fpc[3][2]~reg0    ; |gamecontrol|fpc[3][2]~reg0    ; regout           ;
+; |gamecontrol|overt             ; |gamecontrol|overt             ; regout           ;
+; |gamecontrol|pass~reg0         ; |gamecontrol|pass~reg0         ; regout           ;
+; |gamecontrol|speedstate[0]     ; |gamecontrol|speedstate[0]     ; regout           ;
+; |gamecontrol|speedstate[1]     ; |gamecontrol|speedstate[1]     ; regout           ;
+; |gamecontrol|\p5:speedtmp2[0]  ; |gamecontrol|\p5:speedtmp2[0]  ; regout           ;
+; |gamecontrol|tgtct~1           ; |gamecontrol|tgtct~1           ; combout          ;
+; |gamecontrol|tgtct~2           ; |gamecontrol|tgtct~2           ; combout          ;
+; |gamecontrol|p5~0              ; |gamecontrol|p5~0              ; combout          ;
+; |gamecontrol|p5~1              ; |gamecontrol|p5~1              ; combout          ;
+; |gamecontrol|\p5:rdmtmp[3]     ; |gamecontrol|\p5:rdmtmp[3]     ; regout           ;
+; |gamecontrol|\p5:rdmtmp[2]     ; |gamecontrol|\p5:rdmtmp[2]     ; regout           ;
+; |gamecontrol|\p5:rdmtmp[1]     ; |gamecontrol|\p5:rdmtmp[1]     ; regout           ;
+; |gamecontrol|\p5:rdmtmp[0]     ; |gamecontrol|\p5:rdmtmp[0]     ; regout           ;
+; |gamecontrol|Mux2~0            ; |gamecontrol|Mux2~0            ; combout          ;
+; |gamecontrol|Mux1~0            ; |gamecontrol|Mux1~0            ; combout          ;
+; |gamecontrol|fpstate[0]        ; |gamecontrol|fpstate[0]        ; regout           ;
+; |gamecontrol|fpc[0][2]~reg0    ; |gamecontrol|Mux14~0           ; combout          ;
+; |gamecontrol|fpc[0][2]~reg0    ; |gamecontrol|fpc[0][2]~reg0    ; regout           ;
+; |gamecontrol|blct[2]           ; |gamecontrol|blct[2]           ; regout           ;
+; |gamecontrol|shownumt~4        ; |gamecontrol|shownumt~4        ; combout          ;
+; |gamecontrol|Add11~1           ; |gamecontrol|Add11~1           ; combout          ;
+; |gamecontrol|Add11~1           ; |gamecontrol|Add11~3           ; cout0            ;
+; |gamecontrol|Add11~1           ; |gamecontrol|Add11~3COUT1_36   ; cout1            ;
+; |gamecontrol|Add11~6           ; |gamecontrol|Add11~6           ; combout          ;
+; |gamecontrol|shownumt~8        ; |gamecontrol|shownumt~8        ; combout          ;
+; |gamecontrol|LessThan1~0       ; |gamecontrol|LessThan1~0       ; combout          ;
+; |gamecontrol|shownumt[3][2]~9  ; |gamecontrol|shownumt[3][2]~9  ; combout          ;
+; |gamecontrol|shownumt[3][1]~13 ; |gamecontrol|shownumt[3][1]~13 ; combout          ;
+; |gamecontrol|Add13~0           ; |gamecontrol|Add13~0           ; combout          ;
+; |gamecontrol|Add13~0           ; |gamecontrol|Add13~2           ; cout0            ;
+; |gamecontrol|Add13~0           ; |gamecontrol|Add13~2COUT1_42   ; cout1            ;
+; |gamecontrol|Add13~5           ; |gamecontrol|Add13~5           ; combout          ;
+; |gamecontrol|Add13~5           ; |gamecontrol|Add13~7           ; cout0            ;
+; |gamecontrol|Add13~5           ; |gamecontrol|Add13~7COUT1_44   ; cout1            ;
+; |gamecontrol|Add13~10          ; |gamecontrol|Add13~10          ; combout          ;
+; |gamecontrol|Add13~10          ; |gamecontrol|Add13~12          ; cout0            ;
+; |gamecontrol|Add13~10          ; |gamecontrol|Add13~12COUT1_46  ; cout1            ;
+; |gamecontrol|LessThan2~0       ; |gamecontrol|LessThan2~0       ; combout          ;
+; |gamecontrol|Add13~15          ; |gamecontrol|Add13~15          ; combout          ;
+; |gamecontrol|Add13~15          ; |gamecontrol|Add13~17          ; cout             ;
+; |gamecontrol|Add13~20          ; |gamecontrol|Add13~20          ; combout          ;
+; |gamecontrol|Add13~20          ; |gamecontrol|Add13~22          ; cout0            ;
+; |gamecontrol|Add13~20          ; |gamecontrol|Add13~22COUT1_48  ; cout1            ;
+; |gamecontrol|Add13~25          ; |gamecontrol|Add13~25          ; combout          ;
+; |gamecontrol|Add13~25          ; |gamecontrol|Add13~27          ; cout0            ;
+; |gamecontrol|Add13~25          ; |gamecontrol|Add13~27COUT1_50  ; cout1            ;
+; |gamecontrol|Add13~30          ; |gamecontrol|Add13~30          ; combout          ;
+; |gamecontrol|pass~0            ; |gamecontrol|pass~0            ; combout          ;
+; |gamecontrol|Add11~11          ; |gamecontrol|Add11~11          ; combout          ;
+; |gamecontrol|Add11~12          ; |gamecontrol|Add11~12          ; combout          ;
+; |gamecontrol|Add11~15          ; |gamecontrol|Add11~15          ; cout0            ;
+; |gamecontrol|Add11~15          ; |gamecontrol|Add11~15COUT1_34  ; cout1            ;
+; |gamecontrol|Add11~18          ; |gamecontrol|Add11~18          ; combout          ;
+; |gamecontrol|Add12~0           ; |gamecontrol|Add12~0           ; combout          ;
+; |gamecontrol|Add12~1           ; |gamecontrol|Add12~1           ; combout          ;
+; |gamecontrol|Add12~2           ; |gamecontrol|Add12~2           ; combout          ;
+; |gamecontrol|Add12~3           ; |gamecontrol|Add12~3           ; combout          ;
+; |gamecontrol|Add11~19          ; |gamecontrol|Add11~19          ; combout          ;
+; |gamecontrol|Add11~23          ; |gamecontrol|Add11~23          ; cout0            ;
+; |gamecontrol|Add11~23          ; |gamecontrol|Add11~23COUT1_32  ; cout1            ;
+; |gamecontrol|Add11~26          ; |gamecontrol|Add11~26          ; combout          ;
+; |gamecontrol|breath            ; |gamecontrol|breath~corein     ; combout          ;
+; |gamecontrol|switch            ; |gamecontrol|switch~corein     ; combout          ;
+; |gamecontrol|speeddown         ; |gamecontrol|speeddown~corein  ; combout          ;
+; |gamecontrol|tgtr[0][1]        ; |gamecontrol|tgtr[0][1]        ; padio            ;
+; |gamecontrol|tgtr[0][2]        ; |gamecontrol|tgtr[0][2]        ; padio            ;
+; |gamecontrol|tgtr[1][1]        ; |gamecontrol|tgtr[1][1]        ; padio            ;
+; |gamecontrol|tgtr[1][2]        ; |gamecontrol|tgtr[1][2]        ; padio            ;
+; |gamecontrol|tgtr[2][1]        ; |gamecontrol|tgtr[2][1]        ; padio            ;
+; |gamecontrol|tgtr[2][2]        ; |gamecontrol|tgtr[2][2]        ; padio            ;
+; |gamecontrol|blc[2]            ; |gamecontrol|blc[2]            ; padio            ;
+; |gamecontrol|fpc[0][2]         ; |gamecontrol|fpc[0][2]         ; padio            ;
+; |gamecontrol|fpc[2][2]         ; |gamecontrol|fpc[2][2]         ; padio            ;
+; |gamecontrol|fpc[3][2]         ; |gamecontrol|fpc[3][2]         ; padio            ;
+; |gamecontrol|shownum[1][3]     ; |gamecontrol|shownum[1][3]     ; padio            ;
+; |gamecontrol|shownum[2][0]     ; |gamecontrol|shownum[2][0]     ; padio            ;
+; |gamecontrol|shownum[2][1]     ; |gamecontrol|shownum[2][1]     ; padio            ;
+; |gamecontrol|shownum[2][2]     ; |gamecontrol|shownum[2][2]     ; padio            ;
+; |gamecontrol|shownum[2][3]     ; |gamecontrol|shownum[2][3]     ; padio            ;
+; |gamecontrol|shownum[3][0]     ; |gamecontrol|shownum[3][0]     ; padio            ;
+; |gamecontrol|shownum[3][1]     ; |gamecontrol|shownum[3][1]     ; padio            ;
+; |gamecontrol|shownum[3][2]     ; |gamecontrol|shownum[3][2]     ; padio            ;
+; |gamecontrol|shownum[3][3]     ; |gamecontrol|shownum[3][3]     ; padio            ;
+; |gamecontrol|over              ; |gamecontrol|over              ; padio            ;
+; |gamecontrol|pass              ; |gamecontrol|pass              ; padio            ;
++--------------------------------+--------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 222 10/21/2009 SJ Full Version
+    Info: Processing started: Sun Nov 11 13:15:01 2018
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off gamecontrol -c gamecontrol
+Info: Using vector source file "C:/Users/1/Desktop/shoot. v9.0/gamecontrol/gamecontrol.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |gamecontrol|fpstate[1]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      50.98 %
+Info: Number of transitions in simulation is 152681
+Info: Thank you for using the Quartus II software 30-day evaluation. You have 9 days left (until Nov 20, 2018) before compilation and simulation support is disabled.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 172 megabytes
+    Info: Processing ended: Sun Nov 11 13:15:03 2018
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:03
+
+

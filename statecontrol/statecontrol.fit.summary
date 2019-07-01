@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sat Nov 03 12:55:50 2018
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : statecontrol
+Top-level Entity Name : statecontrol
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 31 / 1,270 ( 2 % )
+Total pins : 18 / 116 ( 16 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

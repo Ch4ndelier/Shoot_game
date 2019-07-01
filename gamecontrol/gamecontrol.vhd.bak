@@ -1,0 +1,266 @@
+ibrary ieee;
+use ieee.std_logic_1164.all;
+
+package muse2 is
+  type dots is array (integer range <>) of integer range 0 to 7;
+  type figure is array (integer range <>) of integer range 0 to 9;
+end muse2;
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+library work;   
+use work.muse2.all;
+
+
+entity gamecontrol is
+port(
+	clk4,clk1,clk5,fire,fire2,switch,clear,speedup,speeddown,random,fprtmove,fplftmove,usual,breath:in std_logic;
+    tgtc:out dots(2 downto 0);   
+    tgtr:out dots(2 downto 0);
+    blr,blc:out integer range 0 to 7;
+    fpc:out dots(3 downto 0);
+    shownum:out figure(3 downto 0);
+    blout,ishit,over,pass:out std_logic
+	);
+end gamecontrol;
+
+architecture gc of gamecontrol is
+
+  signal speedstate:integer range 0 to 2;--shows the speed 0:normal 1:up 2:down
+  signal tgtct:dots(2 downto 0);     --the row and column coordinates of the target
+  signal tgtrt:dots(2 downto 0);
+  signal israndom,overt,bloutt,ishitt:std_logic; 
+  constant randomrow:dots(15 downto 0):=(5,3,7,5,6,6,5,4,6,7,7,5,4,4,6,3);
+  signal shownumt:figure(3 downto 0); 
+  signal blrt,blct:integer range 0 to 7;
+  signal fpstate:std_logic_vector(0 to 2);--the state of fire position
+  signal rtbloutt:std_logic;
+
+begin
+
+p1:process(clk5,clear,switch)                            --control module of speed
+begin
+    if clear='1' then speedstate<=0;
+    elsif switch='0' then speedstate<=0;
+    elsif clk5'event and clk5='1' then
+          if speedup='1' then if speedstate=0 then speedstate<=1;
+                           elsif speedstate=2 then speedstate<=0; end if;
+          elsif speeddown='1' then if speedstate=1 then speedstate<=0;
+                           elsif speedstate=0 then speedstate<=2; end if;
+          end if;
+    end if;
+end process;
+
+p5:process(clear,switch,clk5)                            --control module of target moving
+variable speedtmp1:integer range 0 to 1;
+variable speedtmp2:integer range 0 to 3;
+variable rdmtmp:integer range 0 to 15:=0;
+begin
+  if clear='1' then
+        tgtrt(0)<=7;tgtrt(1)<=7;tgtrt(2)<=7;
+        tgtct(0)<=6;tgtct(1)<=7;tgtct(2)<=0;speedtmp1:=0; speedtmp2:=0;
+  elsif(switch='0')then
+        tgtrt(0)<=7;tgtrt(1)<=7;tgtrt(2)<=7;
+        tgtct(0)<=6;tgtct(1)<=7;tgtct(2)<=0;speedtmp1:=0; speedtmp2:=0;
+  elsif(clk5'event and clk5='1') then
+        if speedstate=0 and breath='0' then            --usual speed
+			     speedtmp1:=speedtmp1+1; 
+                   if speedtmp1=1  then
+				      for i in 0 to 1 loop   
+					  tgtrt(i)<=tgtrt(i+1);
+					  tgtct(i)<=tgtct(i+1); 
+				      end loop;
+				      if tgtct(2)=7 then 
+                           tgtct(2)<=0;
+                           if israndom='1' then        -- if random,the next row is "unpredictable"
+                           rdmtmp:=rdmtmp+1;tgtrt(2)<=randomrow(rdmtmp);
+                           end if;
+				      else tgtct(2)<=tgtct(2)+1;
+				      end if;
+				   end if;
+	    elsif speedstate=1 and breath='0' then         --high speed             
+				      for i in 0 to 1 loop   
+					  tgtrt(i)<=tgtrt(i+1);
+					  tgtct(i)<=tgtct(i+1); 
+				      end loop;
+				      if tgtct(2)=7 then 
+                           tgtct(2)<=0;
+                           if israndom='1' then         -- if random,the next row is "unpredictable"
+                           rdmtmp:=rdmtmp+1;tgtrt(2)<=randomrow(rdmtmp);
+                           end if;
+				      else tgtct(2)<=tgtct(2)+1;
+				      end if;				  
+        elsif speedstate=2 and breath='0' then         --low speed
+			     speedtmp2:=speedtmp2+1; 
+			       if speedtmp2=3 then
+				      for i in 0 to 1 loop   
+					  tgtrt(i)<=tgtrt(i+1);
+					  tgtct(i)<=tgtct(i+1); 
+				      end loop;
+				      if tgtct(2)=7 then 
+                           tgtct(2)<=0;
+                           if israndom='1' then         -- if random,the next row is "unpredictable"
+                           rdmtmp:=rdmtmp+1;tgtrt(2)<=randomrow(rdmtmp);
+                           end if;
+				      else tgtct(2)<=tgtct(2)+1;
+				      end if;
+				   end if;
+		end if;
+  end if;
+end process;
+
+p6:process(switch,clear,clk1)                            --control module of time
+begin
+     if    switch='0' then
+           shownumt(1)<=4;
+           shownumt(0)<=0;
+     elsif clear='1' then                                    --reset
+           shownumt(1)<=4;
+           shownumt(0)<=0;
+     elsif 	clk1'event and clk1='1' then              --the remaining time
+	        if(overt='0' and breath='0')then
+				if shownumt(0)=0 then  shownumt(0)<=9;
+			                          shownumt(1)<=shownumt(1)-1;
+			                    else  shownumt(0)<=shownumt(0)-1;
+				end if;
+			end if;  
+	  
+	end if;
+end process;
+
+p7:process(switch,clk4,fire,fire2,bloutt)                --control module of bullet move
+begin
+ if(switch='0')then
+   bloutt<='0';blrt<=2;
+ elsif( (fire='1'or fire2='1' )and bloutt='0' )then bloutt<='1'; 
+ elsif(clk4'event and clk4='1') then
+      		if  bloutt='1' then 
+		                    if(blrt=7 or ishitt='1') then bloutt<='0';blrt<=2;                  --bullet move
+	                        else  blrt<=blrt+1;
+	                        end if;
+	        end if;
+ end if;
+end process;
+
+pw:process(switch,clk4,fire2,bloutt)                     --control module of right bullet state
+begin
+ if(switch='0')then rtbloutt<='0';
+ elsif( fire2='1' and bloutt='0')then rtbloutt<='1';
+ elsif(clk4'event and clk4='1') then 
+           if(blrt=7 or ishitt='1') then rtbloutt<='0';
+           end if;
+ end if;
+end process;
+
+p8:process(switch,clear,clk4)                            --control module of score
+begin
+     if switch='0' then  
+           overt<='0';
+           pass<='0';
+           shownumt(3)<=0;
+           shownumt(2)<=0;
+     elsif clear='1' then                              --reset
+           overt<='0';
+           pass<='0';
+           shownumt(3)<=0;
+           shownumt(2)<=0;         
+     elsif  clk4'event and clk4='1' then 
+	    if(blrt=2) then ishitt<='0';
+	    end if;
+		if (tgtrt(0)=blrt and tgtct(0)=blct)or( tgtrt(2)=blrt and tgtct(2)=blct) then  --hitting edges
+                            ishitt<='1';
+                            if(shownumt(2)>7)   then shownumt(2)<=shownumt(2)-8;shownumt(3)<=shownumt(3)+1;
+						                         else    shownumt(2)<=shownumt(2)+2;					         
+					        end if;
+	    end if;
+	    if (tgtrt(1)=blrt and tgtct(1)=blct) then                                  --hitting centre
+		                    ishitt<='1';
+						    if(shownumt(2)>6)  then  shownumt(2)<=shownumt(2)-7;shownumt(3)<=shownumt(3)+1;
+						                     else    shownumt(2)<=shownumt(2)+3;					    
+					        end if;
+		end if;
+		if  shownumt(3)*10+shownumt(2)>14 then overt<='1';pass<='1';              --if you win
+	    end if;                                              
+	    if (shownumt(0)=0 and shownumt(1)=0) then overt<='1';pass<='0';           --if you lose
+	    end if;
+	end if;
+end process;
+
+p12:process(clear,switch,clk4)                           --control module of random and usual
+begin
+   if(switch='0') then
+        israndom<='0';
+   elsif(clear='1') then  israndom<='0';
+   elsif(clk4'event and clk4='1') then
+        if(random='1') then
+        israndom<='1';
+        elsif(usual='1') then
+        israndom<='0';
+        end if;
+   end if;
+end process;
+
+p13:process(switch,clear,clk5)                           --control module of firing position state
+begin
+   if(switch='0') then
+        fpstate<="010";
+   elsif(clear='1') then
+        fpstate<="010";
+   elsif(clk5'event and clk5='1') then
+        if(fprtmove='1') then  
+            case fpstate is
+            when "000" =>fpstate<="001";
+            when "001" =>fpstate<="010";
+            when "010" =>fpstate<="011";
+            when "011" =>fpstate<="100";
+            when "100" =>fpstate<="101";
+            when "101" =>fpstate<="101";
+            when others => fpstate<="010";
+            end case;
+        elsif(fplftmove='1')then
+            case fpstate is
+            when "000" =>fpstate<="000";
+            when "001" =>fpstate<="000";
+            when "010" =>fpstate<="001";
+            when "011" =>fpstate<="010";
+            when "100" =>fpstate<="011";
+            when "101" =>fpstate<="100";
+            when others => fpstate<="010"; 
+            end case;
+        end if;
+   end if;
+end process;
+
+p14:process(clk4)                                        --control module of firing and bullet position
+variable turn:integer range 0 to 1:=0;
+begin
+        if(clk4'event and clk4='1') then
+           if rtbloutt='1' then 
+                 if(turn=0)then 
+                        blct<=blct+1 ;
+                       if(blct=6)then turn:=1;end if;
+                 elsif(turn=1) then blct<=blct-1;
+                 end if;
+           end if;
+            case fpstate is
+            when "000" =>fpc<=(0,1,2,1);if(bloutt='0')then blct<=1;turn:=0;end if;
+            when "001" =>fpc<=(1,2,3,2);if(bloutt='0')then blct<=2;turn:=0;end if;
+            when "010" =>fpc<=(2,3,4,3);if(bloutt='0')then blct<=3;turn:=0;end if;
+            when "011" =>fpc<=(3,4,5,4);if(bloutt='0')then blct<=4;turn:=0;end if;
+            when "100" =>fpc<=(4,5,6,5);if(bloutt='0')then blct<=5;turn:=0;end if;
+            when "101" =>fpc<=(5,6,7,6);if(bloutt='0')then blct<=6;turn:=0;end if;
+            when others=>fpc<=(2,3,4,3);if(bloutt='0')then blct<=3;turn:=0;end if;
+            end case;
+        end if;
+end process;
+
+tgtc<=tgtct;
+tgtr<=tgtrt;
+over<=overt;
+shownum<=shownumt;
+ishit<=ishitt;
+blout<=bloutt;
+blr<=blrt;
+blc<=blct;
+end gc;

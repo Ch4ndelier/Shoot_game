@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.077 ns
+From           : fprtmove3~reg0
+To             : fprtmove3
+From Clock     : clk3
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk3'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 218.87 MHz ( period = 4.569 ns )
+From           : \p8:cnt20[3]
+To             : \p8:cnt20[3]
+From Clock     : clk3
+To Clock       : clk3
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

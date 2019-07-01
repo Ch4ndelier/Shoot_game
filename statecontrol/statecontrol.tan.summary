@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 11.083 ns
+From           : cntbreatht[2]
+To             : cntbreath[2]
+From Clock     : clk4
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk4'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 178.64 MHz ( period = 5.598 ns )
+From           : \p9:cntcheck[1]
+To             : check~reg0
+From Clock     : clk4
+To Clock       : clk4
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+
